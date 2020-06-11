@@ -11,12 +11,49 @@
 </head>
 <body>
 
-Nav Bar
-    Logo
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Culinary World Tour</a>
+</nav>
 
-Search Panel
-    Search Bar
-    Filter By Series // Filter By Location
+<div class="container-fluid" id="search-panel">
+    Search Icon
+    <div class="row">
+        <div class="col-12">
+            <form>
+                <input type="text" class="searchbox" id="searchbox">
+            </form>
+            <div class="dropdown">
+                <button type="button" class="btn dropdown-toggle" href="#" role="button" id="seriesDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Filter By Series
+                </button>
+                <div class="dropdown-menu" aria-labelledby="seriesDropdownMenu">
+                    <a class="dropdown-item" href="#">Breakfast, Lunch & Dinner</a>
+                    <a class="dropdown-item" href="#">Chef's Table</a>
+                    <a class="dropdown-item" href="#">Chef's Table France</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="btn dropdown-toggle" href="#" role="button" id="locationDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Filter By Location
+                </button>
+                <div class="dropdown-menu" aria-labelledby="locationDropdownMenu">
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item country" href="#">Japan</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Osaka</a>
+                    <a class="dropdown-item" href="#">Tokyo</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item country" href="#">United States</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Chicago</a>
+                    <a class="dropdown-item" href="#">Texas</a>
+                    <a class="dropdown-item" href="#">New York</a>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
+
 
 Spotlight Panel
     Black background that fades into series picture
