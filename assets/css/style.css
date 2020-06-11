@@ -11,11 +11,11 @@
     margin-bottom: 20px;
 }
 
-.navbar.navbar-dark.bg-dark {
+.navbar {
     background-color: #181818;
 }
 
-.navbar-dark .navbar-brand {
+.navbar-brand {
     color: #e30914;
 }
 
