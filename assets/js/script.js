@@ -1,4 +1,62 @@
 // key: AIzaSyAKKq48oILIJR-D3a22vDaJXZ8-4glyBrE
+let restaurants = [
+    {
+        name: "Lee's Donuts",
+        address1: "1689 Johnston St",
+        city: "Vancouver",
+        country: "Canada",
+        postcode: "BC V6H 3R9",
+        lat: 49.2722501,
+        lng: -123.1352766,
+        series: "Breakfast, Lunch & Dinner",
+        season: 1,
+        episode: 1,
+        episodeLink: "",
+        website: "https://www.leesdonuts.ca/"
+    },
+    {
+        name: "Sun Sui Wah Seafood",
+        address1: "4940 Number 3 Rd, Richmond",
+        city: "Vancouver",
+        country: "Canada",
+        postcode: "BC V6X 3A5",
+        lat: 49.1780648,
+        lng: -123.1377265,
+        series: "Breakfast, Lunch & Dinner",
+        season: 1,
+        episode: 1,
+        episodeLink: "",
+        website: "http://www.sunsuiwah.ca/"
+    },
+    {
+        name: "Apna Bhaia Sweet & Restaurant",
+        address1: "6616 Fraser St",
+        city: "Vancouver",
+        country: "Canada",
+        postcode: "BC V5X 3T5",
+        lat: 49.2243079,
+        lng: -123.0928184,
+        series: "Breakfast, Lunch & Dinner",
+        season: 1,
+        episode: 1,
+        episodeLink: "",
+        website: "http://apnabhaia.com/"
+    },
+    {
+        name: "HK BBQ Master",
+        address1: "4651 Number 3 Rd, Richmond",
+        city: "Vancouver",
+        country: "Canada",
+        postcode: "BC V6X 2C4",
+        lat: 49.1797407,
+        lng: -123.1400272,
+        series: "Breakfast, Lunch & Dinner",
+        season: 1,
+        episode: 1,
+        episodeLink: "",
+        website: ""
+    }
+];
 
 function initMap() {
     let mapDefaults = {
@@ -14,8 +72,8 @@ function initMap() {
     let labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let locations = [ 
             {
-                lat: 49.2722501,
-                lng: -123.1352766
+                lat: restaurants[0].lat,
+                lng: restaurants[0].lng
             },
             {
                 lat: 49.1780648,
