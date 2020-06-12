@@ -44,3 +44,16 @@ body {
     border: 1px solid #fff;
     margin: 10px 2.5px;
 }
+
+.msg {
+    color: #CCCCCC;
+    font-size: 10px;
+    margin: 2px;
+}
+
+
+/* ---Hidden/Visible--- */
+
+.hidden {
+    display: hidden;
+}
