@@ -51,6 +51,39 @@ body {
     margin: 2px;
 }
 
+/* ---Spotlight--- */
+.jumbotron-container {
+    position: relative;
+}
+
+.jumbotron {
+    background-image: url("../images/spotlights/BreakfastLunchDinner-Spotlight.jpg");
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+.jumbotron-overlay {
+/*--    background-image: -webkit-gradient(linear, left center, right center, from(rgba(255, 255, 255, 1)), to(rgba(0, 0, 0, 0))); */
+    background-image: linear-gradient(to right, rgba(25, 25, 25, 1) 50%, rgba(25, 25, 25, 0)); 
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.spotlight-content {
+    z-index: 2;
+}
+
+.spotlight-btn {
+    margin: 20px 2.5px;
+    padding: 5px;
+    border-radius: 2.5px;
+    border: none;
+    width: 120px;
+}
 
 /* ---Hidden/Visible--- */
 
