@@ -128,6 +128,11 @@ function initMap() {
                 lng: 104.9268585
             }
         ];
+
+        let infowindow = new google.maps.InfoWindow({
+            content: "<div class='map-info'>" + restaurants[0].name + "</div>"
+        })
+
                 let markers = locations.map((location, i) => {
             return new google.maps.Marker({
                 position: location,
@@ -136,4 +141,10 @@ function initMap() {
         });
         let markerCluster = new MarkerClusterer(map, markers,
             {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-};
+            
+            markers.forEach((marker) => {
+                marker.addListener("click", function() {
+                infowindow.open(map, marker);
+            });
+        });
+    };
