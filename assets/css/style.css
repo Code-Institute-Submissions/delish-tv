@@ -90,6 +90,10 @@ body {
     min-height: 360px;
 }
 
+.map-info {
+    color: rgba(25, 25, 25, 1);
+}
+
 /* ---Hidden/Visible--- */
 
 .hidden {
