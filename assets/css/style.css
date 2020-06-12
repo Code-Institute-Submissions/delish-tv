@@ -85,6 +85,11 @@ body {
     width: 120px;
 }
 
+/* ---Map--- */
+#map {
+    min-height: 360px;
+}
+
 /* ---Hidden/Visible--- */
 
 .hidden {
