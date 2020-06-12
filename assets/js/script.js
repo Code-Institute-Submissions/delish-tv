@@ -1,13 +1,15 @@
 // key: AIzaSyAKKq48oILIJR-D3a22vDaJXZ8-4glyBrE
 
 function initMap() {
-    let map = new google.maps.Map(document.querySelector("#map"), {
-                zoom: 2,
+    let mapDefaults = {
+        zoom: 2,
                 center: {
-                    lat: 46.619261,
-                    lng: -33.134766
+                    lat: 40.6976701,
+                    lng: -74.2598815
                 }
-                });
+    }    
+    
+    let map = new google.maps.Map(document.querySelector("#map"), mapDefaults);
 
     let labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let locations = [ 
