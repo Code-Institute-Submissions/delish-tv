@@ -57,7 +57,9 @@ body {
 }
 
 .jumbotron {
-    background-image: url("../images/spotlights/BreakfastLunchDinner-Spotlight.jpg")
+    background-image: url("../images/spotlights/BreakfastLunchDinner-Spotlight.jpg");
+    background-position: top right;
+    background-repeat: no-repeat;
 }
 
 .jumbotron-overlay {
@@ -71,6 +73,9 @@ body {
     z-index: 1;
 }
 
+.spotlight-content {
+    z-index: 2;
+}
 
 /* ---Hidden/Visible--- */
 
