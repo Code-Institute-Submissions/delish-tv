@@ -193,111 +193,24 @@ function initMap() {
                 }
     }    
     
-    let infoWindow = new google.maps.InfoWindow();
     let map = new google.maps.Map(document.querySelector("#map"), mapDefaults);
-
+    let infoWindow = new google.maps.InfoWindow();
     let labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    /* let locations = [ 
-            {
-                lat: restaurants[0].lat,
-                lng: restaurants[0].lng
-            },
-            {
-                lat: 49.1780648,
-                lng: -123.1377265
-            },
-            {
-                lat: 49.2243079,
-                lng: -123.0928184
-            },
-            {
-                lat: 49.1797407,
-                lng: -123.1400272
-            },
-            {
-                lat: 31.6269935,
-                lng: -7.9898378
-            },
-            {
-                lat: 31.6330789,
-                lng: -8.0122642
-            },
-            {
-                lat: 33.9725228,
-                lng: -118.4280101
-            },
-            {
-                lat: 34.0905441,
-                lng: -118.3467855
-            },
-            {
-                lat: 33.88804,
-                lng: -118.2944077
-            },
-            {
-                lat: 33.8847021,
-                lng: -118.3111358
-            },
-            {
-                lat: 33.8804593,
-                lng: -118.3115567
-            },
-            {
-                lat: 11.5761988,
-                lng: 104.9161599
-            },
-            {
-                lat: 11.5695572,
-                lng: 104.9187193
-            },
-            {
-                lat: 11.5531691,
-                lng: 104.9268585
-            }
-        ]; */
-
-        
-        let infoWindowContent = [];
-        for (let i = 0; i < restaurants.length; i++) {
-            infoWindowContent[i] = getInfoWindowDetails(restaurants[i]);
-            let location = new google.maps.LatLng(restaurants[i].lat,restaurants[i].lng);
-            marker = new google.maps.Marker({
+    
+    let markers = restaurants.map((location, i) => {
+            let marker = new google.maps.Marker({
                 position: location,
-                map: map,
                 label: labels[i % labels.length]
             });
-
-            google.maps.event.addListener(marker, "click", (function(marker, i) {
-                return function() {
-                    infoWindow.setContent(infoWindowContent[i]);
-                    infoWindow.open(map, marker);
-                }
-            })(marker, i));
-        }
-
-        function getInfoWindowDetails(location) {
-            let infoContentString = "<div class='map-info'>" + location.name + "</div>";
-            return infoContentString
-        }
-        /*
-        let infoWindowContent = new google.maps.InfoWindow({
-            content: "<div class='map-info'>" + restaurants[0].name + "</div>"
-        })
-*/
-        /*        let markers = locations.map((location, i) => {
-            return new google.maps.Marker({
-                position: location,
-                label: labels[i % labels.length]
-            }); 
-        });*/
+            google.maps.event.addListener(marker, "click", function(event) {
+                infoWindow.setContent("<h6 id='firstHeading' class='map-info'>" + restaurants[i].name + "</h6>");
+                infoWindow.open(map, marker);
+            })
+            return marker;     
+        });
+        let markerCluster = new MarkerClusterer(map, markers, {
+    imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
+    });
+}            
         
-        
-        /* let markerCluster = new MarkerClusterer(map, markers,
-            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
             
-            markers.forEach((marker) => {
-                marker.addListener("click", function() {
-                infowindow.open(map, marker);
-            });
-        }); */
-    };
