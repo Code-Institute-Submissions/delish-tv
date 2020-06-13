@@ -11,7 +11,7 @@ let restaurants = [
         series: "Breakfast, Lunch & Dinner",
         season: 1,
         episode: 1,
-        episodeLink: "",
+        episodeLink: "https://www.netflix.com/watch/81076571?trackId=13752289&tctx=0%2C0%2C74f9d99d-98cb-4cdf-9f68-fd9e4083cb4b-230343844%2C%2C%2C",
         website: "https://www.leesdonuts.ca/"
     },
     {
@@ -25,7 +25,7 @@ let restaurants = [
         series: "Breakfast, Lunch & Dinner",
         season: 1,
         episode: 1,
-        episodeLink: "",
+        episodeLink: "https://www.netflix.com/watch/81076571?trackId=13752289&tctx=0%2C0%2C74f9d99d-98cb-4cdf-9f68-fd9e4083cb4b-230343844%2C%2C%2C",
         website: "http://www.sunsuiwah.ca/"
     },
     {
@@ -39,7 +39,7 @@ let restaurants = [
         series: "Breakfast, Lunch & Dinner",
         season: 1,
         episode: 1,
-        episodeLink: "",
+        episodeLink: "https://www.netflix.com/watch/81076571?trackId=13752289&tctx=0%2C0%2C74f9d99d-98cb-4cdf-9f68-fd9e4083cb4b-230343844%2C%2C%2C",
         website: "http://apnabhaia.com/"
     },
     {
@@ -53,7 +53,7 @@ let restaurants = [
         series: "Breakfast, Lunch & Dinner",
         season: 1,
         episode: 1,
-        episodeLink: "",
+        episodeLink: "https://www.netflix.com/watch/81076571?trackId=13752289&tctx=0%2C0%2C74f9d99d-98cb-4cdf-9f68-fd9e4083cb4b-230343844%2C%2C%2C",
         website: ""
     },
     {
@@ -203,7 +203,7 @@ function initMap() {
                 label: labels[i % labels.length]
             });
             google.maps.event.addListener(marker, "click", function(event) {
-                infoWindow.setContent("<h6 id='firstHeading' class='map-info'>" + restaurants[i].name + "</h6>");
+                infoWindow.setContent("<div class='map-content'>" + "<div class='marker-header'>" + restaurants[i].name + "</div>" + "<div class='map-info'>" + restaurants[i].address1 + "</div>" + "<div class='map-info'>" + restaurants[i].city + "</div>" + "<div class='map-info'>" + restaurants[i].country + "</div>" + "<div class='map-info'>" + restaurants[i].postcode + "</div>" + "<div class='map-info'><span class='map-strong'>" + restaurants[i].series + "</span></div>" + "<div class='map-info'>Season: " + restaurants[i].season + " | Episode: " + restaurants[i].episode + "</div>" + "<div class='map-info episode-link'><a href=" + restaurants[i].episodeLink + ">Watch on Netflix" + "</a>" + "</div>" + "</div>");
                 infoWindow.open(map, marker);
             })
             return marker;     
