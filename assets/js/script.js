@@ -185,14 +185,20 @@ let restaurants = [
 ];
 
 function selectSpotlight() {
-    let seriesArray = ["Breakfast, Lunch & Dinner", "Chef's Table", "Chef's Table France", "Somebody Feed Phil", "Street Food Asia", "The Chef Show", "The Final Table", "Ugly Delicious"];
+    let seriesArray = ["Breakfast, Lunch & Dinner"];
     let chosenSpotlight = seriesArray[Math.floor(Math.random() * seriesArray.length)]
     console.log(chosenSpotlight);
+    filterSpotlightRestaurants(chosenSpotlight);
+}
+
+function filterSpotlightRestaurants(spotlight) {
+    const spotlightRestaurants = restaurants.filter(restaurant => restaurant.series === spotlight)
+        console.log(spotlightRestaurants);
 }
 
 function initMap() {
     let mapDefaults = {
-        zoom: 2,
+        zoom: 1,
                 center: {
                     lat: 40.6976701,
                     lng: -74.2598815
