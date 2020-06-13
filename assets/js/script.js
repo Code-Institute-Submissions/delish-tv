@@ -193,6 +193,7 @@ function initMap() {
                 }
     }    
     
+    let infoWindow = new google.maps.InfoWindow();
     let map = new google.maps.Map(document.querySelector("#map"), mapDefaults);
 
     let labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -275,7 +276,7 @@ function initMap() {
         }
 
         function getInfoWindowDetails(location) {
-            let infoContentString = "<div class='map-info'>" + restaurants[i].name + "</div>";
+            let infoContentString = "<div class='map-info'>" + location.name + "</div>";
             return infoContentString
         }
         /*
