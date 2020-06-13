@@ -184,6 +184,12 @@ let restaurants = [
     }
 ];
 
+function selectSpotlight() {
+    let seriesArray = ["Breakfast, Lunch & Dinner", "Chef's Table", "Chef's Table France", "Somebody Feed Phil", "Street Food Asia", "The Chef Show", "The Final Table", "Ugly Delicious"];
+    let chosenSpotlight = seriesArray[Math.floor(Math.random() * seriesArray.length)]
+    console.log(chosenSpotlight);
+}
+
 function initMap() {
     let mapDefaults = {
         zoom: 2,
@@ -213,4 +219,8 @@ function initMap() {
     });
 }            
         
+
+// Event Listeners
+
+window.addEventListener("load", selectSpotlight);
             
