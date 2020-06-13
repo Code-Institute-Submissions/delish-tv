@@ -90,8 +90,19 @@ body {
     min-height: 360px;
 }
 
-.map-info {
-    color: rgba(25, 25, 25, 1);
+.map-content {
+    background-color: white;
+    color: #333;
+}
+
+.marker-header {
+    font-weight: 500;
+    font-size: 14px;
+    color: #333;
+}
+
+.map-strong {
+    font-weight: bold;
 }
 
 /* ---Hidden/Visible--- */
