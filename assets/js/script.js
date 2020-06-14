@@ -273,18 +273,15 @@ function initMap(spotlightRestaurants) {
                 label: labels[i % labels.length]
             });
             // bounds ensures that the map center shows all marker locations
-            bounds.extend(marker.position);     
+            bounds.extend(marker.position);
+            map.fitBounds(bounds);
             google.maps.event.addListener(marker, "click", function(event) {
                 infoWindow.setContent("<div class='map-content'>" + "<div class='marker-header'>" + spotlightRestaurants[i].name + "</div>" + "<div class='map-info'>" + spotlightRestaurants[i].address1 + "</div>" + "<div class='map-info'>" + spotlightRestaurants[i].city + "</div>" + "<div class='map-info'>" + spotlightRestaurants[i].country + "</div>" + "<div class='map-info'>" + spotlightRestaurants[i].postcode + "</div>" + "<div class='map-info'><span class='map-strong'>" + spotlightRestaurants[i].series + "</span></div>" + "<div class='map-info'>Season: " + spotlightRestaurants[i].season + " | Episode: " + spotlightRestaurants[i].episode + "</div>" + "<div class='map-info episode-link'><a href=" + spotlightRestaurants[i].episodeLink + ">Watch on Netflix" + "</a>" + "</div>" + "</div>");
                 infoWindow.open(map, marker);
             })
             return marker;     
         });
-        map.fitBounds(bounds);
-        let listener = google.maps.event.addListener(map, "idle", function() {
-            map.setZoom(1);
-            google.maps.event.removeListener(listener)
-        });
+        
         let markerCluster = new MarkerClusterer(map, markers, {
     imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
     });
