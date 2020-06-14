@@ -194,6 +194,7 @@ function selectSpotlight() {
 function filterSpotlightRestaurants(spotlight) {
     const spotlightRestaurants = restaurants.filter(restaurant => restaurant.series === spotlight)
         console.log(spotlightRestaurants);
+        initMap()
 }
 
 function initMap() {
@@ -208,17 +209,25 @@ function initMap() {
     let map = new google.maps.Map(document.querySelector("#map"), mapDefaults);
     let infoWindow = new google.maps.InfoWindow();
     let labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    
+    let bounds = new google.maps.LatLngBounds();
+
     let markers = restaurants.map((location, i) => {
             let marker = new google.maps.Marker({
                 position: location,
                 label: labels[i % labels.length]
             });
+            // bounds ensures that the map center shows all marker locations
+            bounds.extend(marker.position);     
             google.maps.event.addListener(marker, "click", function(event) {
                 infoWindow.setContent("<div class='map-content'>" + "<div class='marker-header'>" + restaurants[i].name + "</div>" + "<div class='map-info'>" + restaurants[i].address1 + "</div>" + "<div class='map-info'>" + restaurants[i].city + "</div>" + "<div class='map-info'>" + restaurants[i].country + "</div>" + "<div class='map-info'>" + restaurants[i].postcode + "</div>" + "<div class='map-info'><span class='map-strong'>" + restaurants[i].series + "</span></div>" + "<div class='map-info'>Season: " + restaurants[i].season + " | Episode: " + restaurants[i].episode + "</div>" + "<div class='map-info episode-link'><a href=" + restaurants[i].episodeLink + ">Watch on Netflix" + "</a>" + "</div>" + "</div>");
                 infoWindow.open(map, marker);
             })
             return marker;     
+        });
+        map.fitBounds(bounds);
+        let listener = google.maps.event.addListener(map, "idle", function() {
+            map.setZoom(1);
+            google.maps.event.removeListener(listener)
         });
         let markerCluster = new MarkerClusterer(map, markers, {
     imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
@@ -228,5 +237,5 @@ function initMap() {
 
 // Event Listeners
 
-window.addEventListener("load", selectSpotlight);
+// window.addEventListener("load", selectSpotlight);
             
