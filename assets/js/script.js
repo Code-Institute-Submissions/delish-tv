@@ -195,11 +195,53 @@ let restaurants = [
         episode: 1,
         episodeLink: "https://www.netflix.com/watch/80075157?trackId=14277281&tctx=0%2C0%2Cff6e19b5-5706-4dbe-8a41-95b8834040a9-3136058%2C%2C%2C",
         website: "http://www.alain-passard.com/"
+    },
+    {
+        name: "La Marine",
+        address1: "5 Rue Marie Lemonnier",
+        city: "Noirmoutier-en-l'Île",
+        country: "France",
+        postcode: "85330",
+        lat: 47.0237,
+        lng: -2.3021105,
+        series: "Chef’s Table France",
+        season: 1,
+        episode: 2,
+        episodeLink: "https://www.netflix.com/watch/80075159?trackId=14277281&tctx=0%2C1%2Cff6e19b5-5706-4dbe-8a41-95b8834040a9-3136058%2C%2C%2C",
+        website: "http://alexandrecouillon.com/"
+    },
+    {
+        name: "Yam’Tcha",
+        address1: "121 Rue Saint-Honoré",
+        city: "Paris",
+        country: "France",
+        postcode: "75001",
+        lat: 48.8613889,
+        lng: 2.339478,
+        series: "Chef’s Table France",
+        season: 1,
+        episode: 3,
+        episodeLink: "https://www.netflix.com/watch/80075158?trackId=14277281&tctx=0%2C2%2Cff6e19b5-5706-4dbe-8a41-95b8834040a9-3136058%2C%2C%2C",
+        website: "http://www.yamtcha.com/"
+    },
+    {
+        name: "La Maison Troisgros",
+        address1: "728 Route de Villerest",
+        city: "Ouches",
+        country: "France",
+        postcode: "42155",
+        lat: 45.981075,
+        lng: 3.8724685,
+        series: "Chef’s Table France",
+        season: 1,
+        episode: 4,
+        episodeLink: "https://www.netflix.com/watch/80075160?trackId=14277281&tctx=0%2C3%2Cff6e19b5-5706-4dbe-8a41-95b8834040a9-3136058%2C%2C%2C",
+        website: "http://www.troisgros.com/"
     }
 ];
 
 function selectSpotlight() {
-    let seriesArray = ["Breakfast, Lunch & Dinner"];
+    let seriesArray = ["Breakfast, Lunch & Dinner", "Chef’s Table France"];
     let chosenSpotlight = seriesArray[Math.floor(Math.random() * seriesArray.length)]
     console.log(chosenSpotlight);
     filterSpotlightRestaurants(chosenSpotlight);
