@@ -245,12 +245,24 @@ function selectSpotlight() {
     let chosenSpotlight = seriesArray[Math.floor(Math.random() * seriesArray.length)]
     console.log(chosenSpotlight);
     filterSpotlightRestaurants(chosenSpotlight);
+    displaySpotlight(chosenSpotlight);
 }
 
 function filterSpotlightRestaurants(spotlight) {
     const spotlightRestaurants = restaurants.filter(restaurant => restaurant.series === spotlight)
         console.log(spotlightRestaurants);
         initMap(spotlightRestaurants)
+}
+
+function displaySpotlight(spotlight) {
+    let jumbotron = document.querySelector(".bld")
+    switch (spotlight) {
+        case "Breakfast, Lunch & Dinner":
+            jumbotron.classList.remove("hidden");
+            break;
+        default:
+            console.log("A different series has been selected");    
+    }
 }
 
 function initMap(spotlightRestaurants) {
