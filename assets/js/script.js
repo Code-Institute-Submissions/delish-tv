@@ -255,6 +255,13 @@ function selectSpotlight() {
     displaySpotlight(chosenSpotlight);
 }
 
+ function selectSeries() {
+    console.log(this);
+    console.log(this.textContent);
+    let chosenSeries = this.textContent;
+    filterSpotlightRestaurants(chosenSeries);
+    }
+
 function filterSpotlightRestaurants(spotlight) {
     const spotlightRestaurants = restaurants.filter(restaurant => restaurant.series === spotlight)
         console.log(spotlightRestaurants);
@@ -316,8 +323,6 @@ function initMap(spotlightRestaurants) {
 // window.addEventListener("load", selectSpotlight);
 
 seriesDropdown.forEach((item => {
-    item.addEventListener("click", function() {
-        console.log("hi")
-    })
+    item.addEventListener("click", selectSeries)
 })
-)          
+)
