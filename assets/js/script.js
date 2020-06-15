@@ -262,10 +262,14 @@ function filterSpotlightRestaurants(spotlight) {
 }
 
 function displaySpotlight(spotlight) {
-    let jumbotron = document.querySelector(".bld")
+    let jumbotronBLD = document.querySelector(".bld")
+    let jumbotronCTF = document.querySelector(".chefstablefrance")
     switch (spotlight) {
         case "Breakfast, Lunch & Dinner":
-            jumbotron.classList.remove("hidden");
+            jumbotronBLD.classList.remove("hidden");
+            break;
+        case "Chef's Table France":
+            jumbotronCTF.classList.remove("hidden");
             break;
         default:
             console.log("A different series has been selected");    
