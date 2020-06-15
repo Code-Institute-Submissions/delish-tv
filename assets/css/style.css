@@ -108,5 +108,5 @@ body {
 /* ---Hidden/Visible--- */
 
 .hidden {
-    display: hidden;
+    display: none;
 }
