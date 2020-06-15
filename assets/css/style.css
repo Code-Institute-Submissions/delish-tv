@@ -117,3 +117,33 @@ body {
 .hidden {
     display: none;
 }
+
+/* ---Headers--- */
+
+.heading {
+    text-align: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+/* ---Featured Restaurants--- */
+.map-label {
+    background-color: #e30914;    
+}
+
+.restaurant {
+    border: 1px solid white;
+}
+
+.restaurant ul {
+    list-style: none;
+}
+
+.restaurants-btn {
+    padding: 5px;
+    border-radius: 2.5px;
+    border: none;
+    width: 120px;
+}
