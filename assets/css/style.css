@@ -56,15 +56,22 @@ body {
     position: relative;
 }
 
-.jumbotron {
+.jumbotron.bld-jumbo {
     background-image: url("../images/spotlights/BreakfastLunchDinner-Spotlight.jpg");
     background-position: top right;
     background-repeat: no-repeat;
 }
 
+.jumbotron.chefstablefrance-jumbo {
+    background-image: url("../images/spotlights/chefs-table-france_grab.PNG");
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+
 .jumbotron-overlay {
 /*--    background-image: -webkit-gradient(linear, left center, right center, from(rgba(255, 255, 255, 1)), to(rgba(0, 0, 0, 0))); */
-    background-image: linear-gradient(to right, rgba(25, 25, 25, 1) 50%, rgba(25, 25, 25, 0)); 
+    background-image: linear-gradient(to right, rgba(25, 25, 25, 1) 40%, rgba(25, 25, 25, 0)); 
     height: 100%;
     width: 100%;
     position: absolute;
