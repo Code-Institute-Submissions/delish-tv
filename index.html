@@ -1,141 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<title>Title</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<title>Title</title>
 </head>
+
 <body>
 
-<nav class="navbar">
-    <a class="navbar-brand" href="#">Culinary World Tour</a>
-</nav>
+	<nav class="navbar">
+		<a class="navbar-brand" href="#">Culinary World Tour</a>
+	</nav>
 
-<div class="container-fluid" id="search-panel">
-    Search Icon
-    <div class="row">
-        <div class="col-12">
-            <form>
-                <input type="text" class="searchbox" id="searchbox" placeholder="Search by series, restaurant, or location">
-                <div class="msg"></div>
-                <div class="suggestion"></div>
-            </form>
-            <div class="dropdown">
-                <button type="button" class="btn dropdown-toggle" href="#" role="button" id="seriesDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	<div class="container-fluid" id="search-panel">
+		Search Icon
+		<div class="row">
+			<div class="col-12">
+				<form>
+					<input type="text" class="searchbox" id="searchbox" placeholder="Search by series, restaurant, or location">
+					<div class="msg"></div>
+					<div class="suggestion"></div>
+				</form>
+				<div class="dropdown">
+					<button type="button" class="btn dropdown-toggle" href="#" role="button" id="seriesDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Filter By Series
                 </button>
-                <div class="dropdown-menu" aria-labelledby="seriesDropdownMenu">
-                    <a class="dropdown-item dropdown-series" href="#">Breakfast, Lunch & Dinner</a>
-                    <a class="dropdown-item dropdown-series" href="#">Chef's Table</a>
-                    <a class="dropdown-item dropdown-series" href="#">Chef's Table France</a>
-                    <a class="dropdown-item dropdown-series" href="#">Somebody Feed Phil</a>
-                    <a class="dropdown-item dropdown-series" href="#">Street Food Asia</a>
-                    <a class="dropdown-item dropdown-series" href="#">The Chef Show</a>
-                    <a class="dropdown-item dropdown-series" href="#">The Final Table</a>
-                    <a class="dropdown-item dropdown-series" href="#">Ugly Delicious</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button type="button" class="btn dropdown-toggle" href="#" role="button" id="locationDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<div class="dropdown-menu" aria-labelledby="seriesDropdownMenu">
+						<a class="dropdown-item dropdown-series" href="#">Breakfast, Lunch & Dinner</a>
+						<a class="dropdown-item dropdown-series" href="#">Chef's Table</a>
+						<a class="dropdown-item dropdown-series" href="#">Chef's Table France</a>
+						<a class="dropdown-item dropdown-series" href="#">Somebody Feed Phil</a>
+						<a class="dropdown-item dropdown-series" href="#">Street Food Asia</a>
+						<a class="dropdown-item dropdown-series" href="#">The Chef Show</a>
+						<a class="dropdown-item dropdown-series" href="#">The Final Table</a>
+						<a class="dropdown-item dropdown-series" href="#">Ugly Delicious</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button type="button" class="btn dropdown-toggle" href="#" role="button" id="locationDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Filter By Location
                 </button>
-                <div class="dropdown-menu" aria-labelledby="locationDropdownMenu">
-                    <a class="dropdown-item country" href="#">Argentina</a>
-                    <a class="dropdown-item country" href="#">Australia</a>
-                    <a class="dropdown-item country" href="#">Brazil</a>
-                    <a class="dropdown-item country" href="#">Canada</a>
-                    <a class="dropdown-item country" href="#">Cambodia</a>
-                    <a class="dropdown-item country" href="#">France</a>
-                    <a class="dropdown-item country" href="#">Germany</a>
-                    <a class="dropdown-item country" href="#">Indonesia</a>
-                    <a class="dropdown-item country" href="#">Italy</a>
-                    <a class="dropdown-item country" href="#">Japan</a>
-                    <a class="dropdown-item country" href="#">Mexico</a>
-                    <a class="dropdown-item country" href="#">Morocco</a>
-                    <a class="dropdown-item country" href="#">Peru</a>
-                    <a class="dropdown-item country" href="#">Russia</a>
-                    <a class="dropdown-item country" href="#">Slovenia</a>
-                    <a class="dropdown-item country" href="#">Spain</a>
-                    <a class="dropdown-item country" href="#">Sweden</a>
-                    <a class="dropdown-item country" href="#">Thailand</a>
-                    <a class="dropdown-item country" href="#">Turkey</a>
-                    <a class="dropdown-item country" href="#">United Kingdom</a>
-                    <a class="dropdown-item country" href="#">United States</a>
-                </div>
-            </div>  
-        </div>
-    </div>
-</div>
-<div class="container-fluid jumbotron-container hidden bld">
-    <div class="jumbotron-overlay">&nbsp;</div>
-    <div class="row spotlight-panel">
-        <div class="col-12">
-            <div class="jumbotron jumbotron-fluid bld-jumbo">
-                <div class="row">        
-                    <div class="col-8 spotlight-content">
-                        <img src="assets/images/logos/BreakfastLunchDinner-Logo.jpg" class="img-fluid" />
-                        <p class="lead d-none d-md-block">Chef David Chang takes his insatiable curiosity about food, culture and identity on the road, in the convivial company of fun-loving celebrity guests.</p>
-                        <button type="button" class="spotlight-btn play-now"><i class="fas fa-play"></i> Play Now</button>
-                        <button type="button" class="spotlight-btn more-info"><i class="fas fa-info-circle"></i> More Info</button>
+					<div class="dropdown-menu" aria-labelledby="locationDropdownMenu">
+						<a class="dropdown-item country" href="#">Argentina</a>
+						<a class="dropdown-item country" href="#">Australia</a>
+						<a class="dropdown-item country" href="#">Brazil</a>
+						<a class="dropdown-item country" href="#">Canada</a>
+						<a class="dropdown-item country" href="#">Cambodia</a>
+						<a class="dropdown-item country" href="#">France</a>
+						<a class="dropdown-item country" href="#">Germany</a>
+						<a class="dropdown-item country" href="#">Indonesia</a>
+						<a class="dropdown-item country" href="#">Italy</a>
+						<a class="dropdown-item country" href="#">Japan</a>
+						<a class="dropdown-item country" href="#">Mexico</a>
+						<a class="dropdown-item country" href="#">Morocco</a>
+						<a class="dropdown-item country" href="#">Peru</a>
+						<a class="dropdown-item country" href="#">Russia</a>
+						<a class="dropdown-item country" href="#">Slovenia</a>
+						<a class="dropdown-item country" href="#">Spain</a>
+						<a class="dropdown-item country" href="#">Sweden</a>
+						<a class="dropdown-item country" href="#">Thailand</a>
+						<a class="dropdown-item country" href="#">Turkey</a>
+						<a class="dropdown-item country" href="#">United Kingdom</a>
+						<a class="dropdown-item country" href="#">United States</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid jumbotron-container hidden bld">
+		<div class="jumbotron-overlay">&nbsp;</div>
+		<div class="row spotlight-panel">
+			<div class="col-12">
+				<div class="jumbotron jumbotron-fluid bld-jumbo">
+					<div class="row">
+						<div class="col-8 spotlight-content">
+							<img src="assets/images/logos/BreakfastLunchDinner-Logo.jpg" class="img-fluid" />
+							<p class="lead d-none d-md-block">Chef David Chang takes his insatiable curiosity about
+								food, culture and identity on the road, in the convivial company of fun-loving celebrity
+								guests.</p>
+							<button type="button" class="spotlight-btn play-now"><i class="fas fa-play"></i> Play Now</button>
+							<button type="button" class="spotlight-btn more-info"><i class="fas fa-info-circle"></i> More Info</button>
+						</div>
+						<div class="col-4">
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			((More Info unfurls to reveal player with trailer))
+			<!--<div class="underlay"><img src="assets/images/spotlights/BreakfastLunchDinner-Spotlight.jpg" class="img-fluid w-100" alt="Breakfast, Lunch & Dinner spotlight image" /></div>-->
+		</div>
+	</div>
+	<div class="container-fluid jumbotron-container hidden chefstablefrance">
+		<div class="jumbotron-overlay">&nbsp;</div>
+		<div class="row spotlight-panel">
+			<div class="col-12">
+				<div class="jumbotron jumbotron-fluid chefstablefrance-jumbo">
+					<div class="row">
+						<div class="col-8 spotlight-content">
+							<img src="assets/images/logos/chefs-table-france_logo.png" class="img-fluid" />
+							<p class="lead d-none d-md-block">Sample the bold new flavours of France with chefs who are
+								pushing the boundaries of fine dining and reinventing a rich culinary tradition.</p>
+							<button type="button" class="spotlight-btn play-now"><i class="fas fa-play"></i> Play Now</button>
+							<button type="button" class="spotlight-btn more-info"><i class="fas fa-info-circle"></i> More Info</button>
+						</div>
+						<div class="col-4">
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			((More Info unfurls to reveal player with trailer))
+			<!--<div class="underlay"><img src="assets/images/spotlights/BreakfastLunchDinner-Spotlight.jpg" class="img-fluid w-100" alt="Breakfast, Lunch & Dinner spotlight image" /></div>-->
+		</div>
+	</div>
+
+	<div id="map"></div>
+	
+    <h2 class="heading uppercase">Featured Restaurants</h2>
+	<div class="container-fluid">
+		<div class="row bld-restaurant restaurant hidden">
+            <div class="card restaurant-card">
+                <div class="row no-gutters fullscreen">
+                    <div class="col-2 align-self-center restaurant-label">
+                        <span class="my-auto">A</span>
                     </div>
-                    <div class="col-4">
+                    <div class="col-10 col-md-5">
+                        <div class="card-body">
+                            <h5 class="card-title">Lee's Donuts</h5>
+                            <ul class="card-text">
+                                <li>Vancouver</li>
+                                <li>Canada</li>
+                            </ul>
+                        </div>
                     </div>
+                    <div class="col-md-5">
+                        <div class="card-body">
+                            <button type="button" class="restaurants-btn more-info d-none d-md-block"><i class="fas fa-info-circle d-block d-md-inline"></i> More Info</button>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            
-        ((More Info unfurls to reveal player with trailer))
-            <!--<div class="underlay"><img src="assets/images/spotlights/BreakfastLunchDinner-Spotlight.jpg" class="img-fluid w-100" alt="Breakfast, Lunch & Dinner spotlight image" /></div>-->
-    </div>
-</div>
-<div class="container-fluid jumbotron-container hidden chefstablefrance">
-    <div class="jumbotron-overlay">&nbsp;</div>
-    <div class="row spotlight-panel">
-        <div class="col-12">
-            <div class="jumbotron jumbotron-fluid chefstablefrance-jumbo">
-                <div class="row">        
-                    <div class="col-8 spotlight-content">
-                        <img src="assets/images/logos/chefs-table-france_logo.png" class="img-fluid" />
-                        <p class="lead d-none d-md-block">Sample the bold new flavours of France with chefs who are pushing the boundaries of fine dining and reinventing a rich culinary tradition.</p>
-                        <button type="button" class="spotlight-btn play-now"><i class="fas fa-play"></i> Play Now</button>
-                        <button type="button" class="spotlight-btn more-info"><i class="fas fa-info-circle"></i> More Info</button>
+		</div>
+        <div class="row bld-restaurant restaurant hidden">
+            <div class="card restaurant-card">
+                <div class="row no-gutters fullscreen">
+                    <div class="col-2 align-self-center restaurant-label">
+                        <span class="my-auto">B</span>
                     </div>
-                    <div class="col-4">
+                    <div class="col-10 col-md-5">
+                        <div class="card-body">
+                            <h5 class="card-title">Sun Sui Wah Seafood</h5>
+                            <ul class="card-text">
+                                <li>Vancouver</li>
+                                <li>Canada</li>
+                            </ul>
+                        </div>
                     </div>
+                    <div class="col-md-5">
+                        <div class="card-body">
+                            <button type="button" class="restaurants-btn more-info d-none d-md-block"><i class="fas fa-info-circle d-block d-md-inline"></i> More Info</button>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            
-        ((More Info unfurls to reveal player with trailer))
-            <!--<div class="underlay"><img src="assets/images/spotlights/BreakfastLunchDinner-Spotlight.jpg" class="img-fluid w-100" alt="Breakfast, Lunch & Dinner spotlight image" /></div>-->
-    </div>
-</div>
-
-<div id="map"></div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12">
-            <div class="restaurants">
-                <h2>Featured Restaurants</h2>
-            </div>
-        </div>
-    </div>
-</div>
+		</div>
+	</div>
 
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKKq48oILIJR-D3a22vDaJXZ8-4glyBrE&callback=selectSpotlight"></script>
-<script src="assets/js/script.js"></script>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<script
+		src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+	</script>
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKKq48oILIJR-D3a22vDaJXZ8-4glyBrE&">
+	</script>
+	<script src="assets/js/script.js"></script>
 </body>
+
 </html>

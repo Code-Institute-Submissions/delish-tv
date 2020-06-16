@@ -319,12 +319,15 @@ function initMap(spotlightRestaurants) {
         let markerCluster = new MarkerClusterer(map, markers, {
     imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
     });
+        displayFeaturedRestaurants(spotlightRestaurants, markers);
 }            
         
-
+function displayFeaturedRestaurants(spotlight, markers) {
+    console.log(spotlight, markers)
+}
 // Event Listeners
 
-// window.addEventListener("load", selectSpotlight);
+window.addEventListener("load", selectSpotlight);
 
 seriesDropdown.forEach((item => {
     item.addEventListener("click", selectSeries);
