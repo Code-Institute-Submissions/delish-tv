@@ -340,12 +340,57 @@ function initMap(spotlightRestaurants) {
         let markerCluster = new MarkerClusterer(map, markers, {
     imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
     });
-        displayFeaturedRestaurants(spotlightRestaurants, markers);
+        listFeaturedRestaurants(spotlightRestaurants, markers);
 }            
         
-function displayFeaturedRestaurants(spotlight, markers) {
-    console.log(spotlight, markers)
+function listFeaturedRestaurants(selectedRestaurants, markers) {
+    let allFeaturedRestaurants = document.querySelectorAll(".restaurant");
+    let individualRestaurant = allFeaturedRestaurants.forEach(restaurant => {
+        restaurant.classList.add("hidden")
+    });
+    console.log(selectedRestaurants, markers);
+    console.log(allFeaturedRestaurants);
+
+    selectedRestaurants.forEach(restaurant => {
+        createListing(restaurant);
+    })
 }
+
+function createListing(restaurant) {
+    let listing = document.querySelector(".restaurants-listings");
+    let div = document.createElement("div");
+    div.innerHTML = `<div class="row bld-restaurant restaurant">
+            <div class="card restaurant-card">
+                <div class="row no-gutters fullscreen">
+                    <div class="col-2 align-self-center restaurant-label">
+                        <span class="my-auto">A</span>
+                    </div>
+                    <div class="col-10 col-md-5">
+                        <div class="card-body">
+                            <h5 class="card-title">${restaurant.name}</h5>
+                            <ul class="card-text">
+                                <li>${restaurant.city}</li>
+                                <li>${restaurant.country}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="card-body">
+                            <h5 class="card-title">${restaurant.series}</h5>
+                            <ul class="card-text">
+                                <li>${restaurant.season}</li>
+                                <li>${restaurant.series}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>`
+
+listing.appendChild(div);
+
+}
+
 // Event Listeners
 
 window.addEventListener("load", selectSpotlight);
