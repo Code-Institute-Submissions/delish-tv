@@ -351,19 +351,28 @@ function listFeaturedRestaurants(selectedRestaurants, markers) {
     console.log(selectedRestaurants, markers);
     console.log(allFeaturedRestaurants);
 
-    selectedRestaurants.forEach(restaurant => {
+    /* selectedRestaurants.forEach(restaurant => {
         createListing(restaurant);
-    })
+    }) */
+
+    // need to fix loop so that it fires when i and j = 0
+    for (let i = 0; i < selectedRestaurants.length; i++) {
+        for (let j = 0; j < markers.length; j++) {
+            if (i = j) {
+                createListing(selectedRestaurants[i], markers[j].label);
+            }
+        }
+    }
 }
 
-function createListing(restaurant) {
+function createListing(restaurant, label) {
     let listing = document.querySelector(".restaurants-listings");
     let div = document.createElement("div");
     div.innerHTML = `<div class="row bld-restaurant restaurant">
             <div class="card restaurant-card">
                 <div class="row no-gutters fullscreen">
                     <div class="col-2 align-self-center restaurant-label">
-                        <span class="my-auto">A</span>
+                        <span class="my-auto">${label}</span>
                     </div>
                     <div class="col-10 col-md-5">
                         <div class="card-body">
@@ -378,8 +387,8 @@ function createListing(restaurant) {
                         <div class="card-body">
                             <h5 class="card-title">${restaurant.series}</h5>
                             <ul class="card-text">
-                                <li>${restaurant.season}</li>
-                                <li>${restaurant.series}</li>
+                                <li>Season: ${restaurant.season}</li>
+                                <li>Episode: ${restaurant.episode}</li>
                             </ul>
                         </div>
                     </div>
