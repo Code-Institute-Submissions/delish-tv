@@ -327,7 +327,7 @@ function displayFeaturedRestaurants(spotlight, markers) {
 }
 // Event Listeners
 
-// window.addEventListener("load", selectSpotlight);
+window.addEventListener("load", selectSpotlight);
 
 seriesDropdown.forEach((item => {
     item.addEventListener("click", selectSeries);
