@@ -243,7 +243,7 @@ let restaurants = [
 // Defining Selectors
 
 let seriesDropdown = document.querySelectorAll(".dropdown-series");
-
+let locationDropdown = document.querySelectorAll(".country");
 
 // Functions 
 
@@ -261,6 +261,21 @@ function selectSpotlight() {
     filterSpotlightRestaurants(chosenSeries);
     }
 
+function selectLocation() {
+    console.log(this)
+    let chosenLocation = this.textContent
+    filterRestaurantsByLocation(chosenLocation)
+    hideSpotlight()
+
+}
+
+function hideSpotlight() {
+    let allJumbotrons = document.querySelectorAll(".jumbotron-container");
+    allJumbotrons.forEach(jumbotron => {
+        jumbotron.classList.add("hidden");
+    });
+}
+
 function filterSpotlightRestaurants(spotlight) {
     const spotlightRestaurants = restaurants.filter(restaurant => restaurant.series === spotlight);
         console.log(spotlightRestaurants);
@@ -268,9 +283,15 @@ function filterSpotlightRestaurants(spotlight) {
         displaySpotlight(spotlight);
 }
 
+function filterRestaurantsByLocation(location) {
+    const spotlightRestaurants = restaurants.filter(restaurant => restaurant.country === location);
+    console.log(spotlightRestaurants);
+    initMap(spotlightRestaurants);
+}
+
 function displaySpotlight(spotlight) {
     let allJumbotrons = document.querySelectorAll(".jumbotron-container");
-    allJumbotrons.forEach((jumbotron) => {
+    allJumbotrons.forEach(jumbotron => {
         jumbotron.classList.add("hidden");
     });
     let jumbotronBLD = document.querySelector(".bld");
@@ -331,5 +352,10 @@ window.addEventListener("load", selectSpotlight);
 
 seriesDropdown.forEach((item => {
     item.addEventListener("click", selectSeries);
+})
+);
+
+locationDropdown.forEach((item => {
+    item.addEventListener("click", selectLocation);
 })
 );
