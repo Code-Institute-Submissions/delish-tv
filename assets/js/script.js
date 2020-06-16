@@ -355,12 +355,9 @@ function listFeaturedRestaurants(selectedRestaurants, markers) {
         createListing(restaurant);
     }) */
 
-    // need to fix loop so that it fires when i and j = 0
     for (let i = 0; i < selectedRestaurants.length; i++) {
-        for (let j = 0; j < markers.length; j++) {
-            if (i = j) {
+        for (let j = i; j <= i; j++) {
                 createListing(selectedRestaurants[i], markers[j].label);
-            }
         }
     }
 }
