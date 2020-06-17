@@ -346,14 +346,9 @@ function initMap(spotlightRestaurants) {
         
 function listFeaturedRestaurants(selectedRestaurants, markers) {
     let allFeaturedRestaurants = document.querySelectorAll(".restaurant");
-    let individualRestaurant = allFeaturedRestaurants.forEach(restaurant => {
+    allFeaturedRestaurants.forEach(restaurant => {
         restaurant.classList.add("hidden")
     });
-
-
-    /* selectedRestaurants.forEach(restaurant => {
-        createListing(restaurant);
-    }) */
 
     for (let i = 0; i < selectedRestaurants.length; i++) {
         for (let j = i; j <= i; j++) {
