@@ -345,11 +345,11 @@ function initMap(spotlightRestaurants) {
 }            
         
 function listFeaturedRestaurants(selectedRestaurants, markers) {
-/*    let allFeaturedRestaurants = document.querySelectorAll(".restaurant");
+    let allFeaturedRestaurants = document.querySelectorAll(".restaurant");
     let individualRestaurant = allFeaturedRestaurants.forEach(restaurant => {
         restaurant.classList.add("hidden")
     });
-*/
+
 
     /* selectedRestaurants.forEach(restaurant => {
         createListing(restaurant);
@@ -402,11 +402,19 @@ div.addEventListener("click", highlightRestaurant)
 
 function highlightRestaurant(e) {
     let allFeaturedRestaurants = document.querySelectorAll(".restaurant");
+    let prevButton = document.querySelector(".previous");
+    let showAllButton = document.querySelector(".showall");
+    let nextButton = document.querySelector(".next");
     let chosenRestaurantCard = this;
+    
     allFeaturedRestaurants.forEach(restaurantCard => { 
         restaurantCard.classList.add("hidden");
         });
     chosenRestaurantCard.children[0].classList.remove("hidden");
+    prevButton.classList.remove("hidden");
+    showAllButton.classList.remove("hidden");
+    nextButton.classList.remove("hidden");
+    console.log(this);
 }
 
 
