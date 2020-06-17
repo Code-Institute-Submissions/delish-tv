@@ -147,11 +147,19 @@ body {
 .restaurant-card {
     width: 100vw;
     color: black;
-    border-left: 5px solid #e30914;
+    border-left: 10px solid #e30914;
     padding: 10px;
-    margin: 10px;
+    margin: 5px auto;
 }
 
 .restaurant-label {
     text-align: center;
+}
+
+/* ---Media Queries--- */
+
+@media screen and (min-width: 992px) {
+    .restaurant-card {
+        width: 70vw;
+    }
 }
