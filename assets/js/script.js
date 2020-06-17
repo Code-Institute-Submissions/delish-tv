@@ -244,6 +244,7 @@ let restaurants = [
 
 let seriesDropdown = document.querySelectorAll(".dropdown-series");
 let locationDropdown = document.querySelectorAll(".country");
+// let featuredRestaurantsList = document.querySelector(".restaurants-listings");
 
 // Functions 
 
@@ -344,12 +345,11 @@ function initMap(spotlightRestaurants) {
 }            
         
 function listFeaturedRestaurants(selectedRestaurants, markers) {
-    let allFeaturedRestaurants = document.querySelectorAll(".restaurant");
+/*    let allFeaturedRestaurants = document.querySelectorAll(".restaurant");
     let individualRestaurant = allFeaturedRestaurants.forEach(restaurant => {
         restaurant.classList.add("hidden")
     });
-    console.log(selectedRestaurants, markers);
-    console.log(allFeaturedRestaurants);
+*/
 
     /* selectedRestaurants.forEach(restaurant => {
         createListing(restaurant);
@@ -396,8 +396,19 @@ function createListing(restaurant, label) {
 		</div>`
 
 listing.appendChild(div);
+div.addEventListener("click", highlightRestaurant)
 
 }
+
+function highlightRestaurant(e) {
+    let allFeaturedRestaurants = document.querySelectorAll(".restaurant");
+    let chosenRestaurantCard = this;
+    allFeaturedRestaurants.forEach(restaurantCard => { 
+        restaurantCard.classList.add("hidden");
+        });
+    chosenRestaurantCard.children[0].classList.remove("hidden");
+}
+
 
 // Event Listeners
 
