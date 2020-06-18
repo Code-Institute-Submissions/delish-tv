@@ -347,7 +347,7 @@ function initMap(spotlightRestaurants) {
 function listFeaturedRestaurants(selectedRestaurants, markers) {
     let allFeaturedRestaurants = document.querySelectorAll(".restaurant");
     allFeaturedRestaurants.forEach(restaurant => {
-        restaurant.classList.add("hidden")
+        restaurant.parentNode.removeChild(restaurant)
     });
 
     for (let i = 0; i < selectedRestaurants.length; i++) {
@@ -360,8 +360,9 @@ function listFeaturedRestaurants(selectedRestaurants, markers) {
 function createListing(restaurant, label) {
     let listing = document.querySelector(".restaurants-listings");
     let div = document.createElement("div");
-    div.innerHTML = `<div class="row bld-restaurant restaurant">
-            <div class="card restaurant-card">
+    div.classList.add("row"); 
+    div.classList.add("restaurant");
+    div.innerHTML = `<div class="card restaurant-card">
                 <div class="row no-gutters fullscreen">
                     <div class="col-1 col-md-2 align-self-center restaurant-label">
                         <span class="my-auto">${label}</span>
@@ -387,8 +388,7 @@ function createListing(restaurant, label) {
                         </div>
                     </div>
                 </div>
-            </div>
-		</div>`
+            </div>`
 
 listing.appendChild(div);
 div.addEventListener("click", highlightRestaurant)
@@ -403,13 +403,14 @@ function highlightRestaurant(e) {
     let chosenRestaurantCard = this;
     
     allFeaturedRestaurants.forEach(restaurantCard => { 
-        restaurantCard.classList.add("hidden");
+        restaurantCard.parentNode.removeChild(restaurantCard);
         });
     chosenRestaurantCard.children[0].classList.remove("hidden");
     prevButton.classList.remove("hidden");
     showAllButton.classList.remove("hidden");
     nextButton.classList.remove("hidden");
     console.log(this);
+    console.log(this.nextSibling);
 }
 
 
