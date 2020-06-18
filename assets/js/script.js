@@ -285,6 +285,11 @@ function dropdownLocationMatches() {
   }
 }
 
+/* function clearInputText() {
+    countryFilter.value = "";
+    dropdownLocationMatches();
+} */
+
 function selectLocation() {
   console.log(this);
   let chosenLocation = this.textContent;
@@ -470,3 +475,10 @@ locationDropdown.forEach((item) => {
 });
 
 countryFilter.addEventListener("keyup", dropdownLocationMatches);
+// reset the countryFilter input value and restore all dropdown options
+countryFilter.addEventListener("change", function(){
+    setTimeout(function(){
+        countryFilter.value = "";
+        dropdownLocationMatches()
+    }, 500);
+});
