@@ -255,6 +255,7 @@ let restaurantsMatchingFilter = [];
 let seriesDropdown = document.querySelectorAll(".dropdown-series");
 let locationDropdown = document.querySelectorAll(".country");
 let countryFilter = document.querySelector(".country-filter");
+let showAllButton = document.querySelector(".show-all");
 
 // Functions
 
@@ -477,7 +478,18 @@ function createListing(restaurant, label) {
               restaurant.classList.add("hidden")
           })
       chosenCard.classList.remove("hidden")
+      showAllButton.classList.remove("hidden")
   })
+}
+
+function showAllRestaurants() {
+    let listing = document.querySelector(".restaurants-listings");
+    let allRestaurants = Array.from(listing.children);
+    console.log(allRestaurants);
+    allRestaurants.forEach(restaurant => {
+        restaurant.classList.remove("hidden");
+    })
+    showAllButton.classList.add("hidden");
 }
 
 // Event Listeners
@@ -500,3 +512,5 @@ countryFilter.addEventListener("change", function(){
         dropdownLocationMatches()
     }, 500);
 });
+
+showAllButton.addEventListener("click", showAllRestaurants);
