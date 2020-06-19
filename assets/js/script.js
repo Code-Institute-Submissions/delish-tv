@@ -248,11 +248,14 @@ let restaurants = [
   },
 ];
 
+let restaurantsMatchingFilter = [];
+
 // Defining Selectors
 
 let seriesDropdown = document.querySelectorAll(".dropdown-series");
 let locationDropdown = document.querySelectorAll(".country");
 let countryFilter = document.querySelector(".country-filter");
+let showAllButton = document.querySelector(".show-all");
 
 // Functions
 
@@ -265,8 +268,8 @@ function selectSpotlight() {
 }
 
 function selectSeries() {
-  console.log(this);
-  console.log(this.textContent);
+  //console.log(this);
+  //console.log(this.textContent);
   let chosenSeries = this.textContent;
   filterSpotlightRestaurants(chosenSeries);
 }
@@ -291,7 +294,7 @@ function dropdownLocationMatches() {
 } */
 
 function selectLocation() {
-  console.log(this);
+  //console.log(this);
   let chosenLocation = this.textContent;
   filterRestaurantsByLocation(chosenLocation);
   hideSpotlight();
@@ -308,7 +311,11 @@ function filterSpotlightRestaurants(spotlight) {
   const spotlightRestaurants = restaurants.filter(
     (restaurant) => restaurant.series === spotlight
   );
-  console.log(spotlightRestaurants);
+  restaurantsMatchingFilter = [];
+  spotlightRestaurants.forEach(restaurant => {
+      restaurantsMatchingFilter.push(restaurant);
+  })
+  console.log(restaurantsMatchingFilter);
   initMap(spotlightRestaurants);
   displaySpotlight(spotlight);
 }
@@ -317,6 +324,8 @@ function filterRestaurantsByLocation(location) {
   const spotlightRestaurants = restaurants.filter(
     (restaurant) => restaurant.country === location
   );
+  restaurantsMatchingFilter = [];
+  restaurantsMatchingFilter.push(spotlightRestaurants);
   console.log(spotlightRestaurants);
   initMap(spotlightRestaurants);
 }
@@ -412,8 +421,8 @@ function listFeaturedRestaurants(selectedRestaurants, markers) {
     allFeaturedRestaurants.forEach(restaurant => {
         restaurant.parentNode.removeChild(restaurant)
     });
-    console.log(selectedRestaurants, markers);
-    console.log(allFeaturedRestaurants);
+    //console.log(selectedRestaurants, markers);
+    //console.log(allFeaturedRestaurants);
 
   /* selectedRestaurants.forEach(restaurant => {
         createListing(restaurant);
@@ -460,7 +469,27 @@ function createListing(restaurant, label) {
             </div>
 		</div>`;
 
-  listing.appendChild(div);
+    listing.appendChild(div);
+    
+    div.addEventListener("click", function() {
+      let allFeaturedRestaurants = document.querySelectorAll(".restaurant");
+      let chosenCard = this;
+      allFeaturedRestaurants.forEach(restaurant => {
+              restaurant.classList.add("hidden")
+          })
+      chosenCard.classList.remove("hidden")
+      showAllButton.classList.remove("hidden")
+  })
+}
+
+function showAllRestaurants() {
+    let listing = document.querySelector(".restaurants-listings");
+    let allRestaurants = Array.from(listing.children);
+    console.log(allRestaurants);
+    allRestaurants.forEach(restaurant => {
+        restaurant.classList.remove("hidden");
+    })
+    showAllButton.classList.add("hidden");
 }
 
 // Event Listeners
@@ -483,3 +512,5 @@ countryFilter.addEventListener("change", function(){
         dropdownLocationMatches()
     }, 500);
 });
+
+showAllButton.addEventListener("click", showAllRestaurants);
