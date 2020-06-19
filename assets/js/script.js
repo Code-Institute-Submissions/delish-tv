@@ -408,12 +408,12 @@ function initMap(spotlightRestaurants) {
 }
 
 function listFeaturedRestaurants(selectedRestaurants, markers) {
-  let allFeaturedRestaurants = document.querySelectorAll(".restaurant");
-  let individualRestaurant = allFeaturedRestaurants.forEach((restaurant) => {
-    restaurant.classList.add("hidden");
-  });
-  console.log(selectedRestaurants, markers);
-  console.log(allFeaturedRestaurants);
+    let allFeaturedRestaurants = document.querySelectorAll(".restaurant");
+    allFeaturedRestaurants.forEach(restaurant => {
+        restaurant.parentNode.removeChild(restaurant)
+    });
+    console.log(selectedRestaurants, markers);
+    console.log(allFeaturedRestaurants);
 
   /* selectedRestaurants.forEach(restaurant => {
         createListing(restaurant);
@@ -429,8 +429,9 @@ function listFeaturedRestaurants(selectedRestaurants, markers) {
 function createListing(restaurant, label) {
   let listing = document.querySelector(".restaurants-listings");
   let div = document.createElement("div");
-  div.innerHTML = `<div class="row bld-restaurant restaurant">
-            <div class="card restaurant-card">
+  div.classList.add("row"); 
+  div.classList.add("restaurant");
+  div.innerHTML = `<div class="card restaurant-card">
                 <div class="row no-gutters fullscreen">
                     <div class="col-1 col-md-2 align-self-center restaurant-label">
                         <span class="my-auto">${label}</span>
