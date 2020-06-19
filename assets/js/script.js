@@ -323,13 +323,11 @@ function filterSpotlightRestaurants(spotlight) {
 }
 
 function filterRestaurantsByLocation(location) {
-  const spotlightRestaurants = restaurants.filter(
-    (restaurant) => restaurant.country === location
+    const spotlightRestaurants = restaurants.filter(
+        (restaurant) => restaurant.country === location
   );
-  restaurantsMatchingFilter = [];
-  restaurantsMatchingFilter.push(spotlightRestaurants);
-  //console.log(spotlightRestaurants);
-  initMap(spotlightRestaurants);
+    restaurantsMatchingFilter = spotlightRestaurants;
+    initMap(spotlightRestaurants);
 }
 
 function displaySpotlight(spotlight) {
