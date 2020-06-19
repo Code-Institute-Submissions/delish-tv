@@ -364,17 +364,24 @@ function initMap(spotlightRestaurants) {
 
   let map = new google.maps.Map(document.querySelector("#map"), mapDefaults);
   let infoWindow = new google.maps.InfoWindow();
-  // let labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   let bounds = new google.maps.LatLngBounds();
 
   let markers = spotlightRestaurants.map((location, i) => {
     let marker = new google.maps.Marker({
       position: location,
-      // label: labels[i % labels.length],
     });
     // bounds ensures that the map center shows all marker locations
     bounds.extend(marker.position);
     map.fitBounds(bounds);
+    // ensure that the map isn't too zoomed in when highlighting one location. Source: https://stackoverflow.com/questions/4523023/using-setzoom-after-using-fitbounds-with-google-maps-api-v3
+    zoomChangeBoundsListener = 
+    google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
+        if (this.getZoom()){
+            this.setZoom(16);
+        }
+    });
+    setTimeout(function(){google.maps.event.removeListener(zoomChangeBoundsListener)}, 2000);
+
     google.maps.event.addListener(marker, "click", function (event) {
       infoWindow.setContent(
         "<div class='map-content'>" +
