@@ -288,10 +288,6 @@ function dropdownLocationMatches() {
   }
 }
 
-/* function clearInputText() {
-    countryFilter.value = "";
-    dropdownLocationMatches();
-} */
 
 function selectLocation() {
   //console.log(this);
