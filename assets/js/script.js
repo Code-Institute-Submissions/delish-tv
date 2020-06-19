@@ -468,7 +468,16 @@ function createListing(restaurant, label) {
             </div>
 		</div>`;
 
-  listing.appendChild(div);
+    listing.appendChild(div);
+    
+    div.addEventListener("click", function() {
+      let allFeaturedRestaurants = document.querySelectorAll(".restaurant");
+      let chosenCard = this;
+      allFeaturedRestaurants.forEach(restaurant => {
+              restaurant.classList.add("hidden")
+          })
+      chosenCard.classList.remove("hidden")
+  })
 }
 
 // Event Listeners
