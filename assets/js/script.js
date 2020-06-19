@@ -351,6 +351,7 @@ function displaySpotlight(spotlight) {
 
 function initMap(spotlightRestaurants) {
   console.log(spotlightRestaurants);
+  // If restaurantsMatchingFilter length is more than one, user has selected a restaurant card from featured restaurants, so function should not call listFeaturedRestaurants function
   if (spotlightRestaurants.length === 1 && restaurantsMatchingFilter.length !== 1) {
   let mapDefaults = {
     zoom: 1,
