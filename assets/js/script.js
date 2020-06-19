@@ -263,7 +263,7 @@ function selectSpotlight() {
   let seriesArray = ["Breakfast, Lunch & Dinner", "Chef's Table France"];
   let chosenSpotlight =
     seriesArray[Math.floor(Math.random() * seriesArray.length)];
-  console.log(chosenSpotlight);
+  //console.log(chosenSpotlight);
   filterSpotlightRestaurants(chosenSpotlight);
 }
 
@@ -311,23 +311,23 @@ function filterSpotlightRestaurants(spotlight) {
   const spotlightRestaurants = restaurants.filter(
     (restaurant) => restaurant.series === spotlight
   );
-  restaurantsMatchingFilter = [];
-  spotlightRestaurants.forEach(restaurant => {
-      restaurantsMatchingFilter.push(restaurant);
-  })
+  console.log(spotlightRestaurants);
+  restaurantsMatchingFilter = spotlightRestaurants;
   console.log(restaurantsMatchingFilter);
+  /*spotlightRestaurants.forEach(restaurant => {
+      restaurantsMatchingFilter.push(restaurant);
+  })*/
+  //console.log(restaurantsMatchingFilter);
   initMap(spotlightRestaurants);
   displaySpotlight(spotlight);
 }
 
 function filterRestaurantsByLocation(location) {
-  const spotlightRestaurants = restaurants.filter(
-    (restaurant) => restaurant.country === location
+    const spotlightRestaurants = restaurants.filter(
+        (restaurant) => restaurant.country === location
   );
-  restaurantsMatchingFilter = [];
-  restaurantsMatchingFilter.push(spotlightRestaurants);
-  console.log(spotlightRestaurants);
-  initMap(spotlightRestaurants);
+    restaurantsMatchingFilter = spotlightRestaurants;
+    initMap(spotlightRestaurants);
 }
 
 function displaySpotlight(spotlight) {
@@ -350,11 +350,84 @@ function displaySpotlight(spotlight) {
 }
 
 function initMap(spotlightRestaurants) {
+  console.log(spotlightRestaurants);
+  if (spotlightRestaurants.length === 1 && restaurantsMatchingFilter.length !== 1) {
   let mapDefaults = {
     zoom: 1,
     center: {
       lat: 40.6976701,
       lng: -74.2598815,
+    },
+  };
+
+  let map = new google.maps.Map(document.querySelector("#map"), mapDefaults);
+  let infoWindow = new google.maps.InfoWindow();
+  let bounds = new google.maps.LatLngBounds();
+
+  let markers = spotlightRestaurants.map((location, i) => {
+    let marker = new google.maps.Marker({
+      position: location,
+    });
+    // bounds ensures that the map center shows all marker locations
+    bounds.extend(marker.position);
+    map.fitBounds(bounds);
+    // ensure that the map isn't too zoomed in when highlighting one location. Source: https://stackoverflow.com/questions/4523023/using-setzoom-after-using-fitbounds-with-google-maps-api-v3
+    zoomChangeBoundsListener = 
+    google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
+        if (this.getZoom()){
+            this.setZoom(16);
+        }
+    });
+    setTimeout(function(){google.maps.event.removeListener(zoomChangeBoundsListener)}, 2000);
+
+    google.maps.event.addListener(marker, "click", function (event) {
+      infoWindow.setContent(
+        "<div class='map-content'>" +
+          "<div class='marker-header'>" +
+          spotlightRestaurants[i].name +
+          "</div>" +
+          "<div class='map-info'>" +
+          spotlightRestaurants[i].address1 +
+          "</div>" +
+          "<div class='map-info'>" +
+          spotlightRestaurants[i].city +
+          "</div>" +
+          "<div class='map-info'>" +
+          spotlightRestaurants[i].country +
+          "</div>" +
+          "<div class='map-info'>" +
+          spotlightRestaurants[i].postcode +
+          "</div>" +
+          "<div class='map-info'><span class='map-strong'>" +
+          spotlightRestaurants[i].series +
+          "</span></div>" +
+          "<div class='map-info'>Season: " +
+          spotlightRestaurants[i].season +
+          " | Episode: " +
+          spotlightRestaurants[i].episode +
+          "</div>" +
+          "<div class='map-info episode-link'><a href=" +
+          spotlightRestaurants[i].episodeLink +
+          ">Watch on Netflix" +
+          "</a>" +
+          "</div>" +
+          "</div>"
+      );
+      infoWindow.open(map, marker);
+    });
+    return marker;
+  });
+
+  let markerCluster = new MarkerClusterer(map, markers, {
+    imagePath:
+      "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
+  });
+  } else {
+    let mapDefaults = {
+        zoom: 1,
+        center: {
+        lat: 40.6976701,
+        lng: -74.2598815,
     },
   };
 
@@ -413,7 +486,8 @@ function initMap(spotlightRestaurants) {
     imagePath:
       "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
   });
-  listFeaturedRestaurants(spotlightRestaurants, markers);
+    listFeaturedRestaurants(spotlightRestaurants, markers);
+    }
 }
 
 function listFeaturedRestaurants(selectedRestaurants, markers) {
@@ -472,13 +546,17 @@ function createListing(restaurant, label) {
     listing.appendChild(div);
     
     div.addEventListener("click", function() {
-      let allFeaturedRestaurants = document.querySelectorAll(".restaurant");
+      let allFeaturedRestaurants = Array.from(document.querySelectorAll(".restaurant"));
       let chosenCard = this;
+      let chosenCardIndex = allFeaturedRestaurants.indexOf(chosenCard);
+      let chosenRestaurant = [restaurantsMatchingFilter[allFeaturedRestaurants.indexOf(chosenCard)]]
       allFeaturedRestaurants.forEach(restaurant => {
-              restaurant.classList.add("hidden")
+              restaurant.classList.add("hidden");
           })
-      chosenCard.classList.remove("hidden")
-      showAllButton.classList.remove("hidden")
+      chosenCard.classList.remove("hidden");
+      showAllButton.classList.remove("hidden");
+      console.log(chosenRestaurant);
+      initMap(chosenRestaurant);
   })
 }
 
@@ -489,6 +567,7 @@ function showAllRestaurants() {
     allRestaurants.forEach(restaurant => {
         restaurant.classList.remove("hidden");
     })
+    initMap(restaurantsMatchingFilter);
     showAllButton.classList.add("hidden");
 }
 
