@@ -506,22 +506,16 @@ function createListing(restaurant, label) {
   div.classList.add("restaurant");
   div.innerHTML = `<div class="card restaurant-card">
                 <div class="row no-gutters fullscreen">
-                    <div class="col-1 col-md-2 align-self-center restaurant-label">
+                    <div class="col-1 align-self-center restaurant-label">
                         <span class="my-auto">${label}</span>
                     </div>
-                    <div class="col-11 col-md-5">
+                    <div class="col-11">
                         <div class="card-body">
                             <h5 class="card-title">${restaurant.name}</h5>
                             <ul class="card-text">
                                 <li>${restaurant.city}</li>
                                 <li>${restaurant.country}</li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="col-1 d-md-none">
-                    </div>
-                    <div class="col-11 col-md-5">
-                        <div class="card-body">
                             <h5 class="card-title">${restaurant.series}</h5>
                             <ul class="card-text">
                                 <li>Season: ${restaurant.season}</li>
@@ -530,8 +524,7 @@ function createListing(restaurant, label) {
                         </div>
                     </div>
                 </div>
-            </div>
-		</div>`;
+		    </div>`;
 
     listing.appendChild(div);
     
