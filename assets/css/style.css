@@ -149,7 +149,7 @@ body {
 
 .restaurant-card {
     width: 100vw;
-    color: black;
+    color: #333;
     border-left: 10px solid #e30914;
     padding: 10px;
     margin: 5px auto;
@@ -184,6 +184,8 @@ body {
 .btn-episode-link:hover {
     background-color: white;
     color: #333;
+    box-shadow: 0 -.5px 10px 1px #333;
+}
 }
 
 /* ---Media Queries--- */
