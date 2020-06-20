@@ -526,6 +526,7 @@ function createListing(restaurant, label) {
     listing.appendChild(div);
     
     div.addEventListener("click", function() {
+        let specifyCard = document.querySelector(".closer-look");
       let allFeaturedRestaurants = Array.from(document.querySelectorAll(".restaurant"));
       let chosenCard = this;
       let span = document.createElement("span")
@@ -539,15 +540,18 @@ function createListing(restaurant, label) {
       showAllButton.classList.remove("hidden");
       span.innerHTML = `<a class="btn btn-sm btn-red" href="${restaurant.episodeLink}" target="_blank" rel="noopener">Watch Now On Netflix</a>`
       chosenCard.appendChild(span);
+      specifyCard.classList.add("hidden");
       console.log(chosenRestaurant);
       initMap(chosenRestaurant);
   })
 }
 
 function showAllRestaurants() {
+    let specifyCard = document.querySelector(".closer-look");
     let listing = document.querySelector(".restaurants-listings");
     let allRestaurants = Array.from(listing.children);
     console.log(allRestaurants);
+    specifyCard.classList.remove("hidden");
     allRestaurants.forEach(restaurant => {
         restaurant.classList.remove("hidden");
     })
