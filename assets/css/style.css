@@ -165,6 +165,18 @@ body {
     text-align: center;
 }
 
+.episode-link {
+    margin-top: -15px;
+    margin-bottom: 10px;
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+}
+
+.btn-episode-link {
+    width: 50%;
+}
+
 /* ---Media Queries--- */
 
 @media screen and (min-width: 992px) {
