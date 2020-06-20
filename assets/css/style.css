@@ -150,6 +150,7 @@ body {
     border-left: 10px solid #e30914;
     padding: 10px;
     margin: 5px auto;
+    cursor: pointer;
 }
 
 .restaurant-label {
