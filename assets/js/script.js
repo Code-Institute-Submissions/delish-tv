@@ -263,13 +263,10 @@ function selectSpotlight() {
   let seriesArray = ["Breakfast, Lunch & Dinner", "Chef's Table France"];
   let chosenSpotlight =
     seriesArray[Math.floor(Math.random() * seriesArray.length)];
-  //console.log(chosenSpotlight);
   filterSpotlightRestaurants(chosenSpotlight);
 }
 
 function selectSeries() {
-  //console.log(this);
-  //console.log(this.textContent);
   let chosenSeries = this.textContent;
   filterSpotlightRestaurants(chosenSeries);
 }
@@ -290,7 +287,6 @@ function dropdownLocationMatches() {
 
 
 function selectLocation() {
-  //console.log(this);
   let chosenLocation = this.textContent;
   filterRestaurantsByLocation(chosenLocation);
   hideSpotlight();
@@ -310,10 +306,6 @@ function filterSpotlightRestaurants(spotlight) {
   console.log(spotlightRestaurants);
   restaurantsMatchingFilter = spotlightRestaurants;
   console.log(restaurantsMatchingFilter);
-  /*spotlightRestaurants.forEach(restaurant => {
-      restaurantsMatchingFilter.push(restaurant);
-  })*/
-  //console.log(restaurantsMatchingFilter);
   initMap(spotlightRestaurants);
   displaySpotlight(spotlight);
 }
@@ -485,12 +477,6 @@ function listFeaturedRestaurants(selectedRestaurants, markers) {
     allFeaturedRestaurants.forEach(restaurant => {
         restaurant.parentNode.removeChild(restaurant)
     });
-    //console.log(selectedRestaurants, markers);
-    //console.log(allFeaturedRestaurants);
-
-  /* selectedRestaurants.forEach(restaurant => {
-        createListing(restaurant);
-    }) */
 
   for (let i = 0; i < selectedRestaurants.length; i++) {
     for (let j = i; j <= i; j++) {
