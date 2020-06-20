@@ -521,14 +521,15 @@ function createListing(restaurant, label) {
                         </div>
                     </div>
                 </div>
-            </div>
-            <span class="episode-link"><a class="btn btn-sm btn-episode-link" href="${restaurant.episodeLink}" target="_blank" rel="noopener">Watch Now On Netflix</a></span>`;
+            </div>`;
 
     listing.appendChild(div);
     
     div.addEventListener("click", function() {
       let allFeaturedRestaurants = Array.from(document.querySelectorAll(".restaurant"));
       let chosenCard = this;
+      let span = document.createElement("span")
+      span.classList.add("episode-link");
       let chosenCardIndex = allFeaturedRestaurants.indexOf(chosenCard);
       let chosenRestaurant = [restaurantsMatchingFilter[allFeaturedRestaurants.indexOf(chosenCard)]]
       allFeaturedRestaurants.forEach(restaurant => {
@@ -536,6 +537,8 @@ function createListing(restaurant, label) {
           })
       chosenCard.classList.remove("hidden");
       showAllButton.classList.remove("hidden");
+      span.innerHTML = `<a class="btn btn-sm btn-episode-link" href="${restaurant.episodeLink}" target="_blank" rel="noopener">Watch Now On Netflix</a>`
+      chosenCard.appendChild(span);
       console.log(chosenRestaurant);
       initMap(chosenRestaurant);
   })
