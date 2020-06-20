@@ -158,6 +158,7 @@ body {
 
 .card-title {
     font-family: "Nunito Sans", sans-serif;
+    font-weight: bold;
 }
 
 .restaurant-label {
