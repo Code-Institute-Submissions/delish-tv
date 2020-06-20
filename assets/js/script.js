@@ -509,13 +509,24 @@ function createListing(restaurant, label) {
                     <div class="col-1 align-self-center restaurant-label">
                         <span class="my-auto">${label}</span>
                     </div>
-                    <div class="col-11">
+                    <div class="col">
                         <div class="card-body">
                             <h5 class="card-title">${restaurant.name}</h5>
                             <ul class="card-text">
                                 <li>${restaurant.city}</li>
                                 <li>${restaurant.country}</li>
                             </ul>
+                            <div class="d-md-none d-lg-block">
+                                <h5 class="card-title">${restaurant.series}</h5>
+                                <ul class="card-text">
+                                    <li>Season: ${restaurant.season}</li>
+                                    <li>Episode: ${restaurant.episode}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-md-inline-block d-lg-none">
+                        <div class="card-body">
                             <h5 class="card-title">${restaurant.series}</h5>
                             <ul class="card-text">
                                 <li>Season: ${restaurant.season}</li>
