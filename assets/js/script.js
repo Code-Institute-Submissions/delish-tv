@@ -537,7 +537,7 @@ function createListing(restaurant, label) {
           })
       chosenCard.classList.remove("hidden");
       showAllButton.classList.remove("hidden");
-      span.innerHTML = `<a class="btn btn-sm btn-episode-link" href="${restaurant.episodeLink}" target="_blank" rel="noopener">Watch Now On Netflix</a>`
+      span.innerHTML = `<a class="btn btn-sm btn-red" href="${restaurant.episodeLink}" target="_blank" rel="noopener">Watch Now On Netflix</a>`
       chosenCard.appendChild(span);
       console.log(chosenRestaurant);
       initMap(chosenRestaurant);
