@@ -529,6 +529,8 @@ function createListing(restaurant, label) {
         let specifyCard = document.querySelector(".closer-look");
       let allFeaturedRestaurants = Array.from(document.querySelectorAll(".restaurant"));
       let chosenCard = this;
+      let currentSpans = document.querySelector(".overlap-episode-link")
+      if (currentSpans === null) {
       let span = document.createElement("span")
       span.classList.add("overlap-episode-link");
       let chosenCardIndex = allFeaturedRestaurants.indexOf(chosenCard);
@@ -543,6 +545,9 @@ function createListing(restaurant, label) {
       specifyCard.classList.add("hidden");
       console.log(chosenRestaurant);
       initMap(chosenRestaurant);
+      } else {
+          return;
+      }
   })
 }
 
