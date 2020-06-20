@@ -94,7 +94,7 @@ body {
 
 /* ---Map--- */
 #map {
-    min-height: 360px;
+    height: 360px;
 }
 
 .map-content {
@@ -159,7 +159,12 @@ body {
 /* ---Media Queries--- */
 
 @media screen and (min-width: 992px) {
-    .restaurant-card {
+    /* .restaurant-card {
         width: 70vw;
+    } */
+
+    #map {
+    height: 630px;
+    background-color: #333;
     }
 }
