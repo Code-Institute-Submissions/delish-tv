@@ -166,7 +166,7 @@ body {
 }
 
 .episode-link {
-    margin-top: -15px;
+    margin-top: -20px;
     margin-bottom: 10px;
     z-index: 1;
     text-align: center;
@@ -175,6 +175,15 @@ body {
 
 .btn-episode-link {
     width: 50%;
+    border: 1px solid #333;
+    background-color: #e30914;
+    color:white;
+    font-weight: bold;
+}
+
+.btn-episode-link:hover {
+    background-color: white;
+    color: #333;
 }
 
 /* ---Media Queries--- */

@@ -522,7 +522,7 @@ function createListing(restaurant, label) {
                     </div>
                 </div>
             </div>
-            <span class="episode-link"><a class="btn btn-sm btn-dark btn-content btn-episode-link "href="${restaurant.episodeLink}" target="_blank" rel="noopener">Watch Now On Netflix</a></span>`;
+            <span class="episode-link"><a class="btn btn-sm btn-episode-link" href="${restaurant.episodeLink}" target="_blank" rel="noopener">Watch Now On Netflix</a></span>`;
 
     listing.appendChild(div);
     
