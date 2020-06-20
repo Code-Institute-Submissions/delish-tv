@@ -406,7 +406,7 @@ function initMap(spotlightRestaurants) {
           "</div>" +
           "<div class='map-info episode-link'><a href=" +
           spotlightRestaurants[i].episodeLink +
-          ">Watch on Netflix" +
+          " target='_blank' rel='noopener'>Watch on Netflix" +
           "</a>" +
           "</div>" +
           "</div>"
@@ -421,14 +421,6 @@ function initMap(spotlightRestaurants) {
       "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
   });
   } else {
-    /*let mapDefaults = {
-        zoom: 1,
-        center: {
-        lat: 40.6976701,
-        lng: -74.2598815,
-    },
-  };*/
-
   let map = new google.maps.Map(document.querySelector("#map"), mapDefaults);
   let infoWindow = new google.maps.InfoWindow();
   let labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -470,7 +462,7 @@ function initMap(spotlightRestaurants) {
           "</div>" +
           "<div class='map-info episode-link'><a href=" +
           spotlightRestaurants[i].episodeLink +
-          ">Watch on Netflix" +
+          " target='_blank' rel='noopener'>Watch on Netflix" +
           "</a>" +
           "</div>" +
           "</div>"
