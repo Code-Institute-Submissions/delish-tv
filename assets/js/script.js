@@ -348,15 +348,16 @@ function displaySpotlight(spotlight) {
 function initMap(spotlightRestaurants) {
   console.log(spotlightRestaurants);
   // If restaurantsMatchingFilter length is more than one, user has selected a restaurant card from featured restaurants, so function should not call listFeaturedRestaurants function
-  if (spotlightRestaurants.length === 1 && restaurantsMatchingFilter.length !== 1) {
   let mapDefaults = {
     zoom: 1,
+    backgroundColor: "#333",
     center: {
       lat: 40.6976701,
       lng: -74.2598815,
     },
   };
 
+  if (spotlightRestaurants.length === 1 && restaurantsMatchingFilter.length !== 1) {
   let map = new google.maps.Map(document.querySelector("#map"), mapDefaults);
   let infoWindow = new google.maps.InfoWindow();
   let bounds = new google.maps.LatLngBounds();
@@ -420,13 +421,13 @@ function initMap(spotlightRestaurants) {
       "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
   });
   } else {
-    let mapDefaults = {
+    /*let mapDefaults = {
         zoom: 1,
         center: {
         lat: 40.6976701,
         lng: -74.2598815,
     },
-  };
+  };*/
 
   let map = new google.maps.Map(document.querySelector("#map"), mapDefaults);
   let infoWindow = new google.maps.InfoWindow();
