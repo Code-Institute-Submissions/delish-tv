@@ -71,8 +71,7 @@ body {
 
 
 .jumbotron-overlay {
-/*--    background-image: -webkit-gradient(linear, left center, right center, from(rgba(255, 255, 255, 1)), to(rgba(0, 0, 0, 0))); */
-    background-image: linear-gradient(to right, rgba(25, 25, 25, 1) 40%, rgba(25, 25, 25, 0)); 
+    background-image: linear-gradient(to right, rgba(25, 25, 25, 1) 10%, rgba(25, 25, 25, 0)); 
     height: 100%;
     width: 100%;
     position: absolute;
@@ -203,5 +202,11 @@ body {
     #map {
     height: 630px;
     background-color: #333;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .jumbotron-overlay {
+    background-image: linear-gradient(to right, rgba(25, 25, 25, 1) 10%, rgba(25, 25, 25, 0));
     }
 }
