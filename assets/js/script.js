@@ -263,13 +263,10 @@ function selectSpotlight() {
   let seriesArray = ["Breakfast, Lunch & Dinner", "Chef's Table France"];
   let chosenSpotlight =
     seriesArray[Math.floor(Math.random() * seriesArray.length)];
-  //console.log(chosenSpotlight);
   filterSpotlightRestaurants(chosenSpotlight);
 }
 
 function selectSeries() {
-  //console.log(this);
-  //console.log(this.textContent);
   let chosenSeries = this.textContent;
   filterSpotlightRestaurants(chosenSeries);
 }
@@ -290,7 +287,6 @@ function dropdownLocationMatches() {
 
 
 function selectLocation() {
-  //console.log(this);
   let chosenLocation = this.textContent;
   filterRestaurantsByLocation(chosenLocation);
   hideSpotlight();
@@ -310,10 +306,6 @@ function filterSpotlightRestaurants(spotlight) {
   console.log(spotlightRestaurants);
   restaurantsMatchingFilter = spotlightRestaurants;
   console.log(restaurantsMatchingFilter);
-  /*spotlightRestaurants.forEach(restaurant => {
-      restaurantsMatchingFilter.push(restaurant);
-  })*/
-  //console.log(restaurantsMatchingFilter);
   initMap(spotlightRestaurants);
   displaySpotlight(spotlight);
 }
@@ -485,12 +477,6 @@ function listFeaturedRestaurants(selectedRestaurants, markers) {
     allFeaturedRestaurants.forEach(restaurant => {
         restaurant.parentNode.removeChild(restaurant)
     });
-    //console.log(selectedRestaurants, markers);
-    //console.log(allFeaturedRestaurants);
-
-  /* selectedRestaurants.forEach(restaurant => {
-        createListing(restaurant);
-    }) */
 
   for (let i = 0; i < selectedRestaurants.length; i++) {
     for (let j = i; j <= i; j++) {
@@ -506,21 +492,26 @@ function createListing(restaurant, label) {
   div.classList.add("restaurant");
   div.innerHTML = `<div class="card restaurant-card">
                 <div class="row no-gutters fullscreen">
-                    <div class="col-1 col-md-2 align-self-center restaurant-label">
+                    <div class="col-1 align-self-center restaurant-label">
                         <span class="my-auto">${label}</span>
                     </div>
-                    <div class="col-11 col-md-5">
+                    <div class="col">
                         <div class="card-body">
                             <h5 class="card-title">${restaurant.name}</h5>
                             <ul class="card-text">
                                 <li>${restaurant.city}</li>
                                 <li>${restaurant.country}</li>
                             </ul>
+                            <div class="d-md-none d-lg-block">
+                                <h5 class="card-title">${restaurant.series}</h5>
+                                <ul class="card-text">
+                                    <li>Season: ${restaurant.season}</li>
+                                    <li>Episode: ${restaurant.episode}</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-1 d-md-none">
-                    </div>
-                    <div class="col-11 col-md-5">
+                    <div class="col d-none d-md-inline-block d-lg-none">
                         <div class="card-body">
                             <h5 class="card-title">${restaurant.series}</h5>
                             <ul class="card-text">
@@ -530,8 +521,7 @@ function createListing(restaurant, label) {
                         </div>
                     </div>
                 </div>
-            </div>
-		</div>`;
+		    </div>`;
 
     listing.appendChild(div);
     

@@ -8,6 +8,7 @@
 body {
     background-color: #181818;
     color: #fff;
+    font-family: "Roboto", sans-serif;
 }
 
 /* ---Navbar--- */
@@ -122,6 +123,8 @@ body {
 
 .heading {
     text-align: center;
+    font-family: "Nunito Sans", sans-serif;
+
 }
 
 .uppercase {
@@ -150,6 +153,12 @@ body {
     border-left: 10px solid #e30914;
     padding: 10px;
     margin: 5px auto;
+    cursor: pointer;
+}
+
+.card-title {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: bold;
 }
 
 .restaurant-label {
@@ -159,9 +168,6 @@ body {
 /* ---Media Queries--- */
 
 @media screen and (min-width: 992px) {
-    /* .restaurant-card {
-        width: 70vw;
-    } */
 
     #map {
     height: 630px;
