@@ -175,13 +175,16 @@ body {
 
 .btn-episode-link {
     width: 50%;
-    border: 1px solid #333;
-    background-color: #e30914;
-    color:white;
     font-weight: bold;
 }
 
-.btn-episode-link:hover {
+.btn-red {
+    border: 1px solid #333;
+    background-color: #e30914;
+    color:white;
+}
+
+.btn-red:hover {
     background-color: white;
     color: #333;
     box-shadow: 0 -.5px 10px 1px #333;
@@ -189,17 +192,9 @@ body {
 
 .btn-show-all {
     width: 100%;
-    border: 1px solid #333;
-    background-color: #e30914;
-    color:white;
-    font-weight: bold;
     margin-bottom: 15px;
 }
 
-.btn-show-all:hover {
-    background-color: white;
-    color: #333;
-}
 
 /* ---Media Queries--- */
 
