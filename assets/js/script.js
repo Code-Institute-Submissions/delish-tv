@@ -529,7 +529,7 @@ function createListing(restaurant, label) {
       let allFeaturedRestaurants = Array.from(document.querySelectorAll(".restaurant"));
       let chosenCard = this;
       let span = document.createElement("span")
-      span.classList.add("episode-link");
+      span.classList.add("overlap-episode-link");
       let chosenCardIndex = allFeaturedRestaurants.indexOf(chosenCard);
       let chosenRestaurant = [restaurantsMatchingFilter[allFeaturedRestaurants.indexOf(chosenCard)]]
       allFeaturedRestaurants.forEach(restaurant => {

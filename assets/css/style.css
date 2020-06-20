@@ -165,7 +165,7 @@ body {
     text-align: center;
 }
 
-.episode-link {
+.overlap-episode-link {
     margin-top: -20px;
     margin-bottom: 10px;
     z-index: 1;
@@ -186,6 +186,19 @@ body {
     color: #333;
     box-shadow: 0 -.5px 10px 1px #333;
 }
+
+.btn-show-all {
+    width: 100%;
+    border: 1px solid #333;
+    background-color: #e30914;
+    color:white;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btn-show-all:hover {
+    background-color: white;
+    color: #333;
 }
 
 /* ---Media Queries--- */
