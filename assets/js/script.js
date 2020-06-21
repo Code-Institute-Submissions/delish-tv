@@ -680,7 +680,7 @@ let showAllButton = document.querySelector(".show-all");
 // Functions
 
 function selectSpotlight() {
-  let seriesArray = ["Breakfast, Lunch & Dinner", "Chef's Table France"];
+  let seriesArray = ["Breakfast, Lunch & Dinner", "Chef's Table France", "Street Food Asia"];
   let chosenSpotlight =
     seriesArray[Math.floor(Math.random() * seriesArray.length)];
   filterSpotlightRestaurants(chosenSpotlight);
@@ -745,6 +745,7 @@ function displaySpotlight(spotlight) {
   });
   let jumbotronBLD = document.querySelector(".bld");
   let jumbotronCTF = document.querySelector(".chefstablefrance");
+  let jumbotronSFA = document.querySelector(".sfa");
   switch (spotlight) {
     case "Breakfast, Lunch & Dinner":
       jumbotronBLD.classList.remove("hidden");
@@ -752,6 +753,9 @@ function displaySpotlight(spotlight) {
     case "Chef's Table France":
       jumbotronCTF.classList.remove("hidden");
       break;
+    case "Street Food Asia":
+        jumbotronSFA.classList.remove("hidden");
+        break;
     default:
       console.log("A different series has been selected");
   }
