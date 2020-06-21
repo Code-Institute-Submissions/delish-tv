@@ -53,15 +53,30 @@ body {
     background-color: #D0D0D0;
 }
 
-.country-filter:focus {
-    background-color: #D0D0D0; 
+.country-filter, .country-filter:hover, .country-filter:focus {
+    background-color: #AAAAAA;
 }
 
-/* .msg {
-    color: #CCCCCC;
-    font-size: 10px;
-    margin: 2px;
-} */
+.country-filter:hover, .country-filter:focus {
+    color: #181818;
+    background-color: #D0D0D0;
+}
+
+/* ---Input Placeholder Colors--- */
+
+input::-webkit-input-placeholder {
+    color: #FFF;
+}
+
+/* Firefox > 19 */
+input::-moz-placeholder {
+    color: #FFF;
+}
+
+/* Internet Explorer 10 */
+input:-ms-input-placeholder {
+    color: #FFF;
+}
 
 /* ---Spotlight--- */
 .jumbotron-container {
