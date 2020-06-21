@@ -69,7 +69,6 @@ body {
     background-repeat: no-repeat;
 }
 
-
 .jumbotron-overlay {
     background-image: linear-gradient(to right, rgba(25, 25, 25, 1) 10%, rgba(25, 25, 25, 0)); 
     height: 100%;
@@ -85,11 +84,20 @@ body {
 }
 
 .spotlight-btn {
-    margin: 10px 2.5px;
-    padding: 5px;
+    margin: 5px;
+    padding: 2.5px;
     border-radius: 2.5px;
     border: none;
     width: 120px;
+}
+
+.series-logo {
+    margin-bottom: 20px;
+}
+
+.spotlight-description {
+    font-size: 10px;
+    margin-bottom: 20px;
 }
 
 /* ---Map--- */
@@ -196,6 +204,16 @@ body {
 
 
 /* ---Media Queries--- */
+
+@media screen and (min-width: 660px) {
+    .spotlight-description {
+    font-size: 14px;
+    }
+
+    .spotlight-btn {
+    padding: 5px;
+    }
+}
 
 @media screen and (min-width: 992px) {
 
