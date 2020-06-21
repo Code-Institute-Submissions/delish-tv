@@ -46,11 +46,11 @@ body {
     margin: 10px 2.5px;
 }
 
-.msg {
+/* .msg {
     color: #CCCCCC;
     font-size: 10px;
     margin: 2px;
-}
+} */
 
 /* ---Spotlight--- */
 .jumbotron-container {
@@ -83,6 +83,18 @@ body {
     z-index: 2;
 }
 
+.series-logo {
+    margin-bottom: 20px;
+}
+
+.spotlight-description {
+    font-size: 10px;
+    color: #CCCCCC;
+    margin-bottom: 20px;
+}
+
+/* ---Spotlight Buttons--- */
+
 .spotlight-btn {
     margin: 5px;
     padding: 2.5px;
@@ -91,14 +103,26 @@ body {
     width: 120px;
 }
 
-.series-logo {
-    margin-bottom: 20px;
+.play-now {
+    background-color: #FFF;
+    color: #181818;
 }
 
-.spotlight-description {
-    font-size: 10px;
-    margin-bottom: 20px;
+.play-now:hover {
+    background-color: #D0D0D0;
 }
+
+.more-info {
+    background-color: rgb(133, 133, 133, 0.6);
+    color: #FFF;
+}
+
+.more-info:hover {
+    background-color: rgb(75, 75, 75, 0.6);
+    color: #FFF;
+}
+
+
 
 /* ---Map--- */
 #map {
@@ -107,13 +131,13 @@ body {
 
 .map-content {
     background-color: white;
-    color: #333;
+    color: #181818;
 }
 
 .marker-header {
     font-weight: 500;
     font-size: 14px;
-    color: #333;
+    color: #181818;
 }
 
 .map-strong {
@@ -139,9 +163,6 @@ body {
 }
 
 /* ---Featured Restaurants--- */
-.map-label {
-    background-color: #e30914;    
-}
 
 .restaurant ul {
     list-style: none;
@@ -156,7 +177,7 @@ body {
 
 .restaurant-card {
     width: 100vw;
-    color: #333;
+    color: #181818;
     border-left: 10px solid #e30914;
     padding: 10px;
     margin: 5px auto;
@@ -186,15 +207,15 @@ body {
 }
 
 .btn-red {
-    border: 1px solid #333;
+    border: 1px solid #181818;
     background-color: #e30914;
     color:white;
 }
 
 .btn-red:hover {
     background-color: white;
-    color: #333;
-    box-shadow: 0 -.5px 10px 1px #333;
+    color: #181818;
+    box-shadow: 0 -.5px 10px 1px #181818;
 }
 
 .btn-show-all {
@@ -219,7 +240,7 @@ body {
 
     #map {
     height: 630px;
-    background-color: #333;
+    background-color: #181818;
     }
 }
 
