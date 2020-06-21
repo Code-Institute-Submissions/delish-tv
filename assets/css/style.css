@@ -41,9 +41,20 @@ body {
 }
 
 .dropdown-toggle {
-    color: #fff;
-    border: 1px solid #fff;
-    margin: 10px 2.5px;
+    margin: 30px 2.5px;
+}
+
+.dropdown-item {
+    color: #181818;
+}
+
+.dropdown-item:hover {
+    color: #181818;
+    background-color: #D0D0D0;
+}
+
+.country-filter:focus {
+    background-color: #D0D0D0; 
 }
 
 /* .msg {
@@ -130,7 +141,7 @@ body {
 }
 
 .map-content {
-    background-color: white;
+    background-color: #FFF;
     color: #181818;
 }
 
@@ -208,12 +219,12 @@ body {
 
 .btn-red {
     border: 1px solid #181818;
-    background-color: #e30914;
-    color:white;
+    background-color: #E30914;
+    color:#FFF;
 }
 
 .btn-red:hover {
-    background-color: white;
+    background-color: #FFF;
     color: #181818;
     box-shadow: 0 -.5px 10px 1px #181818;
 }
