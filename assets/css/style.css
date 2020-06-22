@@ -38,6 +38,7 @@ body {
 
 .dropdown-toggle {
     margin: 15px 2.5px;
+    cursor: pointer;
 }
 
 .dropdown-item {
@@ -52,6 +53,7 @@ body {
 
 .country-filter, .country-filter:hover, .country-filter:focus {
     background-color: #AAAAAA;
+    cursor: text;
 }
 
 .country-filter:hover, .country-filter:focus {
