@@ -766,7 +766,7 @@ function initMap(spotlightRestaurants) {
   // If restaurantsMatchingFilter length is more than one, user has selected a restaurant card from featured restaurants, so function should not call listFeaturedRestaurants function
   let mapDefaults = {
     zoom: 1,
-    backgroundColor: "#333",
+    backgroundColor: "#D0D0D0",
     center: {
       lat: 40.6976701,
       lng: -74.2598815,
