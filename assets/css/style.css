@@ -83,18 +83,6 @@ input:-ms-input-placeholder {
     position: relative;
 }
 
-.jumbotron.bld-jumbo {
-    background-image: url("../images/spotlights/BreakfastLunchDinner-Spotlight.jpg");
-    background-position: top right;
-    background-repeat: no-repeat;
-}
-
-.jumbotron.chefstablefrance-jumbo {
-    background-image: url("../images/spotlights/chefs-table-france_grab.PNG");
-    background-position: top right;
-    background-repeat: no-repeat;
-}
-
 .jumbotron-overlay {
     background-image: linear-gradient(to right, rgba(25, 25, 25, 1) 10%, rgba(25, 25, 25, 0)); 
     height: 100%;
@@ -118,6 +106,27 @@ input:-ms-input-placeholder {
     color: #CCCCCC;
     margin-bottom: 20px;
 }
+
+/* ---Spotlight Jumbotron Images--- */
+
+.jumbotron.bld-jumbo {
+    background-image: url("../images/spotlights/BreakfastLunchDinner-Spotlight.jpg");
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+.jumbotron.chefstablefrance-jumbo {
+    background-image: url("../images/spotlights/chefs-table-france_grab.PNG");
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+.jumbotron.sfa-jumbo {
+    background-image: url("../images/spotlights/streetfoodasia_grab.png");
+    background-position: 80% center;
+    background-repeat: no-repeat;
+}
+
 
 /* ---Spotlight Buttons--- */
 
