@@ -1,4 +1,5 @@
-// key: AIzaSyAKKq48oILIJR-D3a22vDaJXZ8-4glyBrE
+// Restaurants featured in all series covered by this site
+
 let restaurants = [
   {
     name: "Lee's Donuts",
@@ -681,9 +682,10 @@ let showAllButton = document.querySelector(".show-all");
 
 function selectSpotlight() {
   let seriesArray = ["Breakfast, Lunch & Dinner", "Chef's Table France", "Street Food Asia"];
-  let chosenSpotlight =
+  let chosenSpotlightSeries =
     seriesArray[Math.floor(Math.random() * seriesArray.length)];
-  filterSpotlightRestaurants(chosenSpotlight);
+  filterSpotlightRestaurants(chosenSpotlightSeries);
+  displaySpotlight(chosenSpotlightSeries);
 }
 
 function selectSeries() {
@@ -723,11 +725,8 @@ function filterSpotlightRestaurants(spotlight) {
   const spotlightRestaurants = restaurants.filter(
     (restaurant) => restaurant.series === spotlight
   );
-  console.log(spotlightRestaurants);
   restaurantsMatchingFilter = spotlightRestaurants;
-  console.log(restaurantsMatchingFilter);
   initMap(spotlightRestaurants);
-  displaySpotlight(spotlight);
 }
 
 function filterRestaurantsByLocation(location) {
@@ -762,7 +761,6 @@ function displaySpotlight(spotlight) {
 }
 
 function initMap(spotlightRestaurants) {
-  console.log(spotlightRestaurants);
   // If restaurantsMatchingFilter length is more than one, user has selected a restaurant card from featured restaurants, so function should not call listFeaturedRestaurants function
   let mapDefaults = {
     zoom: 1,
@@ -967,7 +965,6 @@ function createListing(restaurant, label) {
       span.innerHTML = `<a class="btn btn-sm btn-red" href="${restaurant.episodeLink}" target="_blank" rel="noopener">Watch Now On Netflix</a>`
       chosenCard.appendChild(span);
       specifyCard.classList.add("hidden");
-      console.log(chosenRestaurant);
       initMap(chosenRestaurant);
       } else {
           return;
@@ -979,7 +976,6 @@ function showAllRestaurants() {
     let specifyCard = document.querySelector(".closer-look");
     let listing = document.querySelector(".restaurants-listings");
     let allRestaurants = Array.from(listing.children);
-    console.log(allRestaurants);
     specifyCard.classList.remove("hidden");
     allRestaurants.forEach(restaurant => {
         restaurant.classList.remove("hidden");
