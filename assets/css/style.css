@@ -217,7 +217,13 @@ input:-ms-input-placeholder {
     padding: 10px;
     margin: 5px auto;
     cursor: pointer;
+    transition: background 1s;
+    -webkit-transition: background 1s;
 }
+
+ .restaurant-card:hover {
+     background: #D0D0D0;
+     }
 
 .card-title {
     font-family: "Nunito Sans", sans-serif;
