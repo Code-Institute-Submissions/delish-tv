@@ -277,16 +277,22 @@ input:-ms-input-placeholder {
     }
 }
 
-@media screen and (min-width: 992px) {
-
-    #map {
-    height: 630px;
-    background-color: #181818;
-    }
-}
-
 @media screen and (min-width: 768px) {
     .jumbotron-overlay {
     background-image: linear-gradient(to right, rgba(25, 25, 25, 1) 10%, rgba(25, 25, 25, 0));
     }
 }
+
+@media screen and (min-width: 992px) {
+    #map {
+    height: 630px;
+    background-color: #181818;
+    }
+
+    .restaurants-listings {
+        max-height: 600px;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+}
+
