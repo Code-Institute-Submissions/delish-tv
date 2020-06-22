@@ -1,4 +1,5 @@
-// key: AIzaSyAKKq48oILIJR-D3a22vDaJXZ8-4glyBrE
+// Restaurants featured in all series covered by this site
+
 let restaurants = [
   {
     name: "Lee's Donuts",
@@ -681,9 +682,10 @@ let showAllButton = document.querySelector(".show-all");
 
 function selectSpotlight() {
   let seriesArray = ["Breakfast, Lunch & Dinner", "Chef's Table France", "Street Food Asia"];
-  let chosenSpotlight =
+  let chosenSpotlightSeries =
     seriesArray[Math.floor(Math.random() * seriesArray.length)];
-  filterSpotlightRestaurants(chosenSpotlight);
+  filterSpotlightRestaurants(chosenSpotlightSeries);
+  displaySpotlight(chosenSpotlightSeries);
 }
 
 function selectSeries() {
@@ -725,7 +727,6 @@ function filterSpotlightRestaurants(spotlight) {
   );
   restaurantsMatchingFilter = spotlightRestaurants;
   initMap(spotlightRestaurants);
-  displaySpotlight(spotlight);
 }
 
 function filterRestaurantsByLocation(location) {
