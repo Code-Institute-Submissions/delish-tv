@@ -685,7 +685,6 @@ function selectSpotlight() {
   let chosenSpotlightSeries =
     seriesArray[Math.floor(Math.random() * seriesArray.length)];
   filterSpotlightRestaurants(chosenSpotlightSeries);
-  displaySpotlight(chosenSpotlightSeries);
 }
 
 function selectSeries() {
@@ -727,6 +726,7 @@ function filterSpotlightRestaurants(spotlight) {
   );
   restaurantsMatchingFilter = spotlightRestaurants;
   initMap(spotlightRestaurants);
+  displaySpotlight(spotlight);
 }
 
 function filterRestaurantsByLocation(location) {
