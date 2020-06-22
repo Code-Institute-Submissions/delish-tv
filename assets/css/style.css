@@ -260,6 +260,20 @@ input:-ms-input-placeholder {
     margin-bottom: 15px;
 }
 
+/* ---Footer--- */
+
+footer {
+    padding-left: 15px;
+}
+.social-media a {
+    color: #E30914;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.social-media a:hover {
+    color: #CA0812;
+}
 
 /* ---Media Queries--- */
 
