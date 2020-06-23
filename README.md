@@ -87,6 +87,12 @@ Live GitHub Pages Link: https://mark-obeirne.github.io/culinary-world-tour/
 
 
 ## Acknowledgements
+I would like to thank my mentor, [Antonio Rodriguez](https://github.com/AkaAnto) for their support and advice. In particular, I would like to thank them for their feedback during our second call, which prompted a revision of the site's layout, leading to better flow and overall UI. 
+
+
+I would also like to thank my fellow Code Institute students and the alumni who provided support, advice, and a second opinion on Slack.
+
+Finally, I would like to thank all those who took the time to test this website and provide feedback and suggestions. 
 
 
 ## Disclaimer
