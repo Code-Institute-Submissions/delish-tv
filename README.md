@@ -11,8 +11,16 @@ Live GitHub Pages Link: https://mark-obeirne.github.io/culinary-world-tour/
 [Image of multi-device preview]
 
 ## Summary
+Delish TV is a Netflix companion site that enables users to find the various restaurants featured in their favourite Netflix Original culinary shows. 
 
 ## Aim of the site
+Food television is the fastest-growing niche in unscripted TV, according to [a recent study by The Hollywood Reporter](https://www.hollywoodreporter.com/features/gordon-ramsay-more-hollywoods-growing-hunger-food-tv-shows-1225214). After dipping its toe into the waters in 2015 with the release of Chef's Table, Netflix became one of the leaders in investing in original culinary programming. Today, Netflix's catalogue of culinary shows includes The Chef Show, starring Hollywood superstar Jon Favreau; the humble street stands of Street Food Asia; Michelin star chefs in Chef's Table and Chef's Table France; and a smorgasbord of cuisines and settings in Ugly Delicious, starring celeb chef David Chang. 
+
+Brandon Riegg, Netflix VP of nonfiction series and comedy specials, said that food and cooking shows are the frontrunners when looking at categories of programming that people respond to globally. Lisa Nishimura, Netflix VP independent film and documentary features, said that people connect with these shows because "even though you can't smell or taste this food through the screen, you can absolutely feel it."
+
+While shows such as Ugly Delicious and Street Food can give us a sense of what it is like to visit a particular business and we can witness our hosts delighting at the food on offer, it can be challenging to find more information about the various settings that they explore. If a viewer wishes to find more information, they must become proficient with Google and be very willing to peruse article after article that may provide them with some tidbits of information.
+
+The purpose of this site is to connect users with the restaurants and businesses featured in Netflix Original culinary shows and provide them with relevant information should they wish to experience it for themselves rather than live through an on-screen host. In addition, this site will enable visitors to find other Netflix Original shows that may be of interest to them.
 
 ## UX 
 
