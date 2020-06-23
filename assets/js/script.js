@@ -1,7 +1,5 @@
 // Restaurants featured in all series covered by this site
-
-let restaurants = [
-  {
+let restaurants = [{
     name: "Lee's Donuts",
     address1: "1689 Johnston St",
     city: "Vancouver",
@@ -12,8 +10,7 @@ let restaurants = [
     series: "Breakfast, Lunch & Dinner",
     season: 1,
     episode: 1,
-    episodeLink:
-      "https://www.netflix.com/watch/81076571?trackId=13752289&tctx=0%2C0%2C74f9d99d-98cb-4cdf-9f68-fd9e4083cb4b-230343844%2C%2C%2C",
+    episodeLink: "https://www.netflix.com/watch/81076571?trackId=13752289&tctx=0%2C0%2C74f9d99d-98cb-4cdf-9f68-fd9e4083cb4b-230343844%2C%2C%2C",
     website: "https://www.leesdonuts.ca/",
   },
   {
@@ -27,8 +24,7 @@ let restaurants = [
     series: "Breakfast, Lunch & Dinner",
     season: 1,
     episode: 1,
-    episodeLink:
-      "https://www.netflix.com/watch/81076571?trackId=13752289&tctx=0%2C0%2C74f9d99d-98cb-4cdf-9f68-fd9e4083cb4b-230343844%2C%2C%2C",
+    episodeLink: "https://www.netflix.com/watch/81076571?trackId=13752289&tctx=0%2C0%2C74f9d99d-98cb-4cdf-9f68-fd9e4083cb4b-230343844%2C%2C%2C",
     website: "http://www.sunsuiwah.ca/",
   },
   {
@@ -42,8 +38,7 @@ let restaurants = [
     series: "Breakfast, Lunch & Dinner",
     season: 1,
     episode: 1,
-    episodeLink:
-      "https://www.netflix.com/watch/81076571?trackId=13752289&tctx=0%2C0%2C74f9d99d-98cb-4cdf-9f68-fd9e4083cb4b-230343844%2C%2C%2C",
+    episodeLink: "https://www.netflix.com/watch/81076571?trackId=13752289&tctx=0%2C0%2C74f9d99d-98cb-4cdf-9f68-fd9e4083cb4b-230343844%2C%2C%2C",
     website: "http://apnabhaia.com/",
   },
   {
@@ -57,8 +52,7 @@ let restaurants = [
     series: "Breakfast, Lunch & Dinner",
     season: 1,
     episode: 1,
-    episodeLink:
-      "https://www.netflix.com/watch/81076571?trackId=13752289&tctx=0%2C0%2C74f9d99d-98cb-4cdf-9f68-fd9e4083cb4b-230343844%2C%2C%2C",
+    episodeLink: "https://www.netflix.com/watch/81076571?trackId=13752289&tctx=0%2C0%2C74f9d99d-98cb-4cdf-9f68-fd9e4083cb4b-230343844%2C%2C%2C",
     website: "",
   },
   {
@@ -198,8 +192,7 @@ let restaurants = [
     series: "Chef's Table France",
     season: 1,
     episode: 1,
-    episodeLink:
-      "https://www.netflix.com/watch/80075157?trackId=14277281&tctx=0%2C0%2Cff6e19b5-5706-4dbe-8a41-95b8834040a9-3136058%2C%2C%2C",
+    episodeLink: "https://www.netflix.com/watch/80075157?trackId=14277281&tctx=0%2C0%2Cff6e19b5-5706-4dbe-8a41-95b8834040a9-3136058%2C%2C%2C",
     website: "http://www.alain-passard.com/",
   },
   {
@@ -213,8 +206,7 @@ let restaurants = [
     series: "Chef's Table France",
     season: 1,
     episode: 2,
-    episodeLink:
-      "https://www.netflix.com/watch/80075159?trackId=14277281&tctx=0%2C1%2Cff6e19b5-5706-4dbe-8a41-95b8834040a9-3136058%2C%2C%2C",
+    episodeLink: "https://www.netflix.com/watch/80075159?trackId=14277281&tctx=0%2C1%2Cff6e19b5-5706-4dbe-8a41-95b8834040a9-3136058%2C%2C%2C",
     website: "http://alexandrecouillon.com/",
   },
   {
@@ -228,8 +220,7 @@ let restaurants = [
     series: "Chef's Table France",
     season: 1,
     episode: 3,
-    episodeLink:
-      "https://www.netflix.com/watch/80075158?trackId=14277281&tctx=0%2C2%2Cff6e19b5-5706-4dbe-8a41-95b8834040a9-3136058%2C%2C%2C",
+    episodeLink: "https://www.netflix.com/watch/80075158?trackId=14277281&tctx=0%2C2%2Cff6e19b5-5706-4dbe-8a41-95b8834040a9-3136058%2C%2C%2C",
     website: "http://www.yamtcha.com/",
   },
   {
@@ -243,8 +234,7 @@ let restaurants = [
     series: "Chef's Table France",
     season: 1,
     episode: 4,
-    episodeLink:
-      "https://www.netflix.com/watch/80075160?trackId=14277281&tctx=0%2C3%2Cff6e19b5-5706-4dbe-8a41-95b8834040a9-3136058%2C%2C%2C",
+    episodeLink: "https://www.netflix.com/watch/80075160?trackId=14277281&tctx=0%2C3%2Cff6e19b5-5706-4dbe-8a41-95b8834040a9-3136058%2C%2C%2C",
     website: "http://www.troisgros.com/",
   },
   {
@@ -515,7 +505,7 @@ let restaurants = [
   },
   {
     name: "Gunsook Jung",
-   address1: "Gwangjang Market",
+    address1: "Gwangjang Market",
     city: "Seoul",
     country: "South Korea",
     postcode: "",
@@ -529,7 +519,7 @@ let restaurants = [
   },
   {
     name: "Gumsoon Park and Sangmi Chu",
-     address1: "Gwangjang Market",
+    address1: "Gwangjang Market",
     city: "Seoul",
     country: "South Korea",
     postcode: "",
@@ -730,11 +720,11 @@ function filterSpotlightRestaurants(spotlight) {
 }
 
 function filterRestaurantsByLocation(location) {
-    const spotlightRestaurants = restaurants.filter(
-        (restaurant) => restaurant.country === location
+  const spotlightRestaurants = restaurants.filter(
+    (restaurant) => restaurant.country === location
   );
-    restaurantsMatchingFilter = spotlightRestaurants;
-    initMap(spotlightRestaurants);
+  restaurantsMatchingFilter = spotlightRestaurants;
+  initMap(spotlightRestaurants);
 }
 
 function displaySpotlight(spotlight) {
@@ -753,8 +743,8 @@ function displaySpotlight(spotlight) {
       jumbotronCTF.classList.remove("hidden");
       break;
     case "Street Food Asia":
-        jumbotronSFA.classList.remove("hidden");
-        break;
+      jumbotronSFA.classList.remove("hidden");
+      break;
     default:
       console.log("A different series has been selected");
   }
@@ -772,29 +762,31 @@ function initMap(spotlightRestaurants) {
   };
 
   if (spotlightRestaurants.length === 1 && restaurantsMatchingFilter.length !== 1) {
-  let map = new google.maps.Map(document.querySelector("#map"), mapDefaults);
-  let infoWindow = new google.maps.InfoWindow();
-  let bounds = new google.maps.LatLngBounds();
+    let map = new google.maps.Map(document.querySelector("#map"), mapDefaults);
+    let infoWindow = new google.maps.InfoWindow();
+    let bounds = new google.maps.LatLngBounds();
 
-  let markers = spotlightRestaurants.map((location, i) => {
-    let marker = new google.maps.Marker({
-      position: location,
-    });
-    // bounds ensures that the map center shows all marker locations
-    bounds.extend(marker.position);
-    map.fitBounds(bounds);
-    // ensure that the map isn't too zoomed in when highlighting one location. Source: https://stackoverflow.com/questions/4523023/using-setzoom-after-using-fitbounds-with-google-maps-api-v3
-    zoomChangeBoundsListener = 
-    google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
-        if (this.getZoom()){
+    let markers = spotlightRestaurants.map((location, i) => {
+      let marker = new google.maps.Marker({
+        position: location,
+      });
+      // bounds ensures that the map center shows all marker locations
+      bounds.extend(marker.position);
+      map.fitBounds(bounds);
+      // ensure that the map isn't too zoomed in when highlighting one location. Source: https://stackoverflow.com/questions/4523023/using-setzoom-after-using-fitbounds-with-google-maps-api-v3
+      zoomChangeBoundsListener =
+        google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
+          if (this.getZoom()) {
             this.setZoom(16);
-        }
-    });
-    setTimeout(function(){google.maps.event.removeListener(zoomChangeBoundsListener)}, 2000);
+          }
+        });
+      setTimeout(function() {
+        google.maps.event.removeListener(zoomChangeBoundsListener);
+      }, 2000);
 
-    google.maps.event.addListener(marker, "click", function (event) {
-      infoWindow.setContent(
-        "<div class='map-content'>" +
+      google.maps.event.addListener(marker, "click", function(event) {
+        infoWindow.setContent(
+          "<div class='map-content'>" +
           "<div class='marker-header'>" +
           spotlightRestaurants[i].name +
           "</div>" +
@@ -824,33 +816,32 @@ function initMap(spotlightRestaurants) {
           "</a>" +
           "</div>" +
           "</div>"
-      );
-      infoWindow.open(map, marker);
+        );
+        infoWindow.open(map, marker);
+      });
+      return marker;
     });
-    return marker;
-  });
 
-  let markerCluster = new MarkerClusterer(map, markers, {
-    imagePath:
-      "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
-  });
+    let markerCluster = new MarkerClusterer(map, markers, {
+      imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
+    });
   } else {
-  let map = new google.maps.Map(document.querySelector("#map"), mapDefaults);
-  let infoWindow = new google.maps.InfoWindow();
-  let labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  let bounds = new google.maps.LatLngBounds();
+    let map = new google.maps.Map(document.querySelector("#map"), mapDefaults);
+    let infoWindow = new google.maps.InfoWindow();
+    let labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let bounds = new google.maps.LatLngBounds();
 
-  let markers = spotlightRestaurants.map((location, i) => {
-    let marker = new google.maps.Marker({
-      position: location,
-      label: labels[i % labels.length],
-    });
-    // bounds ensures that the map center shows all marker locations
-    bounds.extend(marker.position);
-    map.fitBounds(bounds);
-    google.maps.event.addListener(marker, "click", function (event) {
-      infoWindow.setContent(
-        "<div class='map-content'>" +
+    let markers = spotlightRestaurants.map((location, i) => {
+      let marker = new google.maps.Marker({
+        position: location,
+        label: labels[i % labels.length],
+      });
+      // bounds ensures that the map center shows all marker locations
+      bounds.extend(marker.position);
+      map.fitBounds(bounds);
+      google.maps.event.addListener(marker, "click", function(event) {
+        infoWindow.setContent(
+          "<div class='map-content'>" +
           "<div class='marker-header'>" +
           spotlightRestaurants[i].name +
           "</div>" +
@@ -880,25 +871,24 @@ function initMap(spotlightRestaurants) {
           "</a>" +
           "</div>" +
           "</div>"
-      );
-      infoWindow.open(map, marker);
+        );
+        infoWindow.open(map, marker);
+      });
+      return marker;
     });
-    return marker;
-  });
 
-  let markerCluster = new MarkerClusterer(map, markers, {
-    imagePath:
-      "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
-  });
+    let markerCluster = new MarkerClusterer(map, markers, {
+      imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
+    });
     listFeaturedRestaurants(spotlightRestaurants, markers);
-    }
+  }
 }
 
 function listFeaturedRestaurants(selectedRestaurants, markers) {
-    let allFeaturedRestaurants = document.querySelectorAll(".restaurant");
-    allFeaturedRestaurants.forEach(restaurant => {
-        restaurant.parentNode.removeChild(restaurant)
-    });
+  let allFeaturedRestaurants = document.querySelectorAll(".restaurant");
+  allFeaturedRestaurants.forEach(restaurant => {
+    restaurant.parentNode.removeChild(restaurant);
+  });
 
   for (let i = 0; i < selectedRestaurants.length; i++) {
     for (let j = i; j <= i; j++) {
@@ -910,7 +900,7 @@ function listFeaturedRestaurants(selectedRestaurants, markers) {
 function createListing(restaurant, label) {
   let listing = document.querySelector(".restaurants-listings");
   let div = document.createElement("div");
-  div.classList.add("row"); 
+  div.classList.add("row");
   div.classList.add("restaurant");
   div.innerHTML = `<div class="card restaurant-card">
                 <div class="row no-gutters fullscreen">
@@ -945,43 +935,43 @@ function createListing(restaurant, label) {
                 </div>
             </div>`;
 
-    listing.appendChild(div);
-    
-    div.addEventListener("click", function() {
-        let specifyCard = document.querySelector(".closer-look");
-      let allFeaturedRestaurants = Array.from(document.querySelectorAll(".restaurant"));
-      let chosenCard = this;
-      let currentSpans = document.querySelector(".overlap-episode-link")
-      if (currentSpans === null) {
+  listing.appendChild(div);
+
+  div.addEventListener("click", function() {
+    let specifyCard = document.querySelector(".closer-look");
+    let allFeaturedRestaurants = Array.from(document.querySelectorAll(".restaurant"));
+    let chosenCard = this;
+    let currentSpans = document.querySelector(".overlap-episode-link")
+    if (currentSpans === null) {
       let span = document.createElement("span")
       span.classList.add("overlap-episode-link");
       let chosenCardIndex = allFeaturedRestaurants.indexOf(chosenCard);
       let chosenRestaurant = [restaurantsMatchingFilter[allFeaturedRestaurants.indexOf(chosenCard)]]
       allFeaturedRestaurants.forEach(restaurant => {
-              restaurant.classList.add("hidden");
-          })
+        restaurant.classList.add("hidden");
+      })
       chosenCard.classList.remove("hidden");
       showAllButton.classList.remove("hidden");
       span.innerHTML = `<a class="btn btn-sm btn-red" href="${restaurant.episodeLink}" target="_blank" rel="noopener">Watch Now On Netflix</a>`
       chosenCard.appendChild(span);
       specifyCard.classList.add("hidden");
       initMap(chosenRestaurant);
-      } else {
-          return;
-      }
+    } else {
+      return;
+    }
   })
 }
 
 function showAllRestaurants() {
-    let specifyCard = document.querySelector(".closer-look");
-    let listing = document.querySelector(".restaurants-listings");
-    let allRestaurants = Array.from(listing.children);
-    specifyCard.classList.remove("hidden");
-    allRestaurants.forEach(restaurant => {
-        restaurant.classList.remove("hidden");
-    })
-    initMap(restaurantsMatchingFilter);
-    showAllButton.classList.add("hidden");
+  let specifyCard = document.querySelector(".closer-look");
+  let listing = document.querySelector(".restaurants-listings");
+  let allRestaurants = Array.from(listing.children);
+  specifyCard.classList.remove("hidden");
+  allRestaurants.forEach(restaurant => {
+    restaurant.classList.remove("hidden");
+  })
+  initMap(restaurantsMatchingFilter);
+  showAllButton.classList.add("hidden");
 }
 
 // Event Listeners
@@ -998,11 +988,11 @@ locationDropdown.forEach((item) => {
 
 countryFilter.addEventListener("keyup", dropdownLocationMatches);
 // reset the countryFilter input value and restore all dropdown options
-countryFilter.addEventListener("change", function(){
-    setTimeout(function(){
-        countryFilter.value = "";
-        dropdownLocationMatches()
-    }, 500);
+countryFilter.addEventListener("change", function() {
+  setTimeout(function() {
+    countryFilter.value = "";
+    dropdownLocationMatches()
+  }, 500);
 });
 
 showAllButton.addEventListener("click", showAllRestaurants);
