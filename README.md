@@ -84,6 +84,7 @@ The site uses Roboto for non-heading text. It is a good pairing for Nunito Sans 
 ## Technology Used
 
 HTML Formatter - https://www.freeformatter.com/
+CSS Beautifier - https://www.freeformatter.com/css-beautifier.html
 
 ## Testing
 
