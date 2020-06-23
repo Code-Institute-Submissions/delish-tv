@@ -1,315 +1,328 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Roboto:wght@300&display=swap');
-
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: #181818;
-    color: #fff;
-    font-family: "Roboto", sans-serif;
+  background-color: #181818;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
 }
+
 
 /* ---Navbar--- */
 
 .navbar {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .navbar {
-    background-color: #141414;
+  background-color: #141414;
 }
+
 
 /* ---Search Panel--- */
 
 #search-panel {
-    margin: 0 auto;
-    text-align: center;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .searchbox {
-    width: 90%;
+  width: 90%;
 }
 
 .dropdown {
-    display: inline-block;
+  display: inline-block;
 }
 
 .dropdown-toggle {
-    margin: 15px 2.5px;
-    cursor: pointer;
+  margin: 15px 2.5px;
+  cursor: pointer;
 }
 
 .dropdown-item {
-    color: #181818;
-    cursor: pointer;
+  color: #181818;
+  cursor: pointer;
 }
 
 .dropdown-item:hover {
-    color: #181818;
-    background-color: #D0D0D0;
+  color: #181818;
+  background-color: #D0D0D0;
 }
 
-.country-filter, .country-filter:hover, .country-filter:focus {
-    background-color: #AAAAAA;
-    cursor: text;
+.country-filter,
+.country-filter:hover,
+.country-filter:focus {
+  background-color: #AAAAAA;
+  cursor: text;
 }
 
-.country-filter:hover, .country-filter:focus {
-    color: #181818;
-    background-color: #D0D0D0;
+.country-filter:hover,
+.country-filter:focus {
+  color: #181818;
+  background-color: #D0D0D0;
 }
+
 
 /* ---Input Placeholder Colors--- */
 
 input::-webkit-input-placeholder {
-    color: #FFF;
+  color: #FFF;
 }
+
 
 /* Firefox > 19 */
+
 input::-moz-placeholder {
-    color: #FFF;
+  color: #FFF;
 }
+
 
 /* Internet Explorer 10 */
+
 input:-ms-input-placeholder {
-    color: #FFF;
+  color: #FFF;
 }
 
+
 /* ---Spotlight--- */
+
 .jumbotron-container {
-    position: relative;
+  position: relative;
 }
 
 .jumbotron-overlay {
-    background-image: linear-gradient(to right, rgba(25, 25, 25, 1) 10%, rgba(25, 25, 25, 0)); 
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+  background-image: linear-gradient(to right, rgba(25, 25, 25, 1) 10%, rgba(25, 25, 25, 0));
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .spotlight-content {
-    z-index: 2;
+  z-index: 2;
 }
 
 .series-logo {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .spotlight-description {
-    font-size: 10px;
-    color: #CCCCCC;
-    margin-bottom: 20px;
+  font-size: 10px;
+  color: #CCCCCC;
+  margin-bottom: 20px;
 }
+
 
 /* ---Spotlight Jumbotron Images--- */
 
 .jumbotron.bld-jumbo {
-    background-image: url("../images/spotlights/BreakfastLunchDinner-Spotlight.jpg");
-    background-position: top right;
-    background-repeat: no-repeat;
+  background-image: url("../images/spotlights/BreakfastLunchDinner-Spotlight.jpg");
+  background-position: top right;
+  background-repeat: no-repeat;
 }
 
 .jumbotron.chefstablefrance-jumbo {
-    background-image: url("../images/spotlights/chefs-table-france_grab.PNG");
-    background-position: top right;
-    background-repeat: no-repeat;
+  background-image: url("../images/spotlights/chefs-table-france_grab.PNG");
+  background-position: top right;
+  background-repeat: no-repeat;
 }
 
 .jumbotron.sfa-jumbo {
-    background-image: url("../images/spotlights/streetfoodasia_grab.png");
-    background-position: 80% center;
-    background-repeat: no-repeat;
+  background-image: url("../images/spotlights/streetfoodasia_grab.png");
+  background-position: 80% center;
+  background-repeat: no-repeat;
 }
 
 
 /* ---Spotlight Buttons--- */
 
 .spotlight-btn {
-    margin: 5px;
-    padding: 2.5px;
-    border-radius: 2.5px;
-    border: none;
-    width: 120px;
+  margin: 5px;
+  padding: 2.5px;
+  border-radius: 2.5px;
+  border: none;
+  width: 120px;
 }
 
 .play-now {
-    background-color: #FFF;
-    color: #181818;
+  background-color: #FFF;
+  color: #181818;
 }
 
 .play-now:hover {
-    background-color: #D0D0D0;
+  background-color: #D0D0D0;
 }
 
 .more-info {
-    background-color: rgb(133, 133, 133, 0.6);
-    color: #FFF;
+  background-color: rgb(133, 133, 133, 0.6);
+  color: #FFF;
 }
 
 .more-info:hover {
-    background-color: rgb(75, 75, 75, 0.6);
-    color: #FFF;
+  background-color: rgb(75, 75, 75, 0.6);
+  color: #FFF;
 }
-
 
 
 /* ---Map--- */
+
 #map {
-    height: 360px;
+  height: 360px;
 }
 
 .map-content {
-    background-color: #FFF;
-    color: #181818;
+  background-color: #FFF;
+  color: #181818;
 }
 
 .marker-header {
-    font-weight: 500;
-    font-size: 14px;
-    color: #181818;
+  font-weight: 500;
+  font-size: 14px;
+  color: #181818;
 }
 
 .map-strong {
-    font-weight: bold;
+  font-weight: bold;
 }
+
 
 /* ---Hidden/Visible--- */
 
 .hidden {
-    display: none;
+  display: none;
 }
+
 
 /* ---Headers--- */
 
 .heading {
-    text-align: center;
-    font-family: "Nunito Sans", sans-serif;
-
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .uppercase {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
+
 
 /* ---Featured Restaurants--- */
 
 .restaurant ul {
-    list-style: none;
+  list-style: none;
 }
 
 .restaurants-btn {
-    padding: 5px;
-    border-radius: 2.5px;
-    border: none;
-    width: 120px;
+  padding: 5px;
+  border-radius: 2.5px;
+  border: none;
+  width: 120px;
 }
 
 .restaurant-card {
-    width: 100vw;
-    color: #181818;
-    border-left: 10px solid #e30914;
-    padding: 10px;
-    margin: 5px auto;
-    cursor: pointer;
-    transition: background 1s;
-    -webkit-transition: background 1s;
+  width: 100vw;
+  color: #181818;
+  border-left: 10px solid #e30914;
+  padding: 10px;
+  margin: 5px auto;
+  cursor: pointer;
+  transition: background 1s;
+  -webkit-transition: background 1s;
 }
 
- .restaurant-card:hover {
-     background: #D0D0D0;
-     }
+.restaurant-card:hover {
+  background: #D0D0D0;
+}
 
 .card-title {
-    font-family: "Nunito Sans", sans-serif;
-    font-weight: bold;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bold;
 }
 
 .restaurant-label {
-    text-align: center;
+  text-align: center;
 }
 
 .overlap-episode-link {
-    margin-top: -20px;
-    margin-bottom: 10px;
-    z-index: 1;
-    text-align: center;
-    width: 100%;
+  margin-top: -20px;
+  margin-bottom: 10px;
+  z-index: 1;
+  text-align: center;
+  width: 100%;
 }
 
 .btn-episode-link {
-    width: 50%;
-    font-weight: bold;
+  width: 50%;
+  font-weight: bold;
 }
 
 .btn-red {
-    border: 1px solid #181818;
-    background-color: #E30914;
-    color:#FFF;
+  border: 1px solid #181818;
+  background-color: #E30914;
+  color: #FFF;
 }
 
 .btn-red:hover {
-    background-color: #FFF;
-    color: #181818;
-    box-shadow: 0 -.5px 10px 1px #181818;
+  background-color: #FFF;
+  color: #181818;
+  box-shadow: 0 -.5px 10px 1px #181818;
 }
 
 .btn-show-all {
-    width: 100%;
-    margin-bottom: 15px;
+  width: 100%;
+  margin-bottom: 15px;
 }
+
 
 /* ---Footer--- */
 
 footer {
-    padding-left: 15px;
+  padding-left: 15px;
 }
+
 .social-media a {
-    color: #E30914;
-    font-size: 20px;
-    margin-right: 5px;
+  color: #E30914;
+  font-size: 20px;
+  margin-right: 5px;
 }
 
 .social-media a:hover {
-    color: #CA0812;
+  color: #CA0812;
 }
+
 
 /* ---Media Queries--- */
 
 @media screen and (min-width: 660px) {
-    .spotlight-description {
+  .spotlight-description {
     font-size: 14px;
-    }
-
-    .spotlight-btn {
+  }
+  .spotlight-btn {
     padding: 5px;
-    }
+  }
 }
 
 @media screen and (min-width: 768px) {
-    .jumbotron-overlay {
+  .jumbotron-overlay {
     background-image: linear-gradient(to right, rgba(25, 25, 25, 1) 10%, rgba(25, 25, 25, 0));
-    }
+  }
 }
 
 @media screen and (min-width: 992px) {
-    #map {
+  #map {
     height: 700px;
     background-color: #181818;
-    }
-
-    .restaurants-listings {
-        max-height: 600px;
-        overflow: hidden;
-        overflow-y: scroll;
-    }
-
-    .dropdown-toggle {
+  }
+  .restaurants-listings {
+    max-height: 600px;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+  .dropdown-toggle {
     margin: 0px 2.5px 15px;
+  }
 }
-}
-

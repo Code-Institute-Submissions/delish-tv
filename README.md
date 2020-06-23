@@ -83,10 +83,20 @@ The site uses Roboto for non-heading text. It is a good pairing for Nunito Sans 
 
 ## Technology Used
 
+HTML Formatter - https://www.freeformatter.com/
+HTML Validator - https://validator.w3.org/nu/ 
+HTML Validator - https://www.freeformatter.com/html-validator.html
+
+CSS Beautifier - https://www.freeformatter.com/css-beautifier.html
+CSS Validator - https://jigsaw.w3.org/css-validator/validator
+
+JavaScript Validator - https://esprima.org/demo/validate.html
+JS Validator (mainly used for missing semicolons) - http://beautifytools.com/javascript-validator.php
 
 ## Testing
 
 -- Any tools and validators. Results, if not screenshots, of said tools
+HTML Validator - https://validator.w3.org/nu/
 
 ## Testing Process
 
