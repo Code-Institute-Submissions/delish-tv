@@ -20,16 +20,29 @@ Brandon Riegg, Netflix VP of nonfiction series and comedy specials, said that fo
 
 While shows such as Ugly Delicious and Street Food can give us a sense of what it is like to visit a particular business and we can witness our hosts delighting at the food on offer, it can be challenging to find more information about the various settings that they explore. If a viewer wishes to find more information, they must become proficient with Google and be very willing to peruse article after article that may provide them with some tidbits of information.
 
-The purpose of this site is to connect users with the restaurants and businesses featured in Netflix Original culinary shows and provide them with relevant information should they wish to experience it for themselves rather than live through an on-screen host. In addition, this site will enable visitors to find other Netflix Original shows that may be of interest to them.
+The purpose of this site is to connect users with the restaurants and businesses featured in Netflix Original culinary shows and provide them with relevant information should they wish to experience it for themselves rather than live through an on-screen host. The link between restaurant and Netflix show adds another dimension when a user is looking for a restaurant as they will be able to judge a restaurant on more than the menu, still pictures, and reviews from users who they do not know; instead, they can see the food preparation and presentation brought to life as well as reactions to a dish. 
 
-## UX 
+## Scope 
+The site targets not only viewers of Netflix Original culinary shows, but is of use to foodies living in an area in which a series have taken place as well as travellers. As a business, we have our own distinct goals, as reflected by the user stories.
 
 ### User Stories
+"As a viewer of culinary shows, I am often automatically recommended other reality TV shows that have nothing to do with food. I would like to find similarly themed series that would be of interest to me."
+
+"As a fan of Ugly Delicious, I would like to find out more information about some of my favourite restaurants featured in the series."
+
+"As someone travelling to Japan, I would like an easy way to find out more about the Toyo street food restaurant, as seen on Street Food Asia, so that I can experience the food and performance for myself." 
+
+"As a foodie, I would like to thoroughly research restaurants in my area to ensure that it appeals to me and that I will get value for money." 
 
 #### Meeting User Expectations
 [Include screenshots for added reference]
 
 ### Business Goals
+"As a business, we would like to showcase our range of culinary series, as we would like users to keep finding value for money in their subscription or attract new customers."
+
+"As a business, we would like to highlight the restaurants involved in series, which rewards them for allowing a series to be filmed there."
+
+"As a business, we wish to continue making original culinary series and providing this added value to participating restaurants could encourage others to get involved."
 
 ### Design Choices
 #### Colours
