@@ -90,17 +90,43 @@ Currently, users are able to search based on the series that a restaurant is fea
 
 ## Technology Used
 
-HTML Formatter - https://www.freeformatter.com/
+[HTML](https://en.wikipedia.org/wiki/HTML) & [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) programming languages - For the basic site structure and design elements.
+
+[JavaScript](https://en.wikipedia.org/wiki/JavaScript) - JavaScript makes up the lion's share of this project as it is used extensively to build and populate the site based on either a randomly chosen series or user choices.
+
+[Bootstrap 4](https://getbootstrap.com/) - Bootstrap 4 was used to prioritise the mobile design, while enabling the site to be responsive and look its best across a variety of screen sizes. 
+
+[Balsamiq](https://balsamiq.com/wireframes/desktop/#) - Balsamiq was used to create a series of wireframes that the site was built based on.
+
+[Coolors](https://coolors.co/) - Coolors assisted in finding a colour palette that worked well. 
+
+[Google Fonts](https://fonts.google.com/) - Google Fonts assisted in finding and sourcing fonts that would suit a site of this type.
+
+[Font Awesome](https://fontawesome.com/) - Font Awesome was used to find icons that would provide more detail for buttons such as the Play Now and More Info buttons as well as visual representations of social media platforms. 
+
+[Git](https://git-scm.com/) - To track changes in code during development.
+
+[GitHub](https://github.com/) - To host the project’s repository and to host the live website via GitHub Pages.
+
+[Gimp 2](https://www.gimp.org/) - Gimp 2 allowed for image manipulation and was used to create the brand’s logo.
+
+[Favicon Converter](https://favicon.io/favicon-converter/) - To create the favicon based on the brand logo.
+
+[FreeFormatter](https://www.freeformatter.com/) - Used to tidy up and properly format the index.html file. 
+
+[FreeFormatter CSS Beautifier](https://www.freeformatter.com/css-beautifier.html) - Used to standardise indents and tidy up the style.css layout and formatting.
+
+
+
+## Testing
+
 HTML Validator - https://validator.w3.org/nu/ 
 HTML Validator - https://www.freeformatter.com/html-validator.html
 
-CSS Beautifier - https://www.freeformatter.com/css-beautifier.html
 CSS Validator - https://jigsaw.w3.org/css-validator/validator
 
 JavaScript Validator - https://esprima.org/demo/validate.html
 JS Validator (mainly used for missing semicolons) - http://beautifytools.com/javascript-validator.php
-
-## Testing
 
 -- Any tools and validators. Results, if not screenshots, of said tools
 HTML Validator - https://validator.w3.org/nu/
