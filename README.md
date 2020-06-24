@@ -59,17 +59,22 @@ While researching this project, Nunito Sans was highlighted as a font that is cl
 
 The site uses Roboto for non-heading text. It is a good pairing for Nunito Sans without shifting the overall font style of the site.  
 
-## Wireframe Mockups - maybe showcase final vs original
+## Wireframe Mockups
 
 ### Mobile Wireframe
-* [Link]
+* [Index on Mobile - Original Layout](https://f6e340d7-6a4e-4496-9b03-f60438b4cd48.ws-eu01.gitpod.io/files/download/?id=6477c8de-4ec2-4cac-a0e6-a7467ce6e06c)
+* [Index on Mobile - Revised Layout]()
 
 ### Tablet Wireframe
-* [Link]
+* [Index on Tablet]
 
 ### Desktop Wireframe
-* [Link]
+* [Index on Desktop]
 
+## Changes to Wireframe
+Originally, the tablet and desktop sites were larger versions of the mobile site, spacing out the individual restaurant cards better. 
+
+However, in testing it became clear and was recommended that the space could be better utilised. The result is the altered layout that can be seen on the desktop site where the restaurant cards push up alongside the map allowing users access to all information easily. This did result in an issue whereby there was a lot of unused space beneath the map so a max height was added to the restaurant card column with a scrollbar available if there were more cards.
 
 ## Site Features
 ### Spotlight Series Jumbotron
