@@ -62,14 +62,14 @@ The site uses Roboto for non-heading text. It is a good pairing for Nunito Sans 
 ## Wireframe Mockups
 
 ### Mobile Wireframe
-* [Index on Mobile - Original Layout](https://f6e340d7-6a4e-4496-9b03-f60438b4cd48.ws-eu01.gitpod.io/files/download/?id=6477c8de-4ec2-4cac-a0e6-a7467ce6e06c)
-* [Index on Mobile - Revised Layout]()
+* [Index on Mobile - Original Layout](https://raw.githubusercontent.com/mark-obeirne/culinary-world-tour/master/assets/wireframes/Index_Mobile_Initial.png)
+* [Index on Mobile - Revised Layout](https://raw.githubusercontent.com/mark-obeirne/culinary-world-tour/master/assets/wireframes/Index_Mobile_Revised.png)
 
 ### Tablet Wireframe
-* [Index on Tablet]
+* [Index on Tablet](https://raw.githubusercontent.com/mark-obeirne/culinary-world-tour/master/assets/wireframes/Index_Tablet.png)
 
 ### Desktop Wireframe
-* [Index on Desktop]
+* [Index on Desktop](https://raw.githubusercontent.com/mark-obeirne/culinary-world-tour/master/assets/wireframes/Index_Desktop.png)
 
 ## Changes to Wireframe
 Originally, the tablet and desktop sites were larger versions of the mobile site, spacing out the individual restaurant cards better. 
