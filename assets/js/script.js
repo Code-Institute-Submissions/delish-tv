@@ -996,3 +996,11 @@ countryFilter.addEventListener("change", function() {
 });
 
 showAllButton.addEventListener("click", showAllRestaurants);
+
+// jQuery
+
+$(document).ready(function() {
+    $("#bld-more-info").on("click", function() {
+        $("#bld-trailer").slideToggle(1000);
+    })
+})
