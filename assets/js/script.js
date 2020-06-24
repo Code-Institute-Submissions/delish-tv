@@ -1001,6 +1001,17 @@ showAllButton.addEventListener("click", showAllRestaurants);
 
 $(document).ready(function() {
     $("#bld-more-info").on("click", function() {
+        $(".trailer-section").hide();
         $("#bld-trailer").slideToggle(1000);
+    })
+
+    $("#ctf-more-info").on("click", function() {
+        $(".trailer-section").hide();
+        $("#chefs-table-france-trailer").slideToggle(1000);
+    })
+
+    $("#sfa-more-info").on("click", function() {
+        $(".trailer-section").hide();
+        $("#street-food-asia-trailer").slideToggle(1000);
     })
 })
