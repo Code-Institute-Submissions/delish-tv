@@ -116,6 +116,7 @@ Currently, users are able to search based on the series that a restaurant is fea
 
 [FreeFormatter CSS Beautifier](https://www.freeformatter.com/css-beautifier.html) - Used to standardise indents and tidy up the style.css layout and formatting.
 
+[Multi Device Website Mockup Generator](http://techsini.com/multi-mockup/index.php) - Used to create the multi-device image featured at the top of this README file.
 
 
 ## Testing
