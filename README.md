@@ -71,7 +71,7 @@ The site uses Roboto for non-heading text. It is a good pairing for Nunito Sans 
 * [Link]
 
 
-## Features
+## Site Features
 ### Spotlight Series Jumbotron
 When a user visits the site, a Netflix Original series is chosen at random to be displayed as the Jumbotron. This provides the user with more details about the series, the opportunity to watch a trailer to see if it is to their liking, and the option to watch it on Netflix if it is. If a user chooses a different series from the dropdown menu, this jumbotron is updated to reflect this. The jumbotron also ties in with the Google Maps feature, as detailed below.
 
@@ -82,7 +82,11 @@ The Google Map is one of the focal points of this project. Upon an initial visit
 A number of individual restaurant cards are displayed to a user depending on the chosen filter. These cards present the user with information about the restaurant such as its general address and the series that it is featured in. When an individual card is selected by the user, the map zooms in on that location as previously mentioned and the card provides the user with a button to watch the episode that the restaurant is featured in. 
 
 ## Future Features
+### Restaurant Wishlist
+While enabling users to find out so much more about restaurants can be helpful, we hope to do more in the future. We would like to add a feature which enables users to add individual restaurants to a wishlist of places that they would like to visit or save for looking up again later; perhaps it will entice them to rewatch the episode that takes place at that restaurant (or, in some cases, watch for the first time).
 
+### Search bar Functionality
+Currently, users are able to search based on the series that a restaurant is featured in or its country. We would like to be able to offer users more choice in how they search. In the future, we would like to add a search bar, which will enable users to search by restaurant name, its city, its country, or the series that it features in. This search bar will suggest searches based on the user's input or, if no matches are found, will offer suggestions, including a restaurant, a city, a country, or a series.
 
 ## Technology Used
 
