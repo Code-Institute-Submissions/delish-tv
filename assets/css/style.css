@@ -15,12 +15,8 @@ body {
 
 .navbar {
   margin-bottom: 20px;
+  background-color: #313131;
 }
-
-.navbar {
-  background-color: #141414;
-}
-
 
 /* ---Search Panel--- */
 
@@ -282,6 +278,11 @@ input:-ms-input-placeholder {
 
 footer {
   padding-left: 15px;
+  background-color: #313131;
+}
+
+.social-media {
+  margin: 20px 0px 0px;
 }
 
 .social-media a {
