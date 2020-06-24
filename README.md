@@ -88,6 +88,9 @@ While enabling users to find out so much more about restaurants can be helpful, 
 ### Search bar Functionality
 Currently, users are able to search based on the series that a restaurant is featured in or its country. We would like to be able to offer users more choice in how they search. In the future, we would like to add a search bar, which will enable users to search by restaurant name, its city, its country, or the series that it features in. This search bar will suggest searches based on the user's input or, if no matches are found, will offer suggestions, including a restaurant, a city, a country, or a series.
 
+### Embedded YouTube Trailers
+While we tested embedding YouTube trailers in a hidden iframe that displayed when a user clicked on the More Info button in the spotlight panel, since replaced by the Trailer button, we found that it resulted in errors and slowed down the performance of the site. For the next release, we would have time to utilise the YouTube API in order to display trailers for the featured series in a more streamlined way than embedded iframes.
+
 ## Technology Used
 
 [HTML](https://en.wikipedia.org/wiki/HTML) & [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) programming languages - For the basic site structure and design elements.
@@ -144,10 +147,15 @@ Accessibility:
 
 
 ## Issues Encountered and Resolutions
+### Error on page load
+Initially, the selectSpotlight function was used as the callback function in the google maps apis script, but this produced an error on page load occasionally. Removing the callback and instead adding a load event listener to the window that called this function has rectified this issue.
 
+### Individual restaurant card produces multiple "Watch on Netfix" buttons
+When a user clicks on an individual div, a Watch on Netflix button is generated with the relevant link. However, when viewing only a single restaurant, clicking on the div again would produce multiple instances of this button. This issue was solved by adding an if statement to check that there were no other such spans on the page already. If this is true, the function runs and generates the span and relevant link; otherwise, the function simply returns.
 
 ### Any known issues?
-
+#### Filter By Location dropdown
+This filter dropdown allows the user to type in a country name to filter the dropdown options to just the countries that match the text entered. If the dropdown menu is displayed above the button, the text entry field is at the top of the list and entering text causes the remaining menu options to seemingly float in the middle of the page.
 
 ## Deployment
 ### GitHub Pages
