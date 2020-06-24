@@ -72,11 +72,14 @@ The site uses Roboto for non-heading text. It is a good pairing for Nunito Sans 
 
 
 ## Features
-### Feature 1
+### Spotlight Series Jumbotron
+When a user visits the site, a Netflix Original series is chosen at random to be displayed as the Jumbotron. This provides the user with more details about the series, the opportunity to watch a trailer to see if it is to their liking, and the option to watch it on Netflix if it is. If a user chooses a different series from the dropdown menu, this jumbotron is updated to reflect this. The jumbotron also ties in with the Google Maps feature, as detailed below.
 
+### Google Maps
+The Google Map is one of the focal points of this project. Upon an initial visit, the map is populated based on the restaurants featured in the randomly chosen spotlight series. When a user chooses a new series or location, the map updates to reflect the locations of restaurants that match the chosen filter. The user is also able to find out more information by clicking on a marker, which provides them with the address, series name, episode, and an episode link so that they can watch immediately. It is also possible to choose an individual restaurant card, which focuses the map on this location.
 
-### Feature 2
-
+### Individual Restaurant cards
+A number of individual restaurant cards are displayed to a user depending on the chosen filter. These cards present the user with information about the restaurant such as its general address and the series that it is featured in. When an individual card is selected by the user, the map zooms in on that location as previously mentioned and the card provides the user with a button to watch the episode that the restaurant is featured in. 
 
 ## Future Features
 
