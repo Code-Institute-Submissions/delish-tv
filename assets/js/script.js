@@ -9,7 +9,7 @@ let showAllButton = document.querySelector(".show-all");
 
 // Functions
 
-function selectSpotlight() {
+function selectSpotlightSeries() {
   let seriesArray = ["Breakfast, Lunch & Dinner", "Chef's Table France", "Chef's Table", "Street Food Asia"];
   let chosenSpotlightSeries =
     seriesArray[Math.floor(Math.random() * seriesArray.length)];
@@ -319,7 +319,7 @@ function showAllRestaurants() {
 
 // Event Listeners
 
-window.addEventListener("load", selectSpotlight);
+window.addEventListener("load", selectSpotlightSeries);
 
 seriesDropdown.forEach((item) => {
   item.addEventListener("click", selectSeries);

@@ -15,7 +15,7 @@ body {
 
 .navbar {
   margin-bottom: 20px;
-  background-color: #313131;
+  background-image: linear-gradient(to right, #696969 10%, #181818);
 }
 
 /* ---Search Panel--- */
