@@ -10,7 +10,12 @@ let showAllButton = document.querySelector(".show-all");
 // Functions
 
 function selectSpotlightSeries() {
-  let seriesArray = ["Breakfast, Lunch & Dinner", "Chef's Table France", "Chef's Table", "Street Food Asia"];
+  let seriesArray = [
+    "Breakfast, Lunch & Dinner",
+    "Chef's Table France",
+    "Chef's Table",
+    "Street Food Asia",
+  ];
   let randomSpotlightSeries =
     seriesArray[Math.floor(Math.random() * seriesArray.length)];
   displaySpotlight(randomSpotlightSeries);
@@ -21,7 +26,7 @@ function selectSeries() {
   let userSelectedSeries = this.textContent;
   displaySpotlight(userSelectedSeries);
   filterSpotlightRestaurants(userSelectedSeries);
-  hideShowAllButton()
+  hideShowAllButton();
 }
 
 function locationDropdownMatches() {
@@ -29,7 +34,8 @@ function locationDropdownMatches() {
   let locationDropdownList = document.querySelectorAll(".country");
 
   for (i = 0; i < locationDropdownList.length; i++) {
-    txtValue = locationDropdownList[i].textContent || locationDropdownList[i].innerText;
+    txtValue =
+      locationDropdownList[i].textContent || locationDropdownList[i].innerText;
     if (txtValue.toUpperCase().indexOf(userText) > -1) {
       locationDropdownList[i].classList.remove("hidden");
     } else {
@@ -38,10 +44,9 @@ function locationDropdownMatches() {
   }
 }
 
-
 function selectLocation() {
-  let chosenLocation = this.textContent;
-  filterRestaurantsByLocation(chosenLocation);
+  let userSelectedLocation = this.textContent;
+  filterRestaurantsByLocation(userSelectedLocation);
   hideSpotlightJumbotron();
   hideShowAllButton();
 }
@@ -53,37 +58,34 @@ function hideSpotlightJumbotron() {
   });
 }
 
-function filterSpotlightRestaurants(spotlight) {
+function filterSpotlightRestaurants(chosenSpotlightSeries) {
   const spotlightRestaurants = restaurants.filter(
-    (restaurant) => restaurant.series === spotlight
+    (restaurant) => restaurant.series === chosenSpotlightSeries
   );
   restaurantsMatchingFilter = spotlightRestaurants;
   initMap(spotlightRestaurants);
-  displayCloserLookText()
+  displayCloserLookText();
 }
 
-function filterRestaurantsByLocation(location) {
-  const spotlightRestaurants = restaurants.filter(
-    (restaurant) => restaurant.country === location
+function filterRestaurantsByLocation(chosenLocation) {
+  const restaurantsInLocation = restaurants.filter(
+    (restaurant) => restaurant.country === chosenLocation
   );
-  restaurantsMatchingFilter = spotlightRestaurants;
-  initMap(spotlightRestaurants);
+  restaurantsMatchingFilter = restaurantsInLocation;
+  initMap(restaurantsInLocation);
   if (restaurantsMatchingFilter.length > 1) {
-      displayCloserLookText();
+    displayCloserLookText();
   } else {
-      hideCloserLookText();
+    hideCloserLookText();
   }
 }
 
 function displaySpotlight(selectedSpotlight) {
-  let allJumbotrons = document.querySelectorAll(".jumbotron-container");
-  allJumbotrons.forEach((jumbotron) => {
-    jumbotron.classList.add("hidden");
-  });
+  hideSpotlightJumbotron();
   let jumbotronBLD = document.querySelector(".bld");
   let jumbotronCTF = document.querySelector(".chefstablefrance");
   let jumbotronSFA = document.querySelector(".sfa");
-  let jumbotronCT = document.querySelector(".ct")
+  let jumbotronCT = document.querySelector(".ct");
   switch (selectedSpotlight) {
     case "Breakfast, Lunch & Dinner":
       jumbotronBLD.classList.remove("hidden");
@@ -113,7 +115,10 @@ function initMap(spotlightRestaurants) {
     },
   };
 
-  if (spotlightRestaurants.length === 1 && restaurantsMatchingFilter.length !== 1) {
+  if (
+    spotlightRestaurants.length === 1 &&
+    restaurantsMatchingFilter.length !== 1
+  ) {
     let map = new google.maps.Map(document.querySelector("#map"), mapDefaults);
     let infoWindow = new google.maps.InfoWindow();
     let bounds = new google.maps.LatLngBounds();
@@ -126,48 +131,51 @@ function initMap(spotlightRestaurants) {
       bounds.extend(marker.position);
       map.fitBounds(bounds);
       // ensure that the map isn't too zoomed in when highlighting one location. Source: https://stackoverflow.com/questions/4523023/using-setzoom-after-using-fitbounds-with-google-maps-api-v3
-      zoomChangeBoundsListener =
-        google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
+      zoomChangeBoundsListener = google.maps.event.addListenerOnce(
+        map,
+        "bounds_changed",
+        function (event) {
           if (this.getZoom()) {
             this.setZoom(16);
           }
-        });
-      setTimeout(function() {
+        }
+      );
+      setTimeout(function () {
         google.maps.event.removeListener(zoomChangeBoundsListener);
       }, 2000);
 
-      google.maps.event.addListener(marker, "click", function(event) {
+      google.maps.event.addListener(marker, "click", function (event) {
         infoWindow.setContent(
           "<div class='map-content'>" +
-          "<div class='marker-header'>" +
-          spotlightRestaurants[i].name +
-          "</div>" +
-          "<div class='map-info'>" +
-          spotlightRestaurants[i].address1 +
-          "</div>" +
-          "<div class='map-info'>" +
-          spotlightRestaurants[i].city +
-          "</div>" +
-          "<div class='map-info'>" +
-          spotlightRestaurants[i].country +
-          "</div>" +
-          "<div class='map-info'>" +
-          spotlightRestaurants[i].postcode +
-          "</div>" +
-          "<div class='map-info'><span class='map-strong'>" +
-          spotlightRestaurants[i].series +
-          "</span></div>" +
-          "<div class='map-info'>Season: " +
-          spotlightRestaurants[i].season +
-          " | Episode: " +
-          spotlightRestaurants[i].episode +
-          "</div>" +
-          "<div class='map-info episode-link'><a href=" +
-          spotlightRestaurants[i].episodeLink +
-          " target='_blank' rel='noopener'>Watch on Netflix" +
-          "</a>" +
-          "</div>" +
-          "</div>"
+            "<div class='marker-header'>" +
+            spotlightRestaurants[i].name +
+            "</div>" +
+            "<div class='map-info'>" +
+            spotlightRestaurants[i].address1 +
+            "</div>" +
+            "<div class='map-info'>" +
+            spotlightRestaurants[i].city +
+            "</div>" +
+            "<div class='map-info'>" +
+            spotlightRestaurants[i].country +
+            "</div>" +
+            "<div class='map-info'>" +
+            spotlightRestaurants[i].postcode +
+            "</div>" +
+            "<div class='map-info'><span class='map-strong'>" +
+            spotlightRestaurants[i].series +
+            "</span></div>" +
+            "<div class='map-info'>Season: " +
+            spotlightRestaurants[i].season +
+            " | Episode: " +
+            spotlightRestaurants[i].episode +
+            "</div>" +
+            "<div class='map-info episode-link'><a href=" +
+            spotlightRestaurants[i].episodeLink +
+            " target='_blank' rel='noopener'>Watch on Netflix" +
+            "</a>" +
+            "</div>" +
+            "</div>"
         );
         infoWindow.open(map, marker);
       });
@@ -175,7 +183,8 @@ function initMap(spotlightRestaurants) {
     });
 
     let markerCluster = new MarkerClusterer(map, markers, {
-      imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
+      imagePath:
+        "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
     });
   } else {
     let map = new google.maps.Map(document.querySelector("#map"), mapDefaults);
@@ -189,55 +198,61 @@ function initMap(spotlightRestaurants) {
         label: labels[i % labels.length],
       });
       // the below if statement ensures that the map isn't too zoomed in when there is only one restaurant matching the given filter
-      if (spotlightRestaurants.length === 1 && restaurantsMatchingFilter.length === 1) {
-        // bounds ensures that the map center shows all marker locations  
+      if (
+        spotlightRestaurants.length === 1 &&
+        restaurantsMatchingFilter.length === 1
+      ) {
+        // bounds ensures that the map center shows all marker locations
         bounds.extend(marker.position);
-      map.fitBounds(bounds);
-      zoomChangeBoundsListener =
-        google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
-          if (this.getZoom()) {
-            this.setZoom(16);
+        map.fitBounds(bounds);
+        zoomChangeBoundsListener = google.maps.event.addListenerOnce(
+          map,
+          "bounds_changed",
+          function (event) {
+            if (this.getZoom()) {
+              this.setZoom(16);
+            }
           }
-        });
-      setTimeout(function() {
-        google.maps.event.removeListener(zoomChangeBoundsListener);
-      }, 2000);
-      } else {          
+        );
+        setTimeout(function () {
+          google.maps.event.removeListener(zoomChangeBoundsListener);
+        }, 2000);
+      } else {
         bounds.extend(marker.position);
-      map.fitBounds(bounds);
+        map.fitBounds(bounds);
       }
-      google.maps.event.addListener(marker, "click", function(event) {
+      google.maps.event.addListener(marker, "click", function (event) {
         infoWindow.setContent(
           "<div class='map-content'>" +
-          "<div class='marker-header'>" +
-          spotlightRestaurants[i].name +
-          "</div>" +
-          "<div class='map-info'>" +
-          spotlightRestaurants[i].address1 +
-          "</div>" +
-          "<div class='map-info'>" +
-          spotlightRestaurants[i].city +
-          "</div>" +
-          "<div class='map-info'>" +
-          spotlightRestaurants[i].country +
-          "</div>" +
-          "<div class='map-info'>" +
-          spotlightRestaurants[i].postcode +
-          "</div>" +
-          "<div class='map-info'><span class='map-strong'>" +
-          spotlightRestaurants[i].series +
-          "</span></div>" +
-          "<div class='map-info'>Season: " +
-          spotlightRestaurants[i].season +
-          " | Episode: " +
-          spotlightRestaurants[i].episode +
-          "</div>" +
-          "<div class='map-info episode-link'><a href=" +
-          spotlightRestaurants[i].episodeLink +
-          " target='_blank' rel='noopener'>Watch on Netflix" +
-          "</a>" +
-          "</div>" +
-          "</div>"
+            "<div class='marker-header'>" +
+            spotlightRestaurants[i].name +
+            "</div>" +
+            "<div class='map-info'>" +
+            spotlightRestaurants[i].address1 +
+            "</div>" +
+            "<div class='map-info'>" +
+            spotlightRestaurants[i].city +
+            "</div>" +
+            "<div class='map-info'>" +
+            spotlightRestaurants[i].country +
+            "</div>" +
+            "<div class='map-info'>" +
+            spotlightRestaurants[i].postcode +
+            "</div>" +
+            "<div class='map-info'><span class='map-strong'>" +
+            spotlightRestaurants[i].series +
+            "</span></div>" +
+            "<div class='map-info'>Season: " +
+            spotlightRestaurants[i].season +
+            " | Episode: " +
+            spotlightRestaurants[i].episode +
+            "</div>" +
+            "<div class='map-info episode-link'><a href=" +
+            spotlightRestaurants[i].episodeLink +
+            " target='_blank' rel='noopener'>Watch on Netflix" +
+            "</a>" +
+            "</div>" +
+            "</div>"
         );
         infoWindow.open(map, marker);
       });
@@ -245,7 +260,8 @@ function initMap(spotlightRestaurants) {
     });
 
     let markerCluster = new MarkerClusterer(map, markers, {
-      imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
+      imagePath:
+        "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
     });
     listFeaturedRestaurants(spotlightRestaurants, markers);
   }
@@ -253,7 +269,7 @@ function initMap(spotlightRestaurants) {
 
 function listFeaturedRestaurants(selectedRestaurants, markers) {
   let allFeaturedRestaurants = document.querySelectorAll(".restaurant");
-  allFeaturedRestaurants.forEach(restaurant => {
+  allFeaturedRestaurants.forEach((restaurant) => {
     restaurant.parentNode.removeChild(restaurant);
   });
 
@@ -305,18 +321,22 @@ function createListing(restaurant, label) {
 
   listing.appendChild(div);
 
-  div.addEventListener("click", function() {
-    let allFeaturedRestaurants = Array.from(document.querySelectorAll(".restaurant"));
+  div.addEventListener("click", function () {
+    let allFeaturedRestaurants = Array.from(
+      document.querySelectorAll(".restaurant")
+    );
     let chosenCard = this;
-      let chosenRestaurant = [restaurantsMatchingFilter[allFeaturedRestaurants.indexOf(chosenCard)]]
-      allFeaturedRestaurants.forEach(restaurant => {
-        restaurant.classList.add("hidden");
-      })
-      chosenCard.classList.remove("hidden");
-      displayShowAllButton()
-      hideCloserLookText();
-      initMap(chosenRestaurant);
-  })
+    let chosenRestaurant = [
+      restaurantsMatchingFilter[allFeaturedRestaurants.indexOf(chosenCard)],
+    ];
+    allFeaturedRestaurants.forEach((restaurant) => {
+      restaurant.classList.add("hidden");
+    });
+    chosenCard.classList.remove("hidden");
+    displayShowAllButton();
+    hideCloserLookText();
+    initMap(chosenRestaurant);
+  });
 }
 
 function showAllRestaurants() {
@@ -324,29 +344,29 @@ function showAllRestaurants() {
   let listing = document.querySelector(".restaurants-listings");
   let allRestaurants = Array.from(listing.children);
   specifyCard.classList.remove("hidden");
-  allRestaurants.forEach(restaurant => {
+  allRestaurants.forEach((restaurant) => {
     restaurant.classList.remove("hidden");
-  })
+  });
   initMap(restaurantsMatchingFilter);
-  hideShowAllButton()
+  hideShowAllButton();
 }
 
 function hideCloserLookText() {
-    let closerLookText = document.querySelector(".closer-look");
-    closerLookText.classList.add("hidden");
+  let closerLookText = document.querySelector(".closer-look");
+  closerLookText.classList.add("hidden");
 }
 
 function displayCloserLookText() {
-    let closerLookText = document.querySelector(".closer-look");
-    closerLookText.classList.remove("hidden");
+  let closerLookText = document.querySelector(".closer-look");
+  closerLookText.classList.remove("hidden");
 }
 
 function hideShowAllButton() {
-    showAllButton.classList.add("hidden");
+  showAllButton.classList.add("hidden");
 }
 
 function displayShowAllButton() {
-    showAllButton.classList.remove("hidden");
+  showAllButton.classList.remove("hidden");
 }
 
 // Event Listeners
@@ -363,10 +383,10 @@ locationDropdown.forEach((locationItem) => {
 
 countryFilter.addEventListener("keyup", locationDropdownMatches);
 // reset the countryFilter input value and restore all dropdown options after user clicks off dropdown menu
-countryFilter.addEventListener("change", function() {
-  setTimeout(function() {
+countryFilter.addEventListener("change", function () {
+  setTimeout(function () {
     countryFilter.value = "";
-    locationDropdownMatches()
+    locationDropdownMatches();
   }, 500);
 });
 
