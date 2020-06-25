@@ -25,10 +25,6 @@ body {
   text-align: center;
 }
 
-.searchbox {
-  width: 90%;
-}
-
 .dropdown {
   display: inline-block;
 }
@@ -36,6 +32,11 @@ body {
 .dropdown-toggle {
   margin: 15px 2.5px;
   cursor: pointer;
+}
+
+.dropdown-menu {
+    max-height: 400px;
+    overflow-y: auto;
 }
 
 .dropdown-item {
