@@ -5,7 +5,6 @@ let restaurantsMatchingFilter = [];
 let seriesDropdown = document.querySelectorAll(".dropdown-series");
 let locationDropdown = document.querySelectorAll(".country");
 let countryFilter = document.querySelector(".country-filter");
-let closerLookText = document.querySelector(".closer-look");
 let showAllButton = document.querySelector(".show-all");
 
 // Functions
@@ -335,10 +334,12 @@ function showAllRestaurants() {
 }
 
 function hideCloserLookText() {
+    let closerLookText = document.querySelector(".closer-look");
     closerLookText.classList.add("hidden");
 }
 
 function displayCloserLookText() {
+    let closerLookText = document.querySelector(".closer-look");
     closerLookText.classList.remove("hidden");
 }
 
