@@ -5,6 +5,7 @@ let restaurantsMatchingFilter = [];
 let seriesDropdown = document.querySelectorAll(".dropdown-series");
 let locationDropdown = document.querySelectorAll(".country");
 let countryFilter = document.querySelector(".country-filter");
+let closerLookText = document.querySelector(".closer-look");
 let showAllButton = document.querySelector(".show-all");
 
 // Functions
@@ -57,6 +58,7 @@ function filterSpotlightRestaurants(spotlight) {
   );
   restaurantsMatchingFilter = spotlightRestaurants;
   initMap(spotlightRestaurants);
+  closerLookText.classList.remove("hidden");
   //displaySpotlight(spotlight);
 }
 
@@ -66,6 +68,12 @@ function filterRestaurantsByLocation(location) {
   );
   restaurantsMatchingFilter = spotlightRestaurants;
   initMap(spotlightRestaurants);
+  console.log(restaurantsMatchingFilter.length);
+  if (restaurantsMatchingFilter.length > 1) {
+      closerLookText.classList.remove("hidden");
+  } else {
+      closerLookText.classList.add("hidden")
+  }
 }
 
 function displaySpotlight(selectedSpotlight) {
@@ -299,7 +307,6 @@ function createListing(restaurant, label) {
   listing.appendChild(div);
 
   div.addEventListener("click", function() {
-    let specifyCard = document.querySelector(".closer-look");
     let allFeaturedRestaurants = Array.from(document.querySelectorAll(".restaurant"));
     let chosenCard = this;
       let chosenRestaurant = [restaurantsMatchingFilter[allFeaturedRestaurants.indexOf(chosenCard)]]
@@ -308,7 +315,7 @@ function createListing(restaurant, label) {
       })
       chosenCard.classList.remove("hidden");
       showAllButton.classList.remove("hidden");
-      specifyCard.classList.add("hidden");
+      closerLookText.classList.add("hidden");
       initMap(chosenRestaurant);
   })
 }
