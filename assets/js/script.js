@@ -323,12 +323,12 @@ function showAllRestaurants() {
 
 window.addEventListener("load", selectSpotlightSeries);
 
-seriesDropdown.forEach((item) => {
-  item.addEventListener("click", selectSeries);
+seriesDropdown.forEach((seriesItem) => {
+  seriesItem.addEventListener("click", selectSeries);
 });
 
-locationDropdown.forEach((item) => {
-  item.addEventListener("click", selectLocation);
+locationDropdown.forEach((locationItem) => {
+  locationItem.addEventListener("click", selectLocation);
 });
 
 countryFilter.addEventListener("keyup", dropdownLocationMatches);
