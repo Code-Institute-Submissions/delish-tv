@@ -11,13 +11,15 @@ let showAllButton = document.querySelector(".show-all");
 
 function selectSpotlightSeries() {
   let seriesArray = ["Breakfast, Lunch & Dinner", "Chef's Table France", "Chef's Table", "Street Food Asia"];
-  let chosenSpotlightSeries =
+  let randomSpotlightSeries =
     seriesArray[Math.floor(Math.random() * seriesArray.length)];
-  filterSpotlightRestaurants(chosenSpotlightSeries);
+  displaySpotlight(randomSpotlightSeries);
+  filterSpotlightRestaurants(randomSpotlightSeries);
 }
 
 function selectSeries() {
   let chosenSeries = this.textContent;
+  displaySpotlight(chosenSeries);
   filterSpotlightRestaurants(chosenSeries);
 }
 
@@ -55,7 +57,7 @@ function filterSpotlightRestaurants(spotlight) {
   );
   restaurantsMatchingFilter = spotlightRestaurants;
   initMap(spotlightRestaurants);
-  displaySpotlight(spotlight);
+  //displaySpotlight(spotlight);
 }
 
 function filterRestaurantsByLocation(location) {
@@ -66,7 +68,7 @@ function filterRestaurantsByLocation(location) {
   initMap(spotlightRestaurants);
 }
 
-function displaySpotlight(spotlight) {
+function displaySpotlight(selectedSpotlight) {
   let allJumbotrons = document.querySelectorAll(".jumbotron-container");
   allJumbotrons.forEach((jumbotron) => {
     jumbotron.classList.add("hidden");
@@ -75,7 +77,7 @@ function displaySpotlight(spotlight) {
   let jumbotronCTF = document.querySelector(".chefstablefrance");
   let jumbotronSFA = document.querySelector(".sfa");
   let jumbotronCT = document.querySelector(".ct")
-  switch (spotlight) {
+  switch (selectedSpotlight) {
     case "Breakfast, Lunch & Dinner":
       jumbotronBLD.classList.remove("hidden");
       break;
