@@ -24,16 +24,16 @@ function selectSeries() {
   hideShowAllButton()
 }
 
-function dropdownLocationMatches() {
-  let filter = countryFilter.value.toUpperCase();
-  let locationDropdown = document.querySelectorAll(".country");
+function locationDropdownMatches() {
+  let userText = countryFilter.value.toUpperCase();
+  let locationDropdownList = document.querySelectorAll(".country");
 
-  for (i = 0; i < locationDropdown.length; i++) {
-    txtValue = locationDropdown[i].textContent || locationDropdown[i].innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      locationDropdown[i].classList.remove("hidden");
+  for (i = 0; i < locationDropdownList.length; i++) {
+    txtValue = locationDropdownList[i].textContent || locationDropdownList[i].innerText;
+    if (txtValue.toUpperCase().indexOf(userText) > -1) {
+      locationDropdownList[i].classList.remove("hidden");
     } else {
-      locationDropdown[i].classList.add("hidden");
+      locationDropdownList[i].classList.add("hidden");
     }
   }
 }
@@ -60,7 +60,6 @@ function filterSpotlightRestaurants(spotlight) {
   restaurantsMatchingFilter = spotlightRestaurants;
   initMap(spotlightRestaurants);
   displayCloserLookText()
-  //displaySpotlight(spotlight);
 }
 
 function filterRestaurantsByLocation(location) {
@@ -69,7 +68,6 @@ function filterRestaurantsByLocation(location) {
   );
   restaurantsMatchingFilter = spotlightRestaurants;
   initMap(spotlightRestaurants);
-  console.log(restaurantsMatchingFilter.length);
   if (restaurantsMatchingFilter.length > 1) {
       displayCloserLookText();
   } else {
@@ -363,12 +361,12 @@ locationDropdown.forEach((locationItem) => {
   locationItem.addEventListener("click", selectLocation);
 });
 
-countryFilter.addEventListener("keyup", dropdownLocationMatches);
-// reset the countryFilter input value and restore all dropdown options
+countryFilter.addEventListener("keyup", locationDropdownMatches);
+// reset the countryFilter input value and restore all dropdown options after user clicks off dropdown menu
 countryFilter.addEventListener("change", function() {
   setTimeout(function() {
     countryFilter.value = "";
-    dropdownLocationMatches()
+    locationDropdownMatches()
   }, 500);
 });
 
