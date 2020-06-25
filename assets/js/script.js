@@ -293,7 +293,8 @@ function createListing(restaurant, label) {
                         </div>
                     </div>
                 </div>
-            </div>`;
+            </div>
+            <span class="overlap-episode-link"><a class="btn btn-sm btn-red" href="${restaurant.episodeLink}" target="_blank" rel="noopener">Watch Now On Netflix</a></span>`;
 
   listing.appendChild(div);
 
@@ -301,24 +302,14 @@ function createListing(restaurant, label) {
     let specifyCard = document.querySelector(".closer-look");
     let allFeaturedRestaurants = Array.from(document.querySelectorAll(".restaurant"));
     let chosenCard = this;
-    let currentSpans = document.querySelector(".overlap-episode-link")
-    if (currentSpans === null) {
-      let span = document.createElement("span")
-      span.classList.add("overlap-episode-link");
-      let chosenCardIndex = allFeaturedRestaurants.indexOf(chosenCard);
       let chosenRestaurant = [restaurantsMatchingFilter[allFeaturedRestaurants.indexOf(chosenCard)]]
       allFeaturedRestaurants.forEach(restaurant => {
         restaurant.classList.add("hidden");
       })
       chosenCard.classList.remove("hidden");
       showAllButton.classList.remove("hidden");
-      span.innerHTML = `<a class="btn btn-sm btn-red" href="${restaurant.episodeLink}" target="_blank" rel="noopener">Watch Now On Netflix</a>`
-      chosenCard.appendChild(span);
       specifyCard.classList.add("hidden");
       initMap(chosenRestaurant);
-    } else {
-      return;
-    }
   })
 }
 
