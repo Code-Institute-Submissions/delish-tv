@@ -22,7 +22,7 @@ function selectSeries() {
   let userSelectedSeries = this.textContent;
   displaySpotlight(userSelectedSeries);
   filterSpotlightRestaurants(userSelectedSeries);
-  showAllButton.classList.add("hidden")
+  hideShowAllButton()
 }
 
 function dropdownLocationMatches() {
@@ -44,7 +44,7 @@ function selectLocation() {
   let chosenLocation = this.textContent;
   filterRestaurantsByLocation(chosenLocation);
   hideSpotlightJumbotron();
-  showAllButton.classList.add("hidden")
+  hideShowAllButton();
 }
 
 function hideSpotlightJumbotron() {
@@ -331,7 +331,7 @@ function showAllRestaurants() {
     restaurant.classList.remove("hidden");
   })
   initMap(restaurantsMatchingFilter);
-  showAllButton.classList.add("hidden");
+  hideShowAllButton()
 }
 
 function hideCloserLookText() {
