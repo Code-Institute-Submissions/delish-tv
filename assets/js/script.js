@@ -181,9 +181,24 @@ function initMap(spotlightRestaurants) {
         position: location,
         label: labels[i % labels.length],
       });
-      // bounds ensures that the map center shows all marker locations
-      bounds.extend(marker.position);
+      // the below if statement ensures that the map isn't too zoomed in when there is only one restaurant matching the given filter
+      if (spotlightRestaurants.length === 1 && restaurantsMatchingFilter.length === 1) {
+        // bounds ensures that the map center shows all marker locations  
+        bounds.extend(marker.position);
       map.fitBounds(bounds);
+      zoomChangeBoundsListener =
+        google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
+          if (this.getZoom()) {
+            this.setZoom(16);
+          }
+        });
+      setTimeout(function() {
+        google.maps.event.removeListener(zoomChangeBoundsListener);
+      }, 2000);
+      } else {          
+        bounds.extend(marker.position);
+      map.fitBounds(bounds);
+      }
       google.maps.event.addListener(marker, "click", function(event) {
         infoWindow.setContent(
           "<div class='map-content'>" +
