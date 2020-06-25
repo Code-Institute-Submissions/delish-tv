@@ -22,6 +22,7 @@ function selectSeries() {
   let chosenSeries = this.textContent;
   displaySpotlight(chosenSeries);
   filterSpotlightRestaurants(chosenSeries);
+  showAllButton.classList.add("hidden")
 }
 
 function dropdownLocationMatches() {
@@ -43,6 +44,7 @@ function selectLocation() {
   let chosenLocation = this.textContent;
   filterRestaurantsByLocation(chosenLocation);
   hideSpotlight();
+  showAllButton.classList.add("hidden")
 }
 
 function hideSpotlight() {
