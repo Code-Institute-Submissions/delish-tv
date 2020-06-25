@@ -66,7 +66,7 @@ let restaurants = [{
     series: "Breakfast, Lunch & Dinner",
     season: 1,
     episode: 2,
-    episodeLink: "",
+    episodeLink: "https://www.netflix.com/watch/81076572?trackId=14277281&tctx=0%2C1%2C847a7e7c-0c26-4565-b1fd-9c5549d10792-1572015%2C%2C%2C",
     website: "",
   },
   {
@@ -80,7 +80,7 @@ let restaurants = [{
     series: "Breakfast, Lunch & Dinner",
     season: 1,
     episode: 2,
-    episodeLink: "",
+    episodeLink: "https://www.netflix.com/watch/81076572?trackId=14277281&tctx=0%2C1%2C847a7e7c-0c26-4565-b1fd-9c5549d10792-1572015%2C%2C%2C",
     website: "http://www.grandcafedelaposte.restaurant/",
   },
   {
@@ -94,7 +94,7 @@ let restaurants = [{
     series: "Breakfast, Lunch & Dinner",
     season: 1,
     episode: 3,
-    episodeLink: "",
+    episodeLink: "https://www.netflix.com/watch/81076574?trackId=14277281&tctx=0%2C2%2C847a7e7c-0c26-4565-b1fd-9c5549d10792-1572015%2C%2C%2C",
     website: "https://www.eatwinsome.com/",
   },
   {
@@ -108,7 +108,7 @@ let restaurants = [{
     series: "Breakfast, Lunch & Dinner",
     season: 1,
     episode: 3,
-    episodeLink: "",
+    episodeLink: "https://www.netflix.com/watch/81076574?trackId=14277281&tctx=0%2C2%2C847a7e7c-0c26-4565-b1fd-9c5549d10792-1572015%2C%2C%2C",
     website: "http://hotnjuicycrawfish.com/",
   },
   {
@@ -122,7 +122,7 @@ let restaurants = [{
     series: "Breakfast, Lunch & Dinner",
     season: 1,
     episode: 3,
-    episodeLink: "",
+    episodeLink: "https://www.netflix.com/watch/81076574?trackId=14277281&tctx=0%2C2%2C847a7e7c-0c26-4565-b1fd-9c5549d10792-1572015%2C%2C%2C",
     website: "http://gardenabowlcoffeeshop.com/",
   },
   {
@@ -136,7 +136,7 @@ let restaurants = [{
     series: "Breakfast, Lunch & Dinner",
     season: 1,
     episode: 3,
-    episodeLink: "",
+    episodeLink: "https://www.netflix.com/watch/81076574?trackId=14277281&tctx=0%2C2%2C847a7e7c-0c26-4565-b1fd-9c5549d10792-1572015%2C%2C%2C",
     website: "",
   },
   {
@@ -150,7 +150,7 @@ let restaurants = [{
     series: "Breakfast, Lunch & Dinner",
     season: 1,
     episode: 3,
-    episodeLink: "",
+    episodeLink: "https://www.netflix.com/watch/81076574?trackId=14277281&tctx=0%2C2%2C847a7e7c-0c26-4565-b1fd-9c5549d10792-1572015%2C%2C%2C",
     website: "http://places.singleplatform.com/otofuku-noodle-house/menu",
   },
   {
@@ -164,7 +164,7 @@ let restaurants = [{
     series: "Breakfast, Lunch & Dinner",
     season: 1,
     episode: 4,
-    episodeLink: "",
+    episodeLink: "https://www.netflix.com/watch/81076570?trackId=14277281&tctx=0%2C3%2C847a7e7c-0c26-4565-b1fd-9c5549d10792-1572015%2C%2C%2C",
     website: "",
   },
   {
@@ -178,7 +178,7 @@ let restaurants = [{
     series: "Breakfast, Lunch & Dinner",
     season: 1,
     episode: 4,
-    episodeLink: "",
+    episodeLink: "https://www.netflix.com/watch/81076570?trackId=14277281&tctx=0%2C3%2C847a7e7c-0c26-4565-b1fd-9c5549d10792-1572015%2C%2C%2C",
     website: "",
   },
   {
