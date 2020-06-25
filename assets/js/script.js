@@ -19,9 +19,9 @@ function selectSpotlightSeries() {
 }
 
 function selectSeries() {
-  let chosenSeries = this.textContent;
-  displaySpotlight(chosenSeries);
-  filterSpotlightRestaurants(chosenSeries);
+  let userSelectedSeries = this.textContent;
+  displaySpotlight(userSelectedSeries);
+  filterSpotlightRestaurants(userSelectedSeries);
   showAllButton.classList.add("hidden")
 }
 
@@ -43,11 +43,11 @@ function dropdownLocationMatches() {
 function selectLocation() {
   let chosenLocation = this.textContent;
   filterRestaurantsByLocation(chosenLocation);
-  hideSpotlight();
+  hideSpotlightJumbotron();
   showAllButton.classList.add("hidden")
 }
 
-function hideSpotlight() {
+function hideSpotlightJumbotron() {
   let allJumbotrons = document.querySelectorAll(".jumbotron-container");
   allJumbotrons.forEach((jumbotron) => {
     jumbotron.classList.add("hidden");
