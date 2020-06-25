@@ -60,7 +60,7 @@ function filterSpotlightRestaurants(spotlight) {
   );
   restaurantsMatchingFilter = spotlightRestaurants;
   initMap(spotlightRestaurants);
-  closerLookText.classList.remove("hidden");
+  displayCloserLookText()
   //displaySpotlight(spotlight);
 }
 
@@ -72,9 +72,9 @@ function filterRestaurantsByLocation(location) {
   initMap(spotlightRestaurants);
   console.log(restaurantsMatchingFilter.length);
   if (restaurantsMatchingFilter.length > 1) {
-      closerLookText.classList.remove("hidden");
+      displayCloserLookText();
   } else {
-      closerLookText.classList.add("hidden")
+      hideCloserLookText();
   }
 }
 
@@ -316,8 +316,8 @@ function createListing(restaurant, label) {
         restaurant.classList.add("hidden");
       })
       chosenCard.classList.remove("hidden");
-      showAllButton.classList.remove("hidden");
-      closerLookText.classList.add("hidden");
+      displayShowAllButton()
+      hideCloserLookText();
       initMap(chosenRestaurant);
   })
 }
