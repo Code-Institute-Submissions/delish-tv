@@ -334,6 +334,22 @@ function showAllRestaurants() {
   showAllButton.classList.add("hidden");
 }
 
+function hideCloserLookText() {
+    closerLookText.classList.add("hidden");
+}
+
+function displayCloserLookText() {
+    closerLookText.classList.remove("hidden");
+}
+
+function hideShowAllButton() {
+    showAllButton.classList.add("hidden");
+}
+
+function displayShowAllButton() {
+    showAllButton.classList.remove("hidden");
+}
+
 // Event Listeners
 
 window.addEventListener("load", selectSpotlightSeries);
