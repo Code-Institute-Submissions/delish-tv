@@ -149,6 +149,25 @@ Accessibility:
     https://color.a11y.com/Contrast/
 
 ## Testing Process
+This website was also tested manually on a range of devices and internet browsers:
+
+Dell Laptop
+* Google Chrome
+* Internet Explorer 11
+* Microsoft Edge
+* Mozilla Firefox
+
+Mobile
+Samsung Galaxy S10:
+* Google Chrome 
+* Firefox
+* Brave
+
+iPhone 8:
+* Safari
+* Google Chrome
+
+## Testing Process
 
 -- Include any automated or lots of details about the manual testing performed, including tests and steps
 
