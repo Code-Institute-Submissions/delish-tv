@@ -15,7 +15,7 @@ body {
 
 .navbar {
   margin-bottom: 20px;
-  background-image: linear-gradient(to right, #696969 10%, #181818);
+  background-image: linear-gradient(to right, #696969, #181818);
 }
 
 /* ---Search Panel--- */
@@ -124,8 +124,14 @@ input:-ms-input-placeholder {
 }
 
 .jumbotron.chefstablefrance-jumbo {
-  background-image: url("../images/spotlights/chefs-table-france_grab.PNG");
-  background-position: top right;
+  background-image: url("../images/spotlights/chefs-table-france_presented_dish.PNG");
+  background-position: 40% center;
+  background-repeat: no-repeat;
+}
+
+.jumbotron.chefstable-jumbo {
+  background-image: url("../images/spotlights/chefs-table.PNG");
+  background-position: 40% center;
   background-repeat: no-repeat;
 }
 
