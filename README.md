@@ -159,8 +159,8 @@ Accessibility:
 ### Error on page load
 Initially, the selectSpotlight function was used as the callback function in the google maps apis script, but this produced an error on page load occasionally. Removing the callback and instead adding a load event listener to the window that called this function has rectified this issue.
 
-### Individual restaurant card produces multiple "Watch on Netfix" buttons
-When a user clicks on an individual div, a Watch on Netflix button is generated with the relevant link. However, when viewing only a single restaurant, clicking on the div again would produce multiple instances of this button. This issue was solved by adding an if statement to check that there were no other such spans on the page already. If this is true, the function runs and generates the span and relevant link; otherwise, the function simply returns.
+### Watch on Netflix button not appearing if only one restaurant matches filter
+When a user clicked on a restaurant card, the Watch on Netflix span would be generated with a link to the episode. However, this button did not appear for restaurants where only one restaurant met the filter (e.g. Germany). Previously, the function checked if there was an existing span (as there was previously an issue whereby clicking on a card again would produce multiple spans). In the end, it was decided to create the button immediately upon creation of the card so that a user can click through to the episode immediately instead of taking an additional step to isolate a restaurant card.
 
 ### Any known issues?
 #### Filter By Location dropdown
