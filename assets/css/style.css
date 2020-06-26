@@ -18,6 +18,15 @@ body {
   background-image: linear-gradient(to right, #696969, #181818);
 }
 
+.navbar-brand {
+  font-family: "Nunito Sans", sans-serif;
+  color: #e30914;
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: bold;
+  margin-left: -25px;
+}
+
 /* ---Search Panel--- */
 
 #search-panel {
