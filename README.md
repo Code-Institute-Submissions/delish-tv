@@ -181,6 +181,9 @@ Initially, the selectSpotlight function was used as the callback function in the
 ### Watch on Netflix button not appearing if only one restaurant matches filter
 When a user clicked on a restaurant card, the Watch on Netflix span would be generated with a link to the episode. However, this button did not appear for restaurants where only one restaurant met the filter (e.g. Germany). Previously, the function checked if there was an existing span (as there was previously an issue whereby clicking on a card again would produce multiple spans). In the end, it was decided to create the button immediately upon creation of the card so that a user can click through to the episode immediately instead of taking an additional step to isolate a restaurant card.
 
+### Grey border to spotlight images on larger screens
+As the site is designed with a mobile-first philosophy, an emphasis was placed on making the spotlight images appear well on mobile. However, at larger screen sizes the custom background position set caused a grey border to appear at the right of some images. Using a media query, the position of these images has been updated to render them correctly on larger devices.
+
 ### Any known issues?
 #### Filter By Location dropdown
 This filter dropdown allows the user to type in a country name to filter the dropdown options to just the countries that match the text entered. If the dropdown menu is displayed above the button, the text entry field is at the top of the list and entering text causes the remaining menu options to seemingly float in the middle of the page.
