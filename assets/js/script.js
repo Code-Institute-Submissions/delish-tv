@@ -33,8 +33,8 @@ function locationDropdownMatches() {
   let userText = countryFilter.value.toUpperCase();
   let locationDropdownList = document.querySelectorAll(".country");
 
-  for (i = 0; i < locationDropdownList.length; i++) {
-    txtValue =
+  for (let i = 0; i < locationDropdownList.length; i++) {
+    let txtValue =
       locationDropdownList[i].textContent || locationDropdownList[i].innerText;
     if (txtValue.toUpperCase().indexOf(userText) > -1) {
       locationDropdownList[i].classList.remove("hidden");
@@ -131,7 +131,7 @@ function initMap(spotlightRestaurants) {
       bounds.extend(marker.position);
       map.fitBounds(bounds);
       // ensure that the map isn't too zoomed in when highlighting one location. Source: https://stackoverflow.com/questions/4523023/using-setzoom-after-using-fitbounds-with-google-maps-api-v3
-      zoomChangeBoundsListener = google.maps.event.addListenerOnce(
+      let zoomChangeBoundsListener = google.maps.event.addListenerOnce(
         map,
         "bounds_changed",
         function (event) {
@@ -205,7 +205,7 @@ function initMap(spotlightRestaurants) {
         // bounds ensures that the map center shows all marker locations
         bounds.extend(marker.position);
         map.fitBounds(bounds);
-        zoomChangeBoundsListener = google.maps.event.addListenerOnce(
+        let zoomChangeBoundsListener = google.maps.event.addListenerOnce(
           map,
           "bounds_changed",
           function (event) {
