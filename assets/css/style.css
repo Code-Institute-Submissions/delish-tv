@@ -124,8 +124,8 @@ input:-ms-input-placeholder {
 }
 
 .jumbotron.chefstablefrance-jumbo {
-  background-image: url("../images/spotlights/chefs-table-france_grab.PNG");
-  background-position: top right;
+  background-image: url("../images/spotlights/chefs-table-france_presented_dish.PNG");
+  background-position: 40% center;
   background-repeat: no-repeat;
 }
 
