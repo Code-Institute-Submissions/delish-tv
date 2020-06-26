@@ -118,6 +118,10 @@ While we tested embedding YouTube trailers in a hidden iframe that displayed whe
 
 [Gimp 2](https://www.gimp.org/) - Gimp 2 allowed for image manipulation and was used to create the brand’s logo.
 
+[Birme](https://www.birme.net) - To ensure that images for the spotlight jumbotron panel were a similar height.
+
+[TinyPNG](https://tinypng.com/) - To compress and optimise image files.
+
 [Favicon Converter](https://favicon.io/favicon-converter/) - To create the favicon based on the brand logo.
 
 [FreeFormatter](https://www.freeformatter.com/) - Used to tidy up and properly format the index.html file. 
