@@ -167,12 +167,108 @@ iPhone 8:
 * Safari
 * Google Chrome
 
-## Testing Process
+The manual testing process included the following tests and steps:
 
--- Include any automated or lots of details about the manual testing performed, including tests and steps
+### Series Selection From Dropdown:
+1. Select Breakfast, Lunch & Dinner from the series dropdown menu. 
 
--- Devices and browsers Used
+2. Ensure that the jumbotron, map, and restaurants list change to reflect this choice.
 
+3. Select Chef's Table from the series dropdown menu and repeat step 2.
+
+4. Select Chef's Table France from the series dropdown menu and repeat step 2.
+
+5. Select Street Food Asia from the series dropdown menu and repeat step 2.
+
+### Google Map
+#### Map Clusters
+1. Select a filter that results in marker clusters to feature on the map. e.g. Breakfast, Lunch & Dinner
+
+2. Tap on a marker cluster. Ensure that the map zooms in to restaurants in this cluster without an error.
+
+3. Zoom back out to ensure that the marker cluster reappears.
+
+#### Map Markers
+1. Using the map, navigate to a zoom that provides a view of individual markers or select a filter from the dropdown menu that shows individual markers. e.g. Japan.
+
+2. Tap or click on a marker. Ensure that the resulting infowindow popup information matches the associated restaurant card identified by the label.
+
+3. Repeat this process a number of times, checking a variety of filters and markers.
+
+#### Map Display By Location
+1. Choose a location from the location dropdown menu.
+
+2. Ensure that the map changes to reflect this chosen filter and compare marker information to the featured restaurants.
+
+#### Zoom To Individual Restaurant
+1. Choose a series or location from the relevant dropdown menu.
+
+2. Click on an individual restaurant card.
+
+3. Ensure that the map displays this chosen location and that the infowindow matches the restaurant card's information.
+
+4. Repeat this process.
+
+### Display/Hide Show All Button And See More Text Where Appropriate
+1. When the page loads initially, ensure that the Back To All Filtered Restaurants button is hidden and that the text inviting users to click on a restaurant card to learn more (from this point on, referred to as "More Info text") is visible.
+
+2. Click on an individual restaurant card. Ensure the Back To All Filtered Restaurants button is displayed and the More Info Text is hidden.
+
+3. Click on a different series or location. Ensure the Back To All Filtered Restaurants is hidden and the More Info Text is displayed.
+
+4. Click on a restaurant card. 
+
+5. Click the Back To All Featured Restaurants button. Ensure this button is then hidden and the More Info Text becomes visible. 
+
+### Opening Links
+1. Press the Play Now button on the jumbotron. Ensure that the series link to Netflix opens in a new tab.
+
+2. Click the Trailer button on the jumbotron. Ensure that the YouTube link opens in a new tab.
+
+3. Click on a restaurant marker on the map.
+
+4. Click the Watch on Netflix link. Ensure this link opens in a new tab.
+
+5. Click on the Watch on Netflix button attached to a restaurant card. Ensure this link opens in a new tab.
+
+### Jump Between Series Filter And Location Filter
+1. Click on a series in the series dropdown menu.
+
+2. Ensure the jumbotron, map, and restaurant cards update to reflect this choice.
+
+3. Click on a country in the location dropdown menu.
+
+4. Ensure the jumbotron is hidden, and the map and restaurant cards update to reflect this choice.
+
+5. Click on another series in the series dropdown menu.
+
+6. Ensure the relevant jumbotron is displayed and the map and restaurants cards update to reflect this choice.
+
+### Filter Country By Text entry
+1. Click on the location dropdown menu
+
+2. Click where the placeholder says "Type Country".
+
+3. Enter the name of a country.
+
+4. As you type, the dropdown list should filter to only return countries that match the text entered.
+
+5. Click on the relevant country to apply this filter. 
+
+### Test Hover Effects
+1. Hover over the Play Now button in the jumbotron. Ensure that the background colour changes.
+
+2. Hover over the More Info button in the jumbotron. Ensure that the background colour changes.
+
+3. Hover over a restaurant card. Ensure that the background colour fades to grey.
+
+4. Move the mouse away from the highlighted restaurant card. Ensure that the background colour fades to white. 
+
+5. Hover over the dropdown menu buttons. Ensure that the colours invert.
+
+6. Hover over a select number of Watch On Netflix buttons. Ensure that the colours invert.
+
+7. Hover over each of the footer links. Ensure that the colour darkens slightly. 
 
 ## Issues Encountered and Resolutions
 ### Error on page load
