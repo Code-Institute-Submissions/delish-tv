@@ -348,24 +348,24 @@ footer {
   background-image: url("../images/spotlights/BreakfastLunchDinner-Spotlight.jpg");
   background-position: top right;
   background-repeat: no-repeat;
-}
+  }
 
 .jumbotron.chefstablefrance-jumbo {
   background-image: url("../images/spotlights/chefs-table-france_presented_dish.PNG");
   background-position: top right;
   background-repeat: no-repeat;
-}
+  }
 
 .jumbotron.chefstable-jumbo {
   background-image: url("../images/spotlights/chefs-table.PNG");
   background-position: top right;
   background-repeat: no-repeat;
-}
+  }
 
 .jumbotron.sfa-jumbo {
   background-image: url("../images/spotlights/streetfoodasia_grab.png");
   background-position: top right;
   background-repeat: no-repeat;
-}
+  }
   
 }
