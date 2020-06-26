@@ -124,7 +124,7 @@ While we tested embedding YouTube trailers in a hidden iframe that displayed whe
 
 [Favicon Converter](https://favicon.io/favicon-converter/) - To create the favicon based on the brand logo.
 
-[FreeFormatter](https://www.freeformatter.com/) - Used to tidy up and properly format the index.html file. 
+[WebFormatter](https://webformatter.com/html) - Used to tidy up and properly format the index.html file. 
 
 [FreeFormatter CSS Beautifier](https://www.freeformatter.com/css-beautifier.html) - Used to standardise indents and tidy up the style.css layout and formatting.
 
@@ -149,6 +149,25 @@ Accessibility:
     https://color.a11y.com/Contrast/
 
 ## Testing Process
+This website was also tested manually on a range of devices and internet browsers:
+
+Dell Laptop
+* Google Chrome
+* Internet Explorer 11
+* Microsoft Edge
+* Mozilla Firefox
+
+Mobile
+Samsung Galaxy S10:
+* Google Chrome 
+* Firefox
+* Brave
+
+iPhone 8:
+* Safari
+* Google Chrome
+
+## Testing Process
 
 -- Include any automated or lots of details about the manual testing performed, including tests and steps
 
@@ -159,8 +178,11 @@ Accessibility:
 ### Error on page load
 Initially, the selectSpotlight function was used as the callback function in the google maps apis script, but this produced an error on page load occasionally. Removing the callback and instead adding a load event listener to the window that called this function has rectified this issue.
 
-### Individual restaurant card produces multiple "Watch on Netfix" buttons
-When a user clicks on an individual div, a Watch on Netflix button is generated with the relevant link. However, when viewing only a single restaurant, clicking on the div again would produce multiple instances of this button. This issue was solved by adding an if statement to check that there were no other such spans on the page already. If this is true, the function runs and generates the span and relevant link; otherwise, the function simply returns.
+### Watch on Netflix button not appearing if only one restaurant matches filter
+When a user clicked on a restaurant card, the Watch on Netflix span would be generated with a link to the episode. However, this button did not appear for restaurants where only one restaurant met the filter (e.g. Germany). Previously, the function checked if there was an existing span (as there was previously an issue whereby clicking on a card again would produce multiple spans). In the end, it was decided to create the button immediately upon creation of the card so that a user can click through to the episode immediately instead of taking an additional step to isolate a restaurant card.
+
+### Grey border to spotlight images on larger screens
+As the site is designed with a mobile-first philosophy, an emphasis was placed on making the spotlight images appear well on mobile. However, at larger screen sizes the custom background position set caused a grey border to appear at the right of some images. Using a media query, the position of these images has been updated to render them correctly on larger devices.
 
 ### Any known issues?
 #### Filter By Location dropdown
@@ -201,14 +223,30 @@ For more information or guidance, please see [GitHub’s Help Section](https://h
 
 ## Credits 
 ### Content
+Show descriptions were provided by Netflix in the About section of the relevant series. 
 
+Information contained within the restaurants array was put together manually from a variety of sources, including [Wikipedia](https://en.wikipedia.org/wiki/Chef%27s_Table), [Bustle](https://www.bustle.com/p/every-breakfast-lunch-dinner-restaurant-in-david-changs-new-series-19259453), Netflix's episode list, [Food and Wine](https://www.foodandwine.com/travel/netflix-street-food-chef-guide), and [Google Maps](https://www.google.com/maps).
 
 ### Media
+Logos were sourced from Netflix, while screenshots from episodes were used for the jumbotron images.
 
+#### Site Logo
+[TV Monitor](https://pixabay.com/vectors/screen-monitor-tv-internet-1065137/)
+
+[Plate and Cutlery](https://pixabay.com/vectors/eating-food-fork-knife-plate-2026455/)
+
+### Code
+[How to autocenter map with multiple markers in unknown locations](https://stackoverflow.com/questions/15719951/auto-center-map-with-multiple-markers-in-google-maps-api-v3)
+This ensured that it was not necessary to set a central location for the map without knowing where the map markers are situated. This was necessary as the central point for a series like Chef's Table France is quite different to Street Food Asia, for example.
+
+[Ensuring that the zoom isn't too close when the map features just one location](https://stackoverflow.com/questions/4523023/using-setzoom-after-using-fitbounds-with-google-maps-api-v3)
+The zoom of the map for this project has to suit both wide reaching locations, such as in Breakfast, Lunch & Dinner, as well as single locations where a distant zoom would not be user friendly. 
+
+[Integrating MarkerClusterer with infowindow](https://stackoverflow.com/questions/40047210/integrate-google-maps-markerclusterer-with-infowindow)
+This code enabled the usage of both MarkerClusterer, which enables many markers in a location to be grouped together, and the infowindow popup to provide more information about a marker. 
 
 ## Acknowledgements
 I would like to thank my mentor, [Antonio Rodriguez](https://github.com/AkaAnto) for their support and advice. In particular, I would like to thank them for their feedback during our second call, which prompted a revision of the site's layout, leading to better flow and overall UI. 
-
 
 I would also like to thank my fellow Code Institute students and the alumni who provided support, advice, and a second opinion on Slack.
 

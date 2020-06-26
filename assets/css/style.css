@@ -18,6 +18,15 @@ body {
   background-image: linear-gradient(to right, #696969, #181818);
 }
 
+.navbar-brand {
+  font-family: "Nunito Sans", sans-serif;
+  color: #e30914;
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: bold;
+  margin-left: -25px;
+}
+
 /* ---Search Panel--- */
 
 #search-panel {
@@ -333,4 +342,30 @@ footer {
   .dropdown-toggle {
     margin: 0px 2.5px 15px;
   }
+
+  /* Reposition jumbotron background images to prevent grey border at edges */
+  .jumbotron.bld-jumbo {
+  background-image: url("../images/spotlights/BreakfastLunchDinner-Spotlight.jpg");
+  background-position: top right;
+  background-repeat: no-repeat;
+  }
+
+.jumbotron.chefstablefrance-jumbo {
+  background-image: url("../images/spotlights/chefs-table-france_presented_dish.PNG");
+  background-position: top right;
+  background-repeat: no-repeat;
+  }
+
+.jumbotron.chefstable-jumbo {
+  background-image: url("../images/spotlights/chefs-table.PNG");
+  background-position: top right;
+  background-repeat: no-repeat;
+  }
+
+.jumbotron.sfa-jumbo {
+  background-image: url("../images/spotlights/streetfoodasia_grab.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+  }
+  
 }
