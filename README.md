@@ -1,4 +1,4 @@
-# [Delish TV - Find the stars of Netflix's original culinary series](https://mark-obeirne.github.io/culinary-world-tour/)
+# [Delish TV - Find the stars of Netflix's original culinary series](https://mark-obeirne.github.io/delish-tv/)
 
 Code Institute - Milestone Project 2
 
@@ -6,9 +6,9 @@ Code Institute - Milestone Project 2
 Deadline: 28/06/20
 
 
-Live GitHub Pages Link: https://mark-obeirne.github.io/culinary-world-tour/
+Live GitHub Pages Link: https://mark-obeirne.github.io/delish-tv/
 
-![Delish TV multi-device mockup](https://raw.githubusercontent.com/mark-obeirne/culinary-world-tour/master/assets/wireframes/multi-device-mockup.PNG)
+![Delish TV multi-device mockup](https://raw.githubusercontent.com/mark-obeirne/delish-tv/master/assets/wireframes/multi-device-mockup.PNG)
 
 ## Summary
 Delish TV is a Netflix companion site that enables users to find the various restaurants featured in their favourite Netflix Original culinary shows. 
@@ -59,14 +59,14 @@ The site uses Roboto for non-heading text. It is a good pairing for Nunito Sans 
 ## Wireframe Mockups
 
 ### Mobile Wireframe
-* [Index on Mobile - Original Layout](https://raw.githubusercontent.com/mark-obeirne/culinary-world-tour/master/assets/wireframes/Index_Mobile_Initial.png)
-* [Index on Mobile - Revised Layout](https://raw.githubusercontent.com/mark-obeirne/culinary-world-tour/master/assets/wireframes/Index_Mobile_Revised.png)
+* [Index on Mobile - Original Layout](https://raw.githubusercontent.com/mark-obeirne/delish-tv/master/assets/wireframes/Index_Mobile_Initial.png)
+* [Index on Mobile - Revised Layout](https://raw.githubusercontent.com/mark-obeirne/delish-tv/master/assets/wireframes/Index_Mobile_Revised.png)
 
 ### Tablet Wireframe
-* [Index on Tablet](https://raw.githubusercontent.com/mark-obeirne/culinary-world-tour/master/assets/wireframes/Index_Tablet.png)
+* [Index on Tablet](https://raw.githubusercontent.com/mark-obeirne/delish-tv/master/assets/wireframes/Index_Tablet.png)
 
 ### Desktop Wireframe
-* [Index on Desktop](https://raw.githubusercontent.com/mark-obeirne/culinary-world-tour/master/assets/wireframes/Index_Desktop.png)
+* [Index on Desktop](https://raw.githubusercontent.com/mark-obeirne/delish-tv/master/assets/wireframes/Index_Desktop.png)
 
 ## Changes to Wireframe
 Originally, the tablet and desktop sites were larger versions of the mobile site, spacing out the individual restaurant cards better. 
@@ -285,9 +285,9 @@ This filter dropdown allows the user to type in a country name to filter the dro
 ## Deployment
 ### GitHub Pages
 To deploy this website on GitHub Pages, I followed the following steps:
-1. Navigate to the [project’s repository](https://github.com/mark-obeirne/culinary-world-tour)
+1. Navigate to the [project’s repository](https://github.com/mark-obeirne/delish-tv)
 
-2. Navigate to the [settings page](https://github.com/mark-obeirne/culinary-world-tour/settings)
+2. Navigate to the [settings page](https://github.com/mark-obeirne/delish-tv/settings)
 
 3. Scroll down to the section titled GitHub Pages
 
@@ -295,12 +295,12 @@ To deploy this website on GitHub Pages, I followed the following steps:
 
 5. Select Master Branch from the Source dropdown
 
-6. The GitHub Pages section changed to inform me that my site "is ready to be published at https://mark-obeirne.github.io/culinary-world-tour/"
+6. The GitHub Pages section changed to inform me that my site "is ready to be published at https://mark-obeirne.github.io/delish-tv/"
 
 ### Local Deployment
 To clone this project and to deploy it locally, follow these steps:
 
-1. Navigate to the [project’s repository](https://github.com/mark-obeirne/culinary-world-tour)
+1. Navigate to the [project’s repository](https://github.com/mark-obeirne/delish-tv)
 
 2. Click the green button marked “Clone or download”
 
