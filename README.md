@@ -247,7 +247,7 @@ The manual testing process included the following tests and steps:
 ### Filter Country By Text entry
 1. Click on the location dropdown menu
 
-2. Click where the placeholder says "Type Country".
+2. Click where the placeholder says "Enter Country".
 
 3. Enter the name of a country.
 
