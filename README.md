@@ -132,17 +132,18 @@ While we tested embedding YouTube trailers in a hidden iframe that displayed whe
 
 
 ## Testing
+* Chrome Developer Tools - Throughout the development of this project, the Chrome Developer Tools were frequently used to ensure that the site behaved responsively, looked attractive across a range of screen sizes, and to ensure that there was sufficient contrast between background colours and text. 
 
-HTML Validator - https://validator.w3.org/nu/ 
-HTML Validator - https://www.freeformatter.com/html-validator.html
+* [HTML Validator](https://validator.w3.org/nu/) - The W3 validator was used to ensure code was valid throughout the project and issues were corrected along the way.
 
-CSS Validator - https://jigsaw.w3.org/css-validator/validator
+* [HTML Validator](https://www.freeformatter.com/html-validator.html) - FreeFormatter's HTML validation tool was also used to double check that no other issues could be found.
 
-JavaScript Validator - https://esprima.org/demo/validate.html
-JS Validator (mainly used for missing semicolons) - http://beautifytools.com/javascript-validator.php
+* [CSS Validator](https://jigsaw.w3.org/css-validator/validator) - W3's CSS Validation tool was used to ensure that the style.css file was valid and correct. 
 
--- Any tools and validators. Results, if not screenshots, of said tools
-HTML Validator - https://validator.w3.org/nu/
+* [JavaScript Validator](https://esprima.org/demo/validate.html) - The Esprima syntax validator checked the script.js file for mistakes and errors. 
+
+* [JavaScript Validator](https://jshint.com/) - JSHint was used to check the validity of JavaScript code contained in this project.
+
 Accessibility:
     https://wave.webaim.org/
     https://www.webaccessibility.com/results
@@ -153,7 +154,6 @@ This website was also tested manually on a range of devices and internet browser
 
 Dell Laptop
 * Google Chrome
-* Internet Explorer 11
 * Microsoft Edge
 * Mozilla Firefox
 
@@ -161,7 +161,7 @@ Mobile
 Samsung Galaxy S10:
 * Google Chrome 
 * Firefox
-* Brave
+* Opera
 
 iPhone 8:
 * Safari

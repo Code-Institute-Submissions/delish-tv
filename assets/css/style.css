@@ -294,7 +294,7 @@ input:-ms-input-placeholder {
 
 footer {
   padding-left: 15px;
-  background-color: #313131;
+  background-image: linear-gradient(to right, #696969, #181818);
 }
 
 .social-media {
