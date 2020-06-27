@@ -8,7 +8,7 @@ Deadline: 28/06/20
 
 Live GitHub Pages Link: https://mark-obeirne.github.io/culinary-world-tour/
 
-[Image of multi-device preview - http://techsini.com/multi-mockup/index.php]
+![Delish TV multi-device mockup](https://raw.githubusercontent.com/mark-obeirne/culinary-world-tour/master/assets/wireframes/multi-device-mockup.PNG)
 
 ## Summary
 Delish TV is a Netflix companion site that enables users to find the various restaurants featured in their favourite Netflix Original culinary shows. 
