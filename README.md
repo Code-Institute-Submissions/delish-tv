@@ -134,23 +134,24 @@ While we tested embedding YouTube trailers in a hidden iframe that displayed whe
 ## Testing
 * Chrome Developer Tools - Throughout the development of this project, the Chrome Developer Tools were frequently used to ensure that the site behaved responsively, looked attractive across a range of screen sizes, and to ensure that there was sufficient contrast between background colours and text. 
 
-* [HTML Validator](https://validator.w3.org/nu/) - The W3 validator was used to ensure code was valid throughout the project and issues were corrected along the way.
+* [HTML Validator](https://validator.w3.org/nu/) - The W3 validator was used to ensure code was valid throughout the project and issues were corrected along the way. The code was determined to be valid.
 
-* [HTML Validator](https://www.freeformatter.com/html-validator.html) - FreeFormatter's HTML validation tool was also used to double check that no other issues could be found.
+* [HTML Validator](https://www.freeformatter.com/html-validator.html) - FreeFormatter's HTML validation tool was also used to double check that no other issues could be found. The code was determined to be valid.
 
-* [CSS Validator](https://jigsaw.w3.org/css-validator/validator) - W3's CSS Validation tool was used to ensure that the style.css file was valid and correct. 
+* [CSS Validator](https://jigsaw.w3.org/css-validator/validator) - W3's CSS Validation tool was used to ensure that the style.css file was valid and correct. The code was determined to be valid.
 
 * [JavaScript Validator](https://esprima.org/demo/validate.html) - The Esprima syntax validator checked the script.js file for mistakes and errors. 
 
 * [JavaScript Validator](https://jshint.com/) - JSHint was used to check the validity of JavaScript code contained in this project.
 
-Accessibility:
-    https://wave.webaim.org/
-    https://www.webaccessibility.com/results
-    https://color.a11y.com/Contrast/
+* [WAVE](https://wave.webaim.org/) - This site was used to evaluate the accessibility the project. It produced one contrast error highlighting the series description as the source of the issue. However, in testing, a font colour of #000, which would pass the test, did not apppear readable.  
+
+* [a11y](https://color.a11y.com/Contrast/) - This site also performed checks on the colour contrast accessibility. Again, it highlighted the series description text as problematic, but did not take the background image or overlay into account, which has increased readability in practice. 
+
+* [Web Accessibility by Level Access](https://www.webaccessibility.com/) - The Delish TV project received a total compliance rating of 91%. The site highlighted that links or controls that open new windows do not do so without a warning. We acknowledge that the trailer links and play now buttons contained within jumbotrons could provide more warning. However, other instances indicate that the user will be directed to watch the episode on Netflix, an external source, and it is best practice to open tabs such as these in a new tab.
 
 ## Testing Process
-This website was also tested manually on a range of devices and internet browsers:
+This website was also tested manually on a range of devices and internet browsers. Please note that this project does not support Internet Explorer due to the use of ES6 features and notation. 
 
 Dell Laptop
 * Google Chrome
