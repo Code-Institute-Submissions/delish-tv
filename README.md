@@ -34,9 +34,6 @@ The site targets not only viewers of Netflix Original culinary shows, but is of 
 
 "As a foodie, I would like to thoroughly research restaurants in my area to ensure that it appeals to me and that I will get value for money." 
 
-#### Meeting User Expectations
-[Include screenshots for added reference]
-
 ### Business Goals
 "As a business, we would like to showcase our range of culinary series, as we would like users to keep finding value for money in their subscription or attract new customers."
 
@@ -134,9 +131,9 @@ While we tested embedding YouTube trailers in a hidden iframe that displayed whe
 ## Testing
 * Chrome Developer Tools - Throughout the development of this project, the Chrome Developer Tools were frequently used to ensure that the site behaved responsively, looked attractive across a range of screen sizes, and to ensure that there was sufficient contrast between background colours and text. 
 
-* [HTML Validator](https://validator.w3.org/nu/) - The W3 validator was used to ensure code was valid throughout the project and issues were corrected along the way. The code was determined to be valid.
+* [HTML Validator](https://validator.w3.org/nu/) - The W3 validator was used to ensure code was valid throughout the project and issues were corrected along the way. The code was determined to be valid but warned that headings could be used in sections.
 
-* [HTML Validator](https://www.freeformatter.com/html-validator.html) - FreeFormatter's HTML validation tool was also used to double check that no other issues could be found. The code was determined to be valid.
+* [HTML Validator](https://www.freeformatter.com/html-validator.html) - FreeFormatter's HTML validation tool was also used to double check that no other issues could be found. The code was determined to be valid but warned that headings could be used in sections.
 
 * [CSS Validator](https://jigsaw.w3.org/css-validator/validator) - W3's CSS Validation tool was used to ensure that the style.css file was valid and correct. The code was determined to be valid.
 
