@@ -153,7 +153,6 @@ This website was also tested manually on a range of devices and internet browser
 
 Dell Laptop
 * Google Chrome
-* Internet Explorer 11
 * Microsoft Edge
 * Mozilla Firefox
 
@@ -161,7 +160,7 @@ Mobile
 Samsung Galaxy S10:
 * Google Chrome 
 * Firefox
-* Brave
+* Opera
 
 iPhone 8:
 * Safari
