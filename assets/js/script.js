@@ -20,13 +20,13 @@ function selectSpotlightSeries() {
   let randomSpotlightSeries =
     seriesArray[Math.floor(Math.random() * seriesArray.length)];
   displaySpotlight(randomSpotlightSeries);
-  filterSpotlightRestaurants(randomSpotlightSeries);
+  filterRestaurantsBySeries(randomSpotlightSeries);
 }
 
 function selectSeries() {
   let userSelectedSeries = this.textContent;
   displaySpotlight(userSelectedSeries);
-  filterSpotlightRestaurants(userSelectedSeries);
+  filterRestaurantsBySeries(userSelectedSeries);
   hideShowAllButton();
 }
 
@@ -59,7 +59,7 @@ function hideSpotlightJumbotron() {
   });
 }
 
-function filterSpotlightRestaurants(chosenSpotlightSeries) {
+function filterRestaurantsBySeries(chosenSpotlightSeries) {
   const spotlightRestaurants = restaurants.filter(
     (restaurant) => restaurant.series === chosenSpotlightSeries
   );
