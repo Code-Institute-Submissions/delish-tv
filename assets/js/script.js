@@ -10,6 +10,10 @@ let showAllButton = document.querySelector(".show-all");
 
 // Functions
 
+fetch('restaurants.json')
+  .then(response => response.json())
+  .then(data => console.log(data));
+/*
 function selectSpotlightSeries() {
   let seriesArray = [
     "Breakfast, Lunch & Dinner",
@@ -392,3 +396,4 @@ countryFilter.addEventListener("change", function () {
 });
 
 showAllButton.addEventListener("click", showAllRestaurants);
+*/
