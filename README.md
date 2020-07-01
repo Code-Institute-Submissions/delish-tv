@@ -38,38 +38,6 @@ The site's main target is fans of Netflix Original culinary shows. However, the 
 
 "As a business, we wish to continue making original culinary series. We would like to provide this added value to pariticipating restaurants to encourage others to get involved."
 
-### Design Choices
-#### Colours
-As Delish TV is built as a Netflix companion site, we have chosen to base our colour scheme on that used by Netflix. 
-
-The background and text colour of #181818 provides good contrast, making it a suitable choice for text and the background to other elements. When acting as a background colour, it allows the map, series jumbotron, individual restaurant cards, and additional buttons to stand out. The exceptions to this are the navbar and footer background colours, which start as a lighter shade (#696969) to enable the logos to stand out before blending with the site's overall background colour.
-
-The red shade (#E30914) is perfectly suited to smaller buttons, such as the dropdown menus and buttons that are created when a user clicks on an individual restaurant card. These draw the eye without being overpowering and provides good contrast to white text or background elements.
-
-Finally, a grey shade (#CCCCCC) is used for added flourishes such as hover colours as it provides the user with information that an element is being hovered over or can be interacted with without impacting the readability of the text.
-
-#### Fonts
-While researching this project, Nunito Sans was highlighted as a font that is close to Netflix's own custom font. This is used for headings, most notably in the Featured Restaurants section. There it is used for the section heading as well as the name of the restaurant and the series that it is featured in. 
-
-The site uses Roboto for non-heading text. It is a good pairing for Nunito Sans without shifting the overall font style of the site.  
-
-## Wireframe Mockups
-
-### Mobile Wireframe
-* [Index on Mobile - Original Layout](https://raw.githubusercontent.com/mark-obeirne/delish-tv/master/assets/wireframes/Index_Mobile_Initial.png)
-* [Index on Mobile - Revised Layout](https://raw.githubusercontent.com/mark-obeirne/delish-tv/master/assets/wireframes/Index_Mobile_Revised.png)
-
-### Tablet Wireframe
-* [Index on Tablet](https://raw.githubusercontent.com/mark-obeirne/delish-tv/master/assets/wireframes/Index_Tablet.png)
-
-### Desktop Wireframe
-* [Index on Desktop](https://raw.githubusercontent.com/mark-obeirne/delish-tv/master/assets/wireframes/Index_Desktop.png)
-
-## Changes to Wireframe
-Originally, the tablet and desktop sites were larger versions of the mobile site, spacing out the individual restaurant cards better. 
-
-However, in testing it became clear and was recommended that the space could be better utilised. The result is the altered layout that can be seen on the desktop site where the restaurant cards push up alongside the map allowing users access to all information easily. This did result in an issue whereby there was a lot of unused space beneath the map so a max height was added to the restaurant card column with a scrollbar available if there were more cards.
-
 ## Site Features
 ### Spotlight Series Jumbotron
 When a user visits the site, a Netflix Original series is chosen at random to be displayed as the Jumbotron. This provides the user with more details about the series, the opportunity to watch a trailer to see if it is to their liking, and the option to watch it on Netflix if it is. If a user chooses a different series from the dropdown menu, this jumbotron is updated to reflect this choice. The jumbotron also ties in with the Google Maps feature, as detailed below.
@@ -89,6 +57,37 @@ Currently, users are able to search by series or by country. We plan to offer us
 
 ### Embedded YouTube Trailers
 While we tested embedding YouTube trailers in a hidden iframe that displayed when a user clicked on the More Info button in the spotlight panel, since replaced by the Trailer button, we found that it slowed down the performance of the site. For the next release, we would have the opportunity to implement the YouTube API in order to display trailers for the featured series in a more streamlined way.
+
+## Skeleton
+### Mobile Wireframe
+* [Index on Mobile - Original Layout](https://raw.githubusercontent.com/mark-obeirne/delish-tv/master/assets/wireframes/Index_Mobile_Initial.png)
+* [Index on Mobile - Revised Layout](https://raw.githubusercontent.com/mark-obeirne/delish-tv/master/assets/wireframes/Index_Mobile_Revised.png)
+
+### Tablet Wireframe
+* [Index on Tablet](https://raw.githubusercontent.com/mark-obeirne/delish-tv/master/assets/wireframes/Index_Tablet.png)
+
+### Desktop Wireframe
+* [Index on Desktop](https://raw.githubusercontent.com/mark-obeirne/delish-tv/master/assets/wireframes/Index_Desktop.png)
+
+## Changes to Wireframe
+Originally, the tablet and desktop sites were larger versions of the mobile site, spacing out the individual restaurant cards better. 
+
+However, in testing it became clear and was recommended that the space could be better utilised. The result is the altered layout that can be seen on the desktop site where the restaurant cards push up alongside the map allowing users access to all information easily. This did result in an issue whereby there was a lot of unused space beneath the map so a max height was added to the restaurant card column with a scrollbar available if there were more cards.
+
+## Surface
+### Colours
+As Delish TV is built as a Netflix companion site, we have chosen to base our colour scheme on that used by Netflix. 
+
+The background and text colour of #181818 provides good contrast, making it a suitable choice for text and the background to other elements. When acting as a background colour, it allows the map, series jumbotron, individual restaurant cards, and additional buttons to stand out. The exceptions to this are the navbar and footer background colours, which start as a lighter shade (#696969) to enable the logos to stand out before blending with the site's overall background colour.
+
+The red shade (#E30914) is perfectly suited to smaller buttons, such as the dropdown menus and buttons that are created when a user clicks on an individual restaurant card. These draw the eye without being overpowering and provides good contrast to white text or background elements.
+
+Finally, a grey shade (#CCCCCC) is used for added flourishes such as hover colours as it provides the user with information that an element is being hovered over or can be interacted with without impacting the readability of the text.
+
+### Fonts
+While researching this project, Nunito Sans was highlighted as a font that is close to Netflix's own custom font. This is used for headings, most notably in the Featured Restaurants section. There it is used for the section heading as well as the name of the restaurant and the series that it is featured in. 
+
+The site uses Roboto for non-heading text. It is a good pairing for Nunito Sans without shifting the overall font style of the site.  
 
 ## Technology Used
 
