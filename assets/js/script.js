@@ -60,11 +60,11 @@ function hideSpotlightJumbotron() {
 }
 
 function filterRestaurantsBySeries(chosenSpotlightSeries) {
-  const spotlightRestaurants = restaurants.filter(
+  let featuredRestaurants = restaurants.filter(
     (restaurant) => restaurant.series === chosenSpotlightSeries
   );
-  restaurantsMatchingFilter = spotlightRestaurants;
-  initMap(spotlightRestaurants);
+  restaurantsMatchingFilter = featuredRestaurants;
+  initMap(featuredRestaurants);
   displayCloserLookText();
 }
 
@@ -101,12 +101,11 @@ function displaySpotlight(selectedSpotlight) {
       jumbotronCT.classList.remove("hidden");
       break;
     default:
-      console.log("A different series has been selected");
+      console.log("Please choose a valid series");
   }
 }
 
 function initMap(spotlightRestaurants) {
-  // If restaurantsMatchingFilter length is more than one, user has selected a restaurant card from featured restaurants, so function should not call listFeaturedRestaurants function
   let mapDefaults = {
     zoom: 1,
     backgroundColor: "#D0D0D0",
@@ -116,6 +115,7 @@ function initMap(spotlightRestaurants) {
     },
   };
 
+  // If restaurantsMatchingFilter length is more than one, user has selected a restaurant card from featured restaurants, so function should not call listFeaturedRestaurants function
   if (
     spotlightRestaurants.length === 1 &&
     restaurantsMatchingFilter.length !== 1
@@ -123,15 +123,15 @@ function initMap(spotlightRestaurants) {
     let map = new google.maps.Map(document.querySelector("#map"), mapDefaults);
     let infoWindow = new google.maps.InfoWindow();
     let bounds = new google.maps.LatLngBounds();
-
     let markers = spotlightRestaurants.map((location, i) => {
       let marker = new google.maps.Marker({
         position: location,
       });
-      // bounds ensures that the map center shows all marker locations
+      // Extend bounds to include all marker locations
       bounds.extend(marker.position);
+      // Fit map to this inclusive bounds. Source: https://stackoverflow.com/questions/15719951/auto-center-map-with-multiple-markers-in-google-maps-api-v3
       map.fitBounds(bounds);
-      // ensure that the map isn't too zoomed in when highlighting one location. Source: https://stackoverflow.com/questions/4523023/using-setzoom-after-using-fitbounds-with-google-maps-api-v3
+      // Ensure that the map isn't too zoomed in when highlighting one location. Source: https://stackoverflow.com/questions/4523023/using-setzoom-after-using-fitbounds-with-google-maps-api-v3
       let zoomChangeBoundsListener = google.maps.event.addListenerOnce(
         map,
         "bounds_changed",
@@ -144,7 +144,7 @@ function initMap(spotlightRestaurants) {
       setTimeout(function () {
         google.maps.event.removeListener(zoomChangeBoundsListener);
       }, 2000);
-
+      // Set content of given infoWindow and open on click
       google.maps.event.addListener(marker, "click", function (event) {
         infoWindow.setContent(
           "<div class='map-content'>" +
@@ -198,12 +198,11 @@ function initMap(spotlightRestaurants) {
         position: location,
         label: labels[i % labels.length],
       });
-      // the below if statement ensures that the map isn't too zoomed in when there is only one restaurant matching the given filter
+      // The below if statement ensures that the map isn't too zoomed in when there is only one restaurant matching the given filter. i.e. when a location is selected
       if (
         spotlightRestaurants.length === 1 &&
         restaurantsMatchingFilter.length === 1
       ) {
-        // bounds ensures that the map center shows all marker locations
         bounds.extend(marker.position);
         map.fitBounds(bounds);
         let zoomChangeBoundsListener = google.maps.event.addListenerOnce(
@@ -322,6 +321,7 @@ function createListing(restaurant, label) {
 
   listing.appendChild(div);
 
+  // Enable user to click on a restaurant card to focus on that location
   div.addEventListener("click", function () {
     let allFeaturedRestaurants = Array.from(
       document.querySelectorAll(".restaurant")
@@ -341,10 +341,9 @@ function createListing(restaurant, label) {
 }
 
 function showAllRestaurants() {
-  let specifyCard = document.querySelector(".closer-look");
   let listing = document.querySelector(".restaurants-listings");
   let allRestaurants = Array.from(listing.children);
-  specifyCard.classList.remove("hidden");
+  displayCloserLookText()
   allRestaurants.forEach((restaurant) => {
     restaurant.classList.remove("hidden");
   });
@@ -383,7 +382,7 @@ locationDropdown.forEach((locationItem) => {
 });
 
 countryFilter.addEventListener("keyup", locationDropdownMatches);
-// reset the countryFilter input value and restore all dropdown options after user clicks off dropdown menu
+// Reset the countryFilter input value and restore all dropdown options after user clicks off dropdown menu
 countryFilter.addEventListener("change", function () {
   setTimeout(function () {
     countryFilter.value = "";
