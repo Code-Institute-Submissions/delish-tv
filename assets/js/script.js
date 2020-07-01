@@ -163,6 +163,12 @@ function initMap(spotlightRestaurants) {
             "<div class='map-info'>" +
             spotlightRestaurants[i].postcode +
             "</div>" +
+            "<div class='map-info restaurant-website'><a href=" +
+            spotlightRestaurants[i].website +
+            " target='_blank' rel='noopener'>" + 
+            spotlightRestaurants[i].website +
+            "</a>" +
+            "</div>" +
             "<div class='map-info'><span class='map-strong'>" +
             spotlightRestaurants[i].series +
             "</span></div>" +
@@ -239,6 +245,12 @@ function initMap(spotlightRestaurants) {
             "<div class='map-info'>" +
             spotlightRestaurants[i].postcode +
             "</div>" +
+            "<div class='map-info restaurant-website'><a href=" +
+            spotlightRestaurants[i].website +
+            " target='_blank' rel='noopener'>" + 
+            spotlightRestaurants[i].website +
+            "</a>" +
+            "</div>" +
             "<div class='map-info'><span class='map-strong'>" +
             spotlightRestaurants[i].series +
             "</span></div>" +
@@ -250,11 +262,6 @@ function initMap(spotlightRestaurants) {
             "<div class='map-info episode-link'><a href=" +
             spotlightRestaurants[i].episodeLink +
             " target='_blank' rel='noopener'>Watch on Netflix" +
-            "</a>" +
-            "</div>" +
-            "<div class='map-info restaurant-website'><a href=" +
-            spotlightRestaurants[i].website +
-            " target='_blank' rel='noopener'>" + spotlightRestaurants[i].website +
             "</a>" +
             "</div>" +
             "</div>"
