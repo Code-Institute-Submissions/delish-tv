@@ -25,18 +25,18 @@ The site's main target is fans of Netflix Original culinary shows. However, the 
 ### User Stories
 "As a viewer of culinary shows, I am often automatically recommended other reality TV shows that have nothing to do with food. I would like to find similarly themed series that would be of interest to me."
 
-"As a fan of Ugly Delicious, I would like to find out more information about some of my favourite restaurants featured in the series."
+"As a fan of Breakfast, Lunch & Dinner, I would like to find out more information about some of my favourite restaurants featured in the series."
 
-"As someone travelling to Japan, I would like an easy way to find out more about the Toyo street food restaurant, as seen on Street Food Asia, so that I can experience the food and performance for myself." 
+"As someone travelling to Japan, I would like an easy way to find out more about Toyo's restaurant, as seen on Street Food Asia, so that I can experience the food and performance for myself." 
 
 "As a foodie, I would like to thoroughly research restaurants in my area to ensure that it appeals to me and that I will get value for money." 
 
 ### Business Goals
-"As a business, we would like to showcase our range of culinary series, as we would like users to keep finding value for money in their subscription or attract new customers."
+"As a business, we would like to showcase our range of culinary series, as we would like users to keep finding value for money in their subscription and attract new customers."
 
 "As a business, we would like to highlight the restaurants involved in series, which rewards them for allowing a series to be filmed there."
 
-"As a business, we wish to continue making original culinary series and providing this added value to participating restaurants could encourage others to get involved."
+"As a business, we wish to continue making original culinary series. We would like to provide this added value to pariticipating restaurants to encourage others to get involved."
 
 ### Design Choices
 #### Colours
