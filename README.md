@@ -72,23 +72,23 @@ However, in testing it became clear and was recommended that the space could be 
 
 ## Site Features
 ### Spotlight Series Jumbotron
-When a user visits the site, a Netflix Original series is chosen at random to be displayed as the Jumbotron. This provides the user with more details about the series, the opportunity to watch a trailer to see if it is to their liking, and the option to watch it on Netflix if it is. If a user chooses a different series from the dropdown menu, this jumbotron is updated to reflect this. The jumbotron also ties in with the Google Maps feature, as detailed below.
+When a user visits the site, a Netflix Original series is chosen at random to be displayed as the Jumbotron. This provides the user with more details about the series, the opportunity to watch a trailer to see if it is to their liking, and the option to watch it on Netflix if it is. If a user chooses a different series from the dropdown menu, this jumbotron is updated to reflect this choice. The jumbotron also ties in with the Google Maps feature, as detailed below.
 
 ### Google Maps
 The Google Map is one of the focal points of this project. Upon an initial visit, the map is populated based on the restaurants featured in the randomly chosen spotlight series. When a user chooses a new series or location, the map updates to reflect the locations of restaurants that match the chosen filter. The user is also able to find out more information by clicking on a marker, which provides them with the address, series name, episode, and an episode link so that they can watch immediately. It is also possible to choose an individual restaurant card, which focuses the map on this location.
 
 ### Individual Restaurant cards
-A number of individual restaurant cards are displayed to a user depending on the chosen filter. These cards present the user with information about the restaurant such as its general address and the series that it is featured in. When an individual card is selected by the user, the map zooms in on that location as previously mentioned and the card provides the user with a button to watch the episode that the restaurant is featured in. 
+A number of individual restaurant cards are displayed to a user depending on the chosen filter. These cards present the user with information about the restaurant such as its general address and the series that it is featured in. When an individual card is selected by the user, the map zooms in on that location as previously mentioned and the card provides the user with a button to watch the episode that the restaurant is featured in. The user is then presented with a link to bring them back to the previous list of filtered restaurants. 
 
 ## Future Features
 ### Restaurant Wishlist
-While enabling users to find out so much more about restaurants can be helpful, we hope to do more in the future. We would like to add a feature which enables users to add individual restaurants to a wishlist of places that they would like to visit or save for looking up again later; perhaps it will entice them to rewatch the episode that takes place at that restaurant (or, in some cases, watch for the first time).
+We plan to add a feature which enables users to add individual restaurants to a wishlist of places that they would like to visit or save for looking up again later. This wishlist would include a link to the relevant Netflix episode, which could entice users to rewatch an episode or delve into one for the first time. 
 
 ### Search bar Functionality
-Currently, users are able to search based on the series that a restaurant is featured in or its country. We would like to be able to offer users more choice in how they search. In the future, we would like to add a search bar, which will enable users to search by restaurant name, its city, its country, or the series that it features in. This search bar will suggest searches based on the user's input or, if no matches are found, will offer suggestions, including a restaurant, a city, a country, or a series.
+Currently, users are able to search by series or by country. We plan to offer users a more extensive search feature that would enable users to search by restaurant name, city, country, or by series. This search feature would then suggest searches based on the user's input or, if no matches are found, will offer suggestions that a user could search for.
 
 ### Embedded YouTube Trailers
-While we tested embedding YouTube trailers in a hidden iframe that displayed when a user clicked on the More Info button in the spotlight panel, since replaced by the Trailer button, we found that it resulted in errors and slowed down the performance of the site. For the next release, we would have time to utilise the YouTube API in order to display trailers for the featured series in a more streamlined way than embedded iframes.
+While we tested embedding YouTube trailers in a hidden iframe that displayed when a user clicked on the More Info button in the spotlight panel, since replaced by the Trailer button, we found that it slowed down the performance of the site. For the next release, we would have the opportunity to implement the YouTube API in order to display trailers for the featured series in a more streamlined way.
 
 ## Technology Used
 
