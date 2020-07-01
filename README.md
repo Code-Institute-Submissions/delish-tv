@@ -42,14 +42,14 @@ The site's main target is fans of Netflix Original culinary shows. However, the 
 #### Colours
 As Delish TV is built as a Netflix companion site, we have chosen to base our colour scheme on that used by Netflix. 
 
-The background and text colour of #181818 provides good contrast, making it a suitable choice for text and the background to other elements. When acting as a background colour, it allows the map, series jumbotron, individual restaurant cards, and additional buttons to stand out. The exception to this is the navbar colour (#313131), which is 10% lighter according to https://www.colorbook.io/, which enables the logo to be displayed correctly.
+The background and text colour of #181818 provides good contrast, making it a suitable choice for text and the background to other elements. When acting as a background colour, it allows the map, series jumbotron, individual restaurant cards, and additional buttons to stand out. The exceptions to this are the navbar and footer background colours, which start as a lighter shade (#696969) to enable the logos to stand out before blending with the site's overall background colour.
 
 The red shade (#E30914) is perfectly suited to smaller buttons, such as the dropdown menus and buttons that are created when a user clicks on an individual restaurant card. These draw the eye without being overpowering and provides good contrast to white text or background elements.
 
 Finally, a grey shade (#CCCCCC) is used for added flourishes such as hover colours as it provides the user with information that an element is being hovered over or can be interacted with without impacting the readability of the text.
 
 #### Fonts
-While researching this project, Nunito Sans was highlighted as a font that is close to Netflix's own custom font. This is used for headings, most notably in the Featured Restaurants section where it is used for the section heading as well as the name of the restaurant and the series that it is featured in. 
+While researching this project, Nunito Sans was highlighted as a font that is close to Netflix's own custom font. This is used for headings, most notably in the Featured Restaurants section. There it is used for the section heading as well as the name of the restaurant and the series that it is featured in. 
 
 The site uses Roboto for non-heading text. It is a good pairing for Nunito Sans without shifting the overall font style of the site.  
 
