@@ -321,6 +321,7 @@ function createListing(restaurant, label) {
 
   listing.appendChild(div);
 
+  // Enable user to click on a restaurant card to focus on that location
   div.addEventListener("click", function () {
     let allFeaturedRestaurants = Array.from(
       document.querySelectorAll(".restaurant")
@@ -340,10 +341,9 @@ function createListing(restaurant, label) {
 }
 
 function showAllRestaurants() {
-  let specifyCard = document.querySelector(".closer-look");
   let listing = document.querySelector(".restaurants-listings");
   let allRestaurants = Array.from(listing.children);
-  specifyCard.classList.remove("hidden");
+  displayCloserLookText()
   allRestaurants.forEach((restaurant) => {
     restaurant.classList.remove("hidden");
   });
