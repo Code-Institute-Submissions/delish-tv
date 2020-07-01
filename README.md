@@ -36,7 +36,7 @@ The site's main target is fans of Netflix Original culinary shows. However, the 
 
 "As a business, we would like to highlight the restaurants involved in series, which rewards them for allowing a series to be filmed there."
 
-"As a business, we wish to continue making original culinary series. We would like to provide this added value to pariticipating restaurants to encourage others to get involved."
+"As a business, we wish to continue making original culinary series. We would like to provide this added value to participating restaurants to encourage others to get involved."
 
 ## Site Features
 ### Spotlight Series Jumbotron
@@ -137,7 +137,7 @@ The site uses Roboto for non-heading text. It is a good pairing for Nunito Sans 
 
 * [JavaScript Validator](https://jshint.com/) - JSHint was used to check the validity of JavaScript code contained in this project.
 
-* [WAVE](https://wave.webaim.org/) - This site was used to evaluate the accessibility the project. It produced one contrast error highlighting the series description as the source of the issue. However, in testing, a font colour of #000, which would pass the test, did not apppear readable.  
+* [WAVE](https://wave.webaim.org/) - This site was used to evaluate the accessibility the project. It produced one contrast error highlighting the series description as the source of the issue. However, in testing, a font colour of #000, which would pass the test, did not appear readable.  
 
 * [a11y](https://color.a11y.com/Contrast/) - This site also performed checks on the colour contrast accessibility. Again, it highlighted the series description text as problematic, but did not take the background image or overlay into account, which has increased readability in practice. 
 
@@ -299,7 +299,7 @@ As is stated previously, the spotlight jumbotron displays a random series when t
 * "As a business, we would like to highlight the restaurants involved in series, which rewards them for allowing a series to be filmed there."
 All of the restaurants that have been involved in the featured series are on display on this site. Users are invited to find out more information about each business with map markers inviting users to click to find out more and restaurant cards that provide added details. 
 
-* "As a business, we wish to continue making original culinary series. We would like to provide this added value to pariticipating restaurants to encourage others to get involved."
+* "As a business, we wish to continue making original culinary series. We would like to provide this added value to participating restaurants to encourage others to get involved."
 This is both a longer-term and ongoing goal. The site has provided additional visibility and value for participating restaurants and the hope is that this can entice other restaurants and business owners to partake in a series. This will enable us to continue to lead the way in producing original culinary series.
 
 
