@@ -278,6 +278,28 @@ As the site is designed with a mobile-first philosophy, an emphasis was placed o
 #### Filter By Location dropdown
 This filter dropdown allows the user to type in a country name to filter the dropdown options to just the countries that match the text entered. If the dropdown menu is displayed above the button, the text entry field is at the top of the list and entering text causes the remaining menu options to seemingly float in the middle of the page.
 
+## Meeting user expectations
+
+### As a user
+* "As a viewer of culinary shows, I am often automatically recommended other reality TV shows that have nothing to do with food. I would like to find similarly themed series that would be of interest to me."
+All of the shows featured on this site are food related, so there is no risk of being recommended a show about real estate or tattoos. When a user visits the site initially, a random series is featured in the spotlight jumbotron, which provides the user with information about the show, a trailer, and a link to the show. The user can explore further and select a new show from the dropdown menu, which in turn provides them further information.
+
+* "As a fan of Breakfast, Lunch & Dinner, I would like to find out more information about some of my favourite restaurants featured in the series."
+All of the restaurants contained within a series are featured when a user selects a series from the relevant dropdown menu. The user is presented with a visual display of where these restaurants are located and can get more detailed information about their location.
+
+"As someone travelling to Japan, I would like an easy way to find out more about Toyo's restaurant, as seen on Street Food Asia, so that I can experience the food and performance for myself." 
+
+"As a foodie, I would like to thoroughly research restaurants in my area to ensure that it appeals to me and that I will get value for money." 
+
+### Business Goals
+"As a business, we would like to showcase our range of culinary series, as we would like users to keep finding value for money in their subscription and attract new customers."
+
+"As a business, we would like to highlight the restaurants involved in series, which rewards them for allowing a series to be filmed there."
+
+"As a business, we wish to continue making original culinary series. We would like to provide this added value to pariticipating restaurants to encourage others to get involved."
+
+
+
 ## Deployment
 ### GitHub Pages
 To deploy this website on GitHub Pages, I followed the following steps:
