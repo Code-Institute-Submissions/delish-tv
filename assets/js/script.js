@@ -252,6 +252,11 @@ function initMap(spotlightRestaurants) {
             " target='_blank' rel='noopener'>Watch on Netflix" +
             "</a>" +
             "</div>" +
+            "<div class='map-info restaurant-website'><a href=" +
+            spotlightRestaurants[i].website +
+            " target='_blank' rel='noopener'>" + spotlightRestaurants[i].website +
+            "</a>" +
+            "</div>" +
             "</div>"
         );
         infoWindow.open(map, marker);
