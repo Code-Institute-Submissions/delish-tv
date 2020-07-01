@@ -382,7 +382,7 @@ locationDropdown.forEach((locationItem) => {
 });
 
 countryFilter.addEventListener("keyup", locationDropdownMatches);
-// reset the countryFilter input value and restore all dropdown options after user clicks off dropdown menu
+// Reset the countryFilter input value and restore all dropdown options after user clicks off dropdown menu
 countryFilter.addEventListener("change", function () {
   setTimeout(function () {
     countryFilter.value = "";
