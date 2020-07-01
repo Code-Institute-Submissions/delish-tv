@@ -279,25 +279,28 @@ As the site is designed with a mobile-first philosophy, an emphasis was placed o
 This filter dropdown allows the user to type in a country name to filter the dropdown options to just the countries that match the text entered. If the dropdown menu is displayed above the button, the text entry field is at the top of the list and entering text causes the remaining menu options to seemingly float in the middle of the page.
 
 ## Meeting user expectations
-
 ### As a user
 * "As a viewer of culinary shows, I am often automatically recommended other reality TV shows that have nothing to do with food. I would like to find similarly themed series that would be of interest to me."
 All of the shows featured on this site are food related, so there is no risk of being recommended a show about real estate or tattoos. When a user visits the site initially, a random series is featured in the spotlight jumbotron, which provides the user with information about the show, a trailer, and a link to the show. The user can explore further and select a new show from the dropdown menu, which in turn provides them further information.
 
 * "As a fan of Breakfast, Lunch & Dinner, I would like to find out more information about some of my favourite restaurants featured in the series."
-All of the restaurants contained within a series are featured when a user selects a series from the relevant dropdown menu. The user is presented with a visual display of where these restaurants are located and can get more detailed information about their location.
+All of the restaurants contained within a series are featured when a user selects a series from the relevant dropdown menu. The user is presented with a visual display of where these restaurants are located and can get more detailed information about their location and the restaurant's website.
 
-"As someone travelling to Japan, I would like an easy way to find out more about Toyo's restaurant, as seen on Street Food Asia, so that I can experience the food and performance for myself." 
+* "As someone travelling to Japan, I would like an easy way to find out more about Toyo's restaurant, as seen on Street Food Asia, so that I can experience the food and performance for myself." 
+For those travelling (or living in a given area), it is possible to find out about restaurants via the location drop down menu. This filters restaurants by geographical location, providing further information about their location and website (where applicable). Those hoping to see more about a given restaurant can then click on the episode link to be brought to the episode of the relevant series in which this restaurant is featured.
 
-"As a foodie, I would like to thoroughly research restaurants in my area to ensure that it appeals to me and that I will get value for money." 
+* "As a foodie, I would like to thoroughly research restaurants in my area to ensure that it appeals to me and that I will get value for money." 
+While menus and user reviews provide a good deal of information to prospective diners, a link to a Netflix episode provides an added dimension. In all cases, viewers will see the food on offer in a more visual and meaningful manner. Seeing someone eating a dish and their reaction to it provides the viewer with more meaning than reading words on a screen. In many cases, viewers get to see how dishes are prepared and brought to life or get to know some of the personalities involved in the restaurant.
 
 ### Business Goals
-"As a business, we would like to showcase our range of culinary series, as we would like users to keep finding value for money in their subscription and attract new customers."
+* "As a business, we would like to showcase our range of culinary series, as we would like users to keep finding value for money in their subscription and attract new customers."
+As is stated previously, the spotlight jumbotron displays a random series when the page is loaded, thus exposing visitors to a range of Netflix Original programming. There are links to series and episodes provided throughout the site, which encourages users to watch, while those who do not have a current subscription will be brought to the series' page with links to sign up for a subscription.
 
-"As a business, we would like to highlight the restaurants involved in series, which rewards them for allowing a series to be filmed there."
+* "As a business, we would like to highlight the restaurants involved in series, which rewards them for allowing a series to be filmed there."
+All of the restaurants that have been involved in the featured series are on display on this site. Users are invited to find out more information about each business with map markers inviting users to click to find out more and restaurant cards that provide added details. 
 
-"As a business, we wish to continue making original culinary series. We would like to provide this added value to pariticipating restaurants to encourage others to get involved."
-
+* "As a business, we wish to continue making original culinary series. We would like to provide this added value to pariticipating restaurants to encourage others to get involved."
+This is both a longer-term and ongoing goal. The site has provided additional visibility and value for participating restaurants and the hope is that this can entice other restaurants and business owners to partake in a series. This will enable us to continue to lead the way in producing original culinary series.
 
 
 ## Deployment
