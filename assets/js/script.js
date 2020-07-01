@@ -60,11 +60,11 @@ function hideSpotlightJumbotron() {
 }
 
 function filterRestaurantsBySeries(chosenSpotlightSeries) {
-  const spotlightRestaurants = restaurants.filter(
+  let featuredRestaurants = restaurants.filter(
     (restaurant) => restaurant.series === chosenSpotlightSeries
   );
-  restaurantsMatchingFilter = spotlightRestaurants;
-  initMap(spotlightRestaurants);
+  restaurantsMatchingFilter = featuredRestaurants;
+  initMap(featuredRestaurants);
   displayCloserLookText();
 }
 
